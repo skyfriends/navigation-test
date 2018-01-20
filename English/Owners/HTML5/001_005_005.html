@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Normal Shutdown Alarms</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_005_001.html">5&nbsp;&nbsp;Alarms</a></p>
+               </div>
+               <h2 id="BABFHFCCJ8"><span class="chapter-number">5.5</span> Normal Shutdown Alarms
+               </h2> 
+               <p>When any one of the alarms occurs that are listed in <a href="001_005_005.html#id17ADE700LHS">Table 5.3</a>, the <span class="acronym" translate="no">PLC</span> executes a normal extruder system shutdown sequence. Each alarm that is listed below
+                  is assigned a number for reference only (it does not reflect any priority, severity,
+                  or importance). For each normal shutdown alarm you will find listed below its unique
+                  <span class="acronym" translate="no">APM</span> alarm reference number and alarm text, both appearing in the alarm region of the
+                  screen header and on the Alarm Summary screen. You will also find the most probable
+                  cause and some troubleshooting suggestions for each alarm on <a href="001_005_005.html#id17ADE700LHS">Table 5.3</a>.
+               </p> 
+               <table format="standard-shaded-head" class="table">
+                  <col style="width:12%">
+                  <col style="width:29%">
+                  <col style="width:34%">
+                  <col style="width:26%">  
+                  <caption id="id17ADE700LHS"><span class="table-number">Table 5.3</span> Normal Extruder System Shutdown
+                  </caption> 
+                  <thead> 
+                     <tr> 
+                        <th class="shading-light center bottom">Alarm Number</th> 
+                        <th class="shading-light center bottom">Alarm Text</th> 
+                        <th class="shading-light center bottom">Most Likely Cause</th> 
+                        <th class="shading-light center bottom">Possible Solutions</th> 
+                     </tr> 
+                  </thead> 
+                  <tbody> 
+                     <tr> 
+                        <td class="shading-default left top">1</td> 
+                        <td class="shading-default left top">Shutdown:<br>Live Bin Empty
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a live bin empty condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAEJDCCJ4">131</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">2</td> 
+                        <td class="shading-default left top">Shutdown:<br>Live Bin Agitator Motor Fault
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a live bin agitator motor fault
+                           condition.
+                        </td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAFJDFFF9">135</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">3</td> 
+                        <td class="shading-default left top">Shutdown:<br>Feeder Screw Motor Fault
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a feeder screw motor fault condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAEHFIEI1">140</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">4</td> 
+                        <td class="shading-default left top">Shutdown:<br>Low/Low Dry Feed Rate
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a low/low dry feed rate condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAJBAGBH6">138</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">5</td> 
+                        <td class="shading-default left top">Shutdown:<br>Low Extruder Lube Oil Flow
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of an extruder low lubrication oil
+                           flow condition.
+                        </td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAFEJFDA4">147</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">6</td> 
+                        <td class="shading-default left top">Shutdown:<br>Knife hood Not Closed
+                        </td> 
+                        <td class="shading-default left top">TBD</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAIGAAJB9">151</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">7</td> 
+                        <td class="shading-default left top">Shutdown:<br>Low/Low Liquid 1 Flow
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a low/low liquid 1 flow rate condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAGDGDHA5">185</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">8</td> 
+                        <td class="shading-default left top">Shutdown:<br>Low/Low Liquid 2 Flow
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a low/low liquid 2 flow rate condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAIGFGJB1">189</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">9</td> 
+                        <td class="shading-default left top">Shutdown:<br>Low/Low Liquid 3 Flow
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a low/low liquid 3flow rate condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJADGCDIH4">193</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">10</td> 
+                        <td class="shading-default left top">Shutdown:<br>Low/Low Liquid 4 Flow
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a low/low liquid 4 flow rate condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAFDCCGJ9">197</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">11</td> 
+                        <td class="shading-default left top">Shutdown:<br>Low/Low Liquid 5 Flow
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a low/low liquid 5 flow rate condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJADEHCJD0">201</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">12</td> 
+                        <td class="shading-default left top">Shutdown:<br>Low/Low Liquid 6 Flow
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a low/low liquid 6 flow rate condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJABJBIGJ6">205</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">13</td> 
+                        <td class="shading-default left top">Shutdown:<br>Low/Low Liquid 7 Flow
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a low/low liquid 7 flow rate condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAHDJJBA9">209</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">14</td> 
+                        <td class="shading-default left top">Shutdown:<br>Low/Low Liquid 8 Flow
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a low/low liquid 8 flow rate condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAEJFCDD5">213</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">15</td> 
+                        <td class="shading-default left top">Shutdown:<br>Low/Low Extrudate Temperature
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a low/low extrudate temperature.</td> 
+                        <td class="shading-default left top">See alarm number 277</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">16</td> 
+                        <td class="shading-default left top">Shutdown:<br>Low System Air Pressure
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a low system air pressure condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAFEEHAB2">37</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">17</td> 
+                        <td class="shading-default left top">Shutdown:<br>Knife Motor Off
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because</td> 
+                        <td class="shading-default left top">TBD</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">18</td> 
+                        <td class="shading-default left top">Shutdown:<br>High Extruder Motor Load
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAJBCCCH4">149</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">19</td> 
+                        <td class="shading-default left top">Shutdown:<br>Low/Low Extruder Steam Flow
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAFCCDBF4">109</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">20</td> 
+                        <td class="shading-default left top">Shutdown:<br>Low/Low Extruder Water Flow
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAFCCDBF4">109</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">21</td> 
+                        <td class="shading-default left top">Shutdown:<br>High Conehead Pressure
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJADEBBIE4">153</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">22</td> 
+                        <td class="shading-default left top">Shutdown:<br>Airlift Cyclone High Level
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJADEBBIE4">153</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">23</td> 
+                        <td class="shading-default left top">Shutdown:<br>Downstream Not Ready
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because the processing equipment down</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJABIICDB9">173</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">24</td> 
+                        <td class="shading-default left top">Shutdown:<br>Downspout Not Connected
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because the downspout safety switch is open.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAEBFGFE0">144</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">25</td> 
+                        <td class="shading-default left top">Shutdown:<br>High/High Extruder Motor Load
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a high/high extruder motor load
+                           condition.
+                        </td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJACBHFEC7">150</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">26</td> 
+                        <td class="shading-default left top">Shutdown:<br>High/High Conehead Pressure
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a high/high conehead pressure condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAFDCAIF0">154</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">27</td> 
+                        <td class="shading-default left top">Shutdown:<br>Extruder Motor Fault
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of an extruder motor fault condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAHHADAE2">148</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">28</td> 
+                        <td class="shading-default left top">Shutdown:<br>Knife Motor Fault
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because of a knife motor fault condition.</td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAGHBJCG4">156</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">29</td> 
+                        <td class="shading-default left top">Shutdown:<br>Extruder Slow Speed Fault
+                        </td> 
+                        <td class="shading-default left top">A shutdown sequence has been initiated because the extruder speed is running under
+                           its lower limit.
+                        </td> 
+                        <td class="shading-default left top">See alarm number <a href="001_005_006.html#CJAJDAFGF9">38</a></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">30</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">31</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                  </tbody> 
+               </table>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_004_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_005_004.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_005_006.html">Next Section &gt;</a></li>
+                     <li><a href="001_006_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

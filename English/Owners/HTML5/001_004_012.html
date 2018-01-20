@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>Other Operations</title>
+  <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+  <link href="../../../assets/css/custom.css" rel="stylesheet">
+  <link rel="icon" href="../../../assets/img/favicon.ico">
+</head>
+
+<body>
+  <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+  <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+  <main class="container-fluid">
+    <div class="row">
+      <article class="main-content" role="main">
+        <div class="row breadcrumbs">
+          <p>
+            <a href="001_004_001.html">4&nbsp;&nbsp;Programmable Logic Controller</a>
+          </p>
+        </div>
+        <h2 id="d6e9509">
+          <span class="chapter-number">4.12</span> Other Operations
+        </h2>
+        <section>
+          <h3 id="d6e9513">
+            <span class="chapter-number">4.12.1</span> Emergency-Stopping
+          </h3>
+          <p>Each extruder system features two emergency stop (E-Stop) pushbuttons. One is on the control room console and the
+            other is on a small control panel located near the extruder downspout. These pushbuttons have large red actuator
+            heads. E-Stop is activated by pushing the red actuator head down (it should lock in place). E-Stop is deactivated
+            by twisting the red actuator head until it pops back up.
+          </p>
+          <p>Either E-Stop pushbutton will terminate output power from the
+            <span class="acronym" translate="no">PLC</span> to all extruder system electrical equipment. Outputs signals from the
+            <span class="acronym" translate="no">PLC</span> to all motors, valves, and flow control devices will be interrupted. These devices cannot be energized
+            while the E-Stop pushbutton remains in the down position.
+          </p>
+        </section>
+        <section>
+          <h3 id="d6e9529">
+            <span class="chapter-number">4.12.2</span> Changing the Downspout Position
+          </h3>
+          <p>Each extruder system features two manual downspout bypass switches. One is on the control room console and the
+            other is on a small control panel located near the extruder downspout. Either of these two switches will allow
+            the operator to reposition the downspout from channeling preconditioner effluent into the extruder inlet. These
+            switches are ignored when the downspout is already in the bypass position.
+          </p>
+        </section>
+        <section>
+          <h3 id="d6e9536">
+            <span class="chapter-number">4.12.3</span> Changing the Knife Speed
+          </h3>
+          <p>A switch is mounted on the knife stand for controlling the knife speed. This switch can be used to both increase
+            and decrease the knife speed. The switch can be rotated clockwise or counterclockwise from its middle (off) position,
+            but when released will always return to its off position. Rotating and holding the switch counterclockwise will
+            cause the knife speed to slowly ramp up, while rotating and holding the switch clockwise will cause the knife
+            speed to slowly ramp down.
+          </p>
+        </section>
+        <section>
+          <h3 id="d6e9543">
+            <span class="chapter-number">4.12.4</span> Recovering from Excessive Extruder Motor Load
+          </h3>
+          <p>If the extruder motor load or the conehead pressure exceeds their respective high alarm limit value for a configured
+            period of time, the
+            <span class="acronym" translate="no">PLC</span> will initiate the overload recovery routine in an attempt to lower the load. The extruder water setpoint
+            will be increased by 1%, the downspout will divert to reject then back to the extruder 3 times. If the load remains
+            high through all these corrective actions, the
+            <span class="acronym" translate="no">PLC</span> will initiate a quick shutdown. If these measures are effective in decreasing the load the extruder
+            will continue to run. The 1% additional water is removed upon acknowledgement and clearing of the alarm. When
+            the alarm condition is corrected and the operator has acknowledged the alarm the 1% water will automatically
+            be removed.
+          </p>
+        </section>
+      </article>
+      <footer class="site-footer" id="copyrightDiv"></footer>
+    </div>
+  </main>
+  <footer class="nav-footer">
+    <div class="container-fluid">
+      <a id="scroll-up" href="#">
+        <i class="fa fa-angle-up"></i>
+      </a>
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="footer-menu">
+            <li>
+              <a href="001_003_001.html">&lt;&lt; Previous Chapter</a>
+            </li>
+            <li>
+              <a href="001_004_011.html#">&lt; Previous Section</a>
+            </li>
+            <li>
+              <a href="001_005_001.html">Next Section &gt;</a>
+            </li>
+            <li>
+              <a href="001_005_001.html">Next Chapter &gt;&gt;</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../../../assets/js/jquery.min.js"></script>
+  <script src="../../../assets/js/theDocs.all.min.js"></script>
+  <script src="assets/js/toc.js"></script>
+  <script src="assets/js/zoom_settings.js"></script>
+  <script src="assets/js/zoom_index.js"></script>
+  <script src="assets/js/zoom_pageinfo.js"></script>
+  <script src="../../../assets/js/search.js"></script>
+  <script src="../../../assets/js/data.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Details</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_005_001.html">5&nbsp;&nbsp;Alarms</a></p>
+               </div>
+               <h2 id="d6e9583"><span class="chapter-number">5.2</span> Details
+               </h2> 
+               <p>All currently active alarms are always displayed in a field in the top right corner
+                  of the <span class="acronym" translate="no">APM</span> monitor <a href="001_005_002.html#BABICFJAF5">Figure 5.1</a>, regardless of which screen is selected. This field only displays the three most
+                  recent active alarms, so there may be more than three. To view all active alarms,
+                  select to view the Alarm Summary screen (as shown in <a href="001_003_011.html#id17AIFG00JPN">Alarm Summary Screen</a> ). The most recently occurring active alarms are displayed at the top (the header
+                  region) above each screen, and as more alarms occur, older active alarms are displayed
+                  below the more recent active alarms, and may even disappear from this field, even
+                  though they are still active. In both the header region at the top of the monitor,
+                  and on the Alarm Summary screen, unacknowledged alarms are shown in red text, while
+                  acknowledged alarms are shown in yellow text.
+               </p> 
+               <figure id="BABICFJAF5">
+                  <figcaption><span class="figure-number">Figure 5.1</span> Active Alarms 
+                  </figcaption> <img src="../../../images/Alarms_Figure_01.png"> 
+                  <ol class="legend-list">
+                     <li class="legend-item">Active Unacknowledged Alarms</li> 
+                     <li class="legend-item">Active Acknowledged Alarm</li>
+                  </ol>
+               </figure> 
+               <p>Acknowledged alarms only remain displayed in the list of active alarms if the condition
+                  causing the alarm remains in force. Acknowledged alarms disappear from the display
+                  of active alarms if the conditions that caused them are no longer true. It should
+                  be noted that if an abnormal condition arises that triggers an alarm, and if that
+                  condition were to revert to normal before the alarm is acknowledged, the alarm for
+                  the original abnormal condition that no longer exists will continue to be displayed
+                  in red text until the operator acknowledges it, at which point the alarm will disappear
+                  from the displayed list of active alarms.
+               </p> 
+               <p>If there are no currently unacknowledged active alarms (those in red text) and a new
+                  alarm appears, the amber alert beacon on the <span class="acronym" translate="no">APM</span> console will flash, and if the new alarm is considered critical the alert horn will
+                  sound until the operator acknowledges all currently unacknowledged active alarms.
+                  The operator can do so by pressing the End key on the console keyboard at any time,
+                  regardless of which screen is currently being displayed. The alarm horn, which can
+                  be very annoying, can be silenced by pressing the Horn Silence button on the <span class="acronym" translate="no">APM</span> console.
+               </p> 
+               <p>For a system as complex as a Wenger Extruder System it should not be surprising that
+                  there are many potential abnormal conditions that have been identified, indeed hundreds,
+                  for which alarms have been defined. These alarms have been classified as to severity
+                  and consequence, and then placed into one of four categories in regards to criticality:
+               </p> 
+               <ul>
+                  <li>Immediate shutdown alarms (most critical). Any of the alarms in this category will
+                     cause the Programmable Logic Controller (<span class="acronym" translate="no">PLC</span>) to execute an immediate extruder system shutdown. What constitutes an immediate
+                     shutdown is discussed in <a href="001_001_001.html#BABGEFBCG0">General Information</a>. See <a href="001_005_003.html#BABHDDHHA2">Immediate Shutdown Alarms</a> for a list of common immediate shutdown alarms.
+                  </li> 
+                  <li>Quick shutdown alarms. Any of the alarms in this category will cause the <span class="acronym" translate="no">PLC</span> to execute a quick extruder system shutdown. What constitutes a quick shutdown is
+                     discussed in <a href="001_001_001.html#BABGEFBCG0">General Information</a>. See <a href="001_005_004.html#BABGEDBDC8">Quick Shutdown Alarms</a> for a listing of common quick shutdown alarms.
+                  </li> 
+                  <li>Normal shutdown alarms. Any of the alarms in this category will cause the <span class="acronym" translate="no">PLC</span> to execute a normal extruder system shutdown. What constitutes a normal shutdown
+                     is discussed in <a href="001_001_001.html#BABGEFBCG0">General Information</a>. See <a href="001_005_005.html#BABFHFCCJ8">Normal Shutdown Alarms</a> for a listing of common normal shutdown alarms.
+                  </li> 
+                  <li>Annunciation only alarms (least critical). These alarms are for information only.
+                     Although none such alarms directly shutdown the extruder system, a condition that
+                     causes one of these alarms to occur may also later lead to one of the above shutdown
+                     alarms occurring. See <a href="001_005_005.html#BABFHFCCJ8">Normal Shutdown Alarms</a> for a list of common normal shutdown alarms.
+                  </li>
+               </ul>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_004_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_005_001.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_005_003.html">Next Section &gt;</a></li>
+                     <li><a href="001_006_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Annunciation Only Alarms</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_005_001.html">5&nbsp;&nbsp;Alarms</a></p>
+               </div>
+               <h2 id="BABFEIEJB9"><span class="chapter-number">5.6</span> Annunciation Only Alarms
+               </h2> 
+               <p>The alarms that are listed in <a href="001_005_006.html#id17ADE8020UI">Table 5.4</a>,  are annunciation-only alarms; they do not cause the <span class="acronym" translate="no">PLC</span> to shutdown the extruder system. Each alarm that is listed below is assigned a number
+                  for reference only (it does not reflect any priority, severity, or importance). For
+                  each alarm listed below there is its reference alarm number, the text that appears
+                  on the <span class="acronym" translate="no">APM</span> monitor (the reference number is displayed along with the text), the most probable
+                  cause of the alarm, and some troubleshooting tips on <a href="001_005_006.html#id17ADE8020UI">Table 5.4</a>.
+               </p> 
+               <table format="standard-shaded-head" class="table">
+                  <col style="width:12%">
+                  <col style="width:29%">
+                  <col style="width:34%">
+                  <col style="width:26%">  
+                  <caption id="id17ADE8020UI"><span class="table-number">Table 5.4</span> Annunciation Only Shutdown
+                  </caption> 
+                  <thead> 
+                     <tr> 
+                        <th class="shading-light center bottom">Alarm Number</th> 
+                        <th class="shading-light center bottom">Alarm Text</th> 
+                        <th class="shading-light center bottom">Most Likely Cause</th> 
+                        <th class="shading-light center bottom">Possible Solutions</th> 
+                     </tr> 
+                  </thead> 
+                  <tbody> 
+                     <tr> 
+                        <td class="shading-default left top">32</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">33</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">34</td> 
+                        <td class="shading-default left top">Lost Communication With <span class="acronym" translate="no">PLC</span></td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> and the Human Machine Interface (<span class="acronym" translate="no">HMI</span>) are not communicating. 
+                        </td> 
+                        <td class="shading-default left top">If the Lost Comm text in the header is blinking, then the DDE server (piece of software
+                           in the <span class="acronym" translate="no">HMI</span> responsible for communicating information between the PC and <span class="acronym" translate="no">PLC</span>) is OK but some problem has occurred between the PC and the <span class="acronym" translate="no">PLC</span>. If the Lost Comm text is non-blinking, then the DDE server has shutdown. In this
+                           case exit and restart windows. Check the connection at both ends of the “Blue Hose.”
+                           You may get this alarm when big motors start if this communication cable is near the
+                           motor wires.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">35</td> 
+                        <td class="shading-default left top">Low System Steam Pressure</td> 
+                        <td class="shading-default left top">The system steam pressure switch signal is false for longer than the alarm timeout
+                           period.
+                        </td> 
+                        <td class="shading-default left top">Make sure all shut-off valves are open. Check that the pressure switch is working
+                           properly by looking at a gauge near the switch. Make sure the pressure switch is set
+                           per the Wenger plumbing diagram.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">36</td> 
+                        <td class="shading-default left top">Low System Water Pressure</td> 
+                        <td class="shading-default left top">The system water pressure switch signal is false for longer than the alarm timeout
+                           period.
+                        </td> 
+                        <td class="shading-default left top">Make sure all shut-off valves are open. Check that the pressure switch is working
+                           properly by looking at a gauge near the switch. Make sure the pressure switch is set
+                           per the Wenger plumbing diagram.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAFEEHAB2">37</span></td> 
+                        <td class="shading-default left top">Low System Air Pressure</td> 
+                        <td class="shading-default left top">The system air pressure switch signal is false for longer than the alarm timeout period.</td> 
+                        <td class="shading-default left top">Make sure all shut-off valves are open. Check that the pressure switch is working
+                           properly by looking at a gauge near the switch. Make sure the pressure switch is set
+                           per the Wenger plumbing diagram.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAJDAFGF9">38</span></td> 
+                        <td class="shading-default left top">Extruder Slow Speed Fault</td> 
+                        <td class="shading-default left top">TBD</td> 
+                        <td class="shading-default left top">TBD</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">39</td> 
+                        <td class="shading-default left top">Extruder Auto Start Failure Main Devices are in Off</td> 
+                        <td class="shading-default left top">TBD</td> 
+                        <td class="shading-default left top">TBD</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">40</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">41</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">42</td> 
+                        <td class="shading-default left top">BPV Servo Motor Fault</td> 
+                        <td class="shading-default left top">TBD</td> 
+                        <td class="shading-default left top">TBD</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">43</td> 
+                        <td class="shading-default left top">BPV Position Fault</td> 
+                        <td class="shading-default left top">TBD</td> 
+                        <td class="shading-default left top">TBD</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">44</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">45</td> 
+                        <td class="shading-default left top">Extruder Water Failed to Reach Startup %</td> 
+                        <td class="shading-default left top">On startup there was very little or no water flow.</td> 
+                        <td class="shading-default left top">Check to make sure that you can get process water flow to the extruder barrel.</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">46</td> 
+                        <td class="shading-default left top">Failure to Confirm Knife!!</td> 
+                        <td class="shading-default left top">The operator didn't press the “Confirm Knife” button in a timely manner.</td> 
+                        <td class="shading-default left top">On startup make sure the knife is ready and then press the “Confirm Knife” button
+                           as soon as it's available.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">47</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">48</td> 
+                        <td class="shading-default left top">Liquid 1 Tank Below Low Level</td> 
+                        <td class="shading-default left top">The liquid level in the tank has been below the low-level sensor for longer than the
+                           alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system.</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">49</td> 
+                        <td class="shading-default left top">Liquid 1 Tank Failure to Fill</td> 
+                        <td class="shading-default left top">The tank has been commanded to refill, but the high-level sensor signal has remained
+                           false for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system. The refill command will be cleared so that the tank will
+                           not overflow in the event of a high-level sensor failure.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">50</td> 
+                        <td class="shading-default left top">Liquid 2 Tank Below Low Level</td> 
+                        <td class="shading-default left top">The liquid level in the tank has been below the low-level sensor for longer than the
+                           alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system.</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">51</td> 
+                        <td class="shading-default left top">Liquid 2 Tank Failure to Fill</td> 
+                        <td class="shading-default left top">The tank has been commanded to refill, but the high-level sensor signal has remained
+                           false for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system. The refill command will be cleared so that the tank will
+                           not overflow in the event of a high-level sensor failure.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">52</td> 
+                        <td class="shading-default left top">Liquid 3 Tank Below Low Level</td> 
+                        <td class="shading-default left top">The liquid level in the tank has been below the low-level sensor for longer than the
+                           alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system.</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">53</td> 
+                        <td class="shading-default left top">Liquid 3 Tank Failure to Fill</td> 
+                        <td class="shading-default left top">The tank has been commanded to refill, but the high-level sensor signal has remained
+                           false for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system. The refill command will be cleared so that the tank will
+                           not overflow in the event of a high-level sensor failure.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">54</td> 
+                        <td class="shading-default left top">Liquid 4 Tank Below Low Level</td> 
+                        <td class="shading-default left top">The liquid level in the tank has been below the low-level sensor for longer than the
+                           alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system.</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">55</td> 
+                        <td class="shading-default left top">Liquid 4 Tank Failure to Fill</td> 
+                        <td class="shading-default left top">The tank has been commanded to refill, but the high-level sensor signal has remained
+                           false for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system. The refill command will be cleared so that the tank will
+                           not overflow in the event of a high-level sensor failure.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">56</td> 
+                        <td class="shading-default left top">Liquid 5 Tank Below Low Level</td> 
+                        <td class="shading-default left top">The liquid level in the tank has been below the low-level sensor for longer than the
+                           alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system.</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">57</td> 
+                        <td class="shading-default left top">Liquid 5 Tank Failure to Fill</td> 
+                        <td class="shading-default left top">The tank has been commanded to refill, but the high-level sensor signal has remained
+                           false for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system. The refill command will be cleared so that the tank will
+                           not overflow in the event of a high-level sensor failure.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">58</td> 
+                        <td class="shading-default left top">Liquid 6 Tank Below Low Level</td> 
+                        <td class="shading-default left top">The liquid level in the tank has been below the low-level sensor for longer than the
+                           alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system.</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">59</td> 
+                        <td class="shading-default left top">Liquid 6 Tank Failure to Fill</td> 
+                        <td class="shading-default left top">The tank has been commanded to refill, but the high-level sensor signal has remained
+                           false for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system. The refill command will be cleared so that the tank will
+                           not overflow in the event of a high-level sensor failure.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">60</td> 
+                        <td class="shading-default left top">Liquid 7 Tank Below Low Level</td> 
+                        <td class="shading-default left top">The liquid level in the tank has been below the low-level sensor for longer than the
+                           alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system.</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">61</td> 
+                        <td class="shading-default left top">Liquid 7 Tank Failure to Fill</td> 
+                        <td class="shading-default left top">The tank has been commanded to refill, but the high-level sensor signal has remained
+                           false for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system. The refill command will be cleared so that the tank will
+                           not overflow in the event of a high-level sensor failure.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">62</td> 
+                        <td class="shading-default left top">Liquid 8 Tank Below Low Level</td> 
+                        <td class="shading-default left top">The liquid level in the tank has been below the low-level sensor for longer than the
+                           alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system.</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">63</td> 
+                        <td class="shading-default left top">Liquid 8 Tank Failure to Fill</td> 
+                        <td class="shading-default left top">The tank has been commanded to refill, but the high-level sensor signal has remained
+                           false for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check the refill system. The refill command will be cleared so that the tank will
+                           not overflow in the event of a high-level sensor failure.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">64</td> 
+                        <td class="shading-default left top">Cylinder Discharge Temperature Sensor Failure</td> 
+                        <td class="shading-default left top">The temperature sensor is returning a value outside the allowable range of 0-300 deg
+                           C (0-572 deg F).
+                        </td> 
+                        <td class="shading-default left top">Check the connection from the extruder to the sensor. If this connection is broken
+                           or if the thermocouple is unhooked the alarm will occur. Check the thermocouple and
+                           replace it if necessary.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">65</td> 
+                        <td class="shading-default left top">Extruder Zone 1 Temperature Sensor Failure</td> 
+                        <td class="shading-default left top">The input signal from the temperature sensor was outside the valid range for this
+                           sensor type.
+                        </td> 
+                        <td class="shading-default left top">Check the connection from the extruder to the sensor. If the connection is broken
+                           the alarm will occur. Check the sensor and replace it if necessary.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">66</td> 
+                        <td class="shading-default left top">Extruder Zone 2 Temperature Sensor Failure</td> 
+                        <td class="shading-default left top">The input signal from the temperature sensor was outside the valid range for this
+                           sensor type.
+                        </td> 
+                        <td class="shading-default left top">Check the connection from the extruder to the sensor. If the connection is broken
+                           the alarm will occur. Check the sensor and replace it if necessary.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">67</td> 
+                        <td class="shading-default left top">Extruder Zone 3 Temperature Sensor Failure</td> 
+                        <td class="shading-default left top">The input signal from the temperature sensor was outside the valid range for this
+                           sensor type.
+                        </td> 
+                        <td class="shading-default left top">Check the connection from the extruder to the sensor. If the connection is broken
+                           the alarm will occur. Check the sensor and replace it if necessary.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">68</td> 
+                        <td class="shading-default left top">Extruder Zone 4 Temperature Sensor Failure</td> 
+                        <td class="shading-default left top">The input signal from the temperature sensor was outside the valid range for this
+                           sensor type.
+                        </td> 
+                        <td class="shading-default left top">Check the connection from the extruder to the sensor. If the connection is broken
+                           the alarm will occur. Check the sensor and replace it if necessary.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">69</td> 
+                        <td class="shading-default left top">Extruder Zone 5 Temperature Sensor Failure</td> 
+                        <td class="shading-default left top">The input signal from the temperature sensor was outside the valid range for this
+                           sensor type.
+                        </td> 
+                        <td class="shading-default left top">Check the connection from the extruder to the sensor. If the connection is broken
+                           the alarm will occur. Check the sensor and replace it if necessary.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">70</td> 
+                        <td class="shading-default left top">Extruder Zone 6 Temperature Sensor Failure</td> 
+                        <td class="shading-default left top">The input signal from the temperature sensor was outside the valid range for this
+                           sensor type.
+                        </td> 
+                        <td class="shading-default left top">Check the connection from the extruder to the sensor. If the connection is broken
+                           the alarm will occur. Check the sensor and replace it if necessary.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">71</td> 
+                        <td class="shading-default left top">SMI Temperature Sensor Failure</td> 
+                        <td class="shading-default left top">The input signal from the temperature sensor was outside the valid range for this
+                           sensor type.
+                        </td> 
+                        <td class="shading-default left top">Check the connection from the extruder to the sensor. If the connection is broken
+                           the alarm will occur. Check the sensor and replace it if necessary.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">72</td> 
+                        <td class="shading-default left top">Extruder Die Temperature Sensor Failure</td> 
+                        <td class="shading-default left top">The input signal from the temperature sensor was outside the valid range for this
+                           sensor type.
+                        </td> 
+                        <td class="shading-default left top">Check the connection from the extruder to the sensor. If the connection is broken
+                           the alarm will occur. Check the sensor and replace it if necessary.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">73</td> 
+                        <td class="shading-default left top">High Zone 1 Temperature</td> 
+                        <td class="shading-default left top">The zone temperature has been above the formula setpoint plus the formula alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">There is possibly too much steam injection in the extruder barrel. The formula setpoint
+                           for this item is too low because the process needs to run at a higher temperature.
+                           There is not enough cooling capacity in the jacket to cool the head to the setpoint.
+                           The head jacket has become plugged with deposits and can no longer cool. The throttle
+                           valve at the exit of the head jacket may be turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">74</td> 
+                        <td class="shading-default left top">Low Zone 1 Temperature</td> 
+                        <td class="shading-default left top">The zone temperature has been below the formula setpoint less the formula alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">The steam for temperature control is turned off and it is needed to attain the set
+                           temperature. The formula setpoint for this item is too high because the process needs
+                           to run at a lower temperature.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">75</td> 
+                        <td class="shading-default left top">High Zone 2 Temperature</td> 
+                        <td class="shading-default left top">The zone temperature has been above the formula setpoint plus the formula alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">There is possibly too much steam injection in the Extruder barrel. The formula setpoint
+                           for this item is too low because the process needs to run at a higher temperature.
+                           There is not enough cooling capacity in the jacket to cool the head to the setpoint.
+                           The head jacket has become plugged with deposits and can no longer cool. The throttle
+                           valve at the exit of the head jacket may be turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">76</td> 
+                        <td class="shading-default left top">Low Zone 2 Temperature</td> 
+                        <td class="shading-default left top">The zone temperature has been below the formula setpoint less the formula alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">The steam for temperature control is turned off and it is needed to attain the set
+                           temperature. The formula setpoint for this item is too high because the process needs
+                           to run at a lower temperature.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">77</td> 
+                        <td class="shading-default left top">High Zone 3 Temperature</td> 
+                        <td class="shading-default left top">The zone temperature has been above the formula setpoint plus the formula alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">There is possibly too much steam injection in the Extruder barrel. The formula setpoint
+                           for this item is too low because the process needs to run at a higher temperature.
+                           There is not enough cooling capacity in the jacket to cool the head to the setpoint.
+                           The head jacket has become plugged with deposits and can no longer cool. The throttle
+                           valve at the exit of the head jacket may be turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">78</td> 
+                        <td class="shading-default left top">Low Zone 3 Temperature</td> 
+                        <td class="shading-default left top">The zone temperature has been below the formula setpoint less the formula alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">The steam for temperature control is turned off and it is needed to attain the set
+                           temperature. The formula setpoint for this item is too high because the process needs
+                           to run at a lower temperature.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">79</td> 
+                        <td class="shading-default left top">High Zone 4 Temperature</td> 
+                        <td class="shading-default left top">The zone temperature has been above the formula setpoint plus the formula alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">There is possibly too much steam injection in the Extruder barrel. The formula setpoint
+                           for this item is too low because the process needs to run at a higher temperature.
+                           There is not enough cooling capacity in the jacket to cool the head to the setpoint.
+                           The head jacket has become plugged with deposits and can no longer cool. The throttle
+                           valve at the exit of the head jacket may be turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">80</td> 
+                        <td class="shading-default left top">Low Zone 4 Temperature</td> 
+                        <td class="shading-default left top">The zone temperature has been below the formula setpoint less the formula alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">The steam for temperature control is turned off and it is needed to attain the set
+                           temperature. The formula setpoint for this item is too high because the process needs
+                           to run at a lower temperature.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">81</td> 
+                        <td class="shading-default left top">High Zone 5 Temperature</td> 
+                        <td class="shading-default left top">The zone temperature has been above the formula setpoint plus the formula alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">There is possibly too much steam injection in the Extruder barrel. The formula setpoint
+                           for this item is too low because the process needs to run at a higher temperature.
+                           There is not enough cooling capacity in the jacket to cool the head to the setpoint.
+                           The head jacket has become plugged with deposits and can no longer cool. The throttle
+                           valve at the exit of the head jacket may be turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">82</td> 
+                        <td class="shading-default left top">Low Zone 5 Temperature</td> 
+                        <td class="shading-default left top">The zone temperature has been below the formula setpoint less the formula alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">The steam for temperature control is turned off and it is needed to attain the set
+                           temperature. The formula setpoint for this item is too high because the process needs
+                           to run at a lower temperature.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">83</td> 
+                        <td class="shading-default left top">High Zone 6 Temperature</td> 
+                        <td class="shading-default left top">The zone temperature has been above the formula setpoint plus the formula alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">There is possibly too much steam injection in the Extruder barrel. The formula setpoint
+                           for this item is too low because the process needs to run at a higher temperature.
+                           There is not enough cooling capacity in the jacket to cool the head to the setpoint.
+                           The head jacket has become plugged with deposits and can no longer cool. The throttle
+                           valve at the exit of the head jacket may be turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">84</td> 
+                        <td class="shading-default left top">Low Zone 6 Temperature</td> 
+                        <td class="shading-default left top">The zone temperature has been below the formula setpoint less the formula alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">The steam for temperature control is turned off and it is needed to attain the set
+                           temperature. The formula setpoint for this item is too high because the process needs
+                           to run at a lower temperature.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">85</td> 
+                        <td class="shading-default left top">Preconditioner Water at Limit</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">86</td> 
+                        <td class="shading-default left top">Preconditioner Steam at Limit</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">87</td> 
+                        <td class="shading-default left top">Extruder Water at Limit</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">88</td> 
+                        <td class="shading-default left top">Extruder Steam at Limit</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">89</td> 
+                        <td class="shading-default left top">Liquid 1 at Limit</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">90</td> 
+                        <td class="shading-default left top">Liquid 1 at Limit</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">91</td> 
+                        <td class="shading-default left top">Liquid 1 at Limit</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">92</td> 
+                        <td class="shading-default left top">Liquid 1 at Limit</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">93</td> 
+                        <td class="shading-default left top">Liquid 1 at Limit</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">94</td> 
+                        <td class="shading-default left top">Liquid 1 at Limit</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">95</td> 
+                        <td class="shading-default left top">Liquid 1 at Limit</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">96</td> 
+                        <td class="shading-default left top">Liquid 1 at Limit</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">97</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">98</td> 
+                        <td class="shading-default left top">High/High Conditioning Cylinder Steam Flow</td> 
+                        <td class="shading-default left top">The preconditioner steam flow rate has been above its maximum set by Wenger for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check to make sure the flow meter is not sending a false value. Check for vibration
+                           near the meter. If your setpoint is 100% of the analog scale you may be adding too
+                           much steam even though it looks like you are achieving setpoint.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">99</td> 
+                        <td class="shading-default left top">High Conditioning Cylinder Steam Flow</td> 
+                        <td class="shading-default left top">The preconditioner steam flow rate has been above the formula setpoint plus the alarm
+                           offset for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">You may need to close a few injection nozzles on the preconditioner. This will usually
+                           help the system control steam better.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">100</td> 
+                        <td class="shading-default left top">Low Conditioning Cylinder Steam Flow</td> 
+                        <td class="shading-default left top">The preconditioner steam flow rate has been below the formula setpoint less the alarm
+                           offset for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">You may need to open some injection nozzles on the preconditioner. However, if you
+                           are getting the high and the low alarm you should close the nozzles down to provide
+                           restriction for the control valve to work against.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">101</td> 
+                        <td class="shading-default left top">Low/Low Conditioning Cylinder Steam Flow</td> 
+                        <td class="shading-default left top">The preconditioner steam flow rate has been below its minimum set by Wenger for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Someone may have turned off the steam or the boiler has quit running. The steam injection
+                           ports may be plugged with material.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">102</td> 
+                        <td class="shading-default left top">High/High Conditioning Cylinder Water Flow</td> 
+                        <td class="shading-default left top">The preconditioner water flow rate has been above its maximum set by Wenger for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check to make sure the flow meter is not sending a false value. Check for vibration
+                           near the meter. If your setpoint is 100% of the analog scale you may be adding too
+                           much water even though it appears you are achieving setpoint.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">103</td> 
+                        <td class="shading-default left top">High Conditioning Cylinder Water Flow</td> 
+                        <td class="shading-default left top">The preconditioner water flow rate has been above the formula setpoint plus the alarm
+                           offset for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Something may have changed to make the system control different than before like increased
+                           water pressure or removing the nozzles. You may need to re-tune the PID. You could
+                           also be having trouble with the filter or nozzles plugging then getting free.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">104</td> 
+                        <td class="shading-default left top">Low Conditioning Cylinder Water Flow</td> 
+                        <td class="shading-default left top">The preconditioner water flow rate has been below the formula setpoint less the alarm
+                           offset for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Your nozzles are getting plugged or the in line filter is getting plugged. The line
+                           pressure has decreased.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">105</td> 
+                        <td class="shading-default left top">Low/Low Conditioning Cylinder Water Flow</td> 
+                        <td class="shading-default left top">The preconditioner water flow rate has been below its minimum set by Wenger for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Either the injection nozzles or filter is completely plugged, or the water has been
+                           turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">106</td> 
+                        <td class="shading-default left top">High/High Extruder Steam Flow</td> 
+                        <td class="shading-default left top">The extruder steam flow rate has been above its maximum set by Wenger for longer than
+                           the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check to make sure the flow meter is not sending a false value. Check for vibration
+                           near the meter. If your setpoint is 100% of the analog scale you may be adding too
+                           much steam even though it looks like you are achieving setpoint.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJADBBCCD0">107</span></td> 
+                        <td class="shading-default left top">High Extruder Steam Flow</td> 
+                        <td class="shading-default left top">The extruder steam flow rate has been above the formula setpoint plus the alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">You may need to close a few injection nozzles on the extruder. This will usually help
+                           the system control steam better.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">108</td> 
+                        <td class="shading-default left top">Low Extruder Steam Flow</td> 
+                        <td class="shading-default left top">The extruder steam flow rate has been below the formula setpoint less the alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">You may need to open some injection nozzles on the extruder. However, if you are getting
+                           the high and the low alarms you should close the nozzles down to provide restriction
+                           for the control valve to work against. The injection nozzles may be partially plugged
+                           with material.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAFCCDBF4">109</span></td> 
+                        <td class="shading-default left top">Low/Low Extruder Steam Flow</td> 
+                        <td class="shading-default left top">The extruder steam flow rate has been below its minimum set by Wenger for longer than
+                           the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Someone may have turned off the steam or the boiler has quit running. The steam injection
+                           ports may be plugged with material.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">110</td> 
+                        <td class="shading-default left top">High/High Extruder Water Flow</td> 
+                        <td class="shading-default left top">The extruder water flow rate has been above its maximum set by Wenger for longer than
+                           the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check to make sure the flow meter is not sending a false value. Check for vibration
+                           near the meter. If your setpoint is 100% of the analog scale you may be putting in
+                           too much water even though it looks like you are achieving setpoint.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAEBHIIF4">111</span></td> 
+                        <td class="shading-default left top">High Extruder Water Flow</td> 
+                        <td class="shading-default left top">The extruder water flow rate has been above the formula setpoint plus the alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">You may have the water pressure too high and the control system is having problems
+                           controlling flow. If the extruder is surging this can cause problems with liquid flow.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">112</td> 
+                        <td class="shading-default left top">Low Extruder Water Flow</td> 
+                        <td class="shading-default left top">The extruder water flow rate has been below the formula setpoint less the alarm offset
+                           for longer than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">The injection nozzle may be partially plugged with material. The water pressure is
+                           going down due to high demand.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJABJEAJG6">113</span></td> 
+                        <td class="shading-default left top">Low/Low Extruder Water Flow</td> 
+                        <td class="shading-default left top">The extruder water flow rate has been below its minimum set by Wenger for longer than
+                           the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Someone may have turned off the water or a water pump has quit running.</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">112</td> 
+                        <td class="shading-default left top">High/High Liquid #1 Flow</td> 
+                        <td class="shading-default left top">The liquid flow meter has sensed a flow reading above the  maximum value set by Wenger
+                           for more than 10 seconds.  
+                        </td> 
+                        <td class="shading-default left top">Check to make sure the flow meter is not sending a false value. Check for vibration
+                           near the meter. If your setpoint is 100% of the analog scale you may be putting in
+                           too much liquid even though it looks like you are achieving setpoint.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">113</td> 
+                        <td class="shading-default left top">High Liquid #1 Flow</td> 
+                        <td class="shading-default left top">The liquid flow meter has sensed a flow reading above the formula setpoint plus the
+                           alarm offset for more than 10 seconds.
+                        </td> 
+                        <td class="shading-default left top">If this is inverter controlled you may have the pressure set too high. You can reduce
+                           the pressure by opening up the pressure relief on the pump or the one supplied by
+                           Wenger.   
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">114</td> 
+                        <td class="shading-default left top">Low Liquid #1 Flow</td> 
+                        <td class="shading-default left top">The liquid flow meter has sensed a flow reading below the formula setpoint minus the
+                           alarm offset for more than 10 seconds.
+                        </td> 
+                        <td class="shading-default left top">Your nozzles are getting plugged or the in line filter is getting plugged. The line
+                           pressure has decreased.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">115</td> 
+                        <td class="shading-default left top">Low/Low Liquid #1 Flow</td> 
+                        <td class="shading-default left top">The liquid flow meter has sensed a flow reading below the minimum set by Wenger for
+                           more than 10 seconds. 
+                        </td> 
+                        <td class="shading-default left top">The injection nozzles or the filter is completely plugged. The liquid pump has been
+                           turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">116</td> 
+                        <td class="shading-default left top">Maintenance Required</td> 
+                        <td class="shading-default left top">It is time for one of the extruder system's scheduled maintenance task to be completed.</td> 
+                        <td class="shading-default left top">There are a handful of scheduled maintenance tasks that need to be completed at regular
+                           intervals defined by Wenger. Instructions for what needs to be done are displayed
+                           on the Extruder Maintenance screen.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">117</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">118</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">119</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">120</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">121</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">122</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">123</td> 
+                        <td class="shading-default left top">Spare</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAGCFFEI5">124</span></td> 
+                        <td class="shading-default left top">Preconditioner Motor 1 Run Forward Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the preconditioner motor to run forward but it has not responded within
+                           the allotted time.
+                        </td> 
+                        <td class="shading-default left top">Check the overloads or breaker to make sure the motor is getting power. If the motor
+                           runs then the problem is in the feedback of the auxiliary signal. If the motor starter
+                           doesn't engage, the starter may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJACHAICG7">125</span></td> 
+                        <td class="shading-default left top">Preconditioner Motor 1 Run Reverse Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the preconditioner motor to run reverse but it has not responded within
+                           the allotted time.
+                        </td> 
+                        <td class="shading-default left top">Check the overloads or breaker to make sure the motor is getting power. If the motor
+                           runs then the problem is in the feedback of the auxiliary signal. If the motor starter
+                           doesn't engage, the starter may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAHIDHBC4">126</span></td> 
+                        <td class="shading-default left top">Preconditioner Motor 2 Run Forward Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the preconditioner motor to run forward but it has not responded within
+                           the allotted time.
+                        </td> 
+                        <td class="shading-default left top">Check the overloads or breaker to make sure the motor is getting power. If the motor
+                           runs then the problem is in the feedback of the auxiliary signal. If the motor starter
+                           doesn't engage, the starter may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAEDAAHE8">127</span></td> 
+                        <td class="shading-default left top">Preconditioner Motor 2 Run Reverse Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the preconditioner motor to run reverse but it has not responded within
+                           the allotted time.
+                        </td> 
+                        <td class="shading-default left top">Check the overloads or breaker to make sure the motor is getting power. If the motor
+                           runs then the problem is in the feedback of the auxiliary signal. If the motor starter
+                           doesn't engage, the starter may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">128</td> 
+                        <td class="shading-default left top">Surge Bin Slidegate Failure</td> 
+                        <td class="shading-default left top">The surge bin slidegate fails to fully open or close within the allotted time after
+                           commanded to do so, or the slidegate is neither fully open nor the fully closed.
+                        </td> 
+                        <td class="shading-default left top">Something is blocking the slidegate from moving to its commanded position. The slidegate
+                           has a mechanical problem that is preventing its movement. The problem may be with
+                           the system air to the slidegate. If the bin is continually overfilling the slidegate
+                           may get packed with material and close slowly or not at all.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">129</td> 
+                        <td class="shading-default left top">Failure to Fill Surge Bin</td> 
+                        <td class="shading-default left top">The surge bin level failed to reach the high limit within the allotted time after
+                           the <span class="acronym" translate="no">PLC</span> has commanded a refill.
+                        </td> 
+                        <td class="shading-default left top">There may be problems with the conveying system to the surge bin. The bin upstream
+                           of the surge bin may be empty. The high-level sensor in the surge bin may not be functioning.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">130</td> 
+                        <td class="shading-default left top">Live Bin Low Level</td> 
+                        <td class="shading-default left top">The weight of material in the live bin has fallen below the configured low level.
+                           This alarm can become active only for gravimetric feeder control. The live bin level
+                           is based on the weight input from the load cells.
+                        </td> 
+                        <td class="shading-default left top">The system has run out of material and failed to refill the bin. Physically check
+                           to see if the bin is low, perhaps the load cells are not functioning properly. If
+                           the load cells are not working, switch to Volumetric control mode. The slidegate may
+                           have been placed in the OFF position.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAEJDCCJ4">131</span></td> 
+                        <td class="shading-default left top">Live Bin Empty</td> 
+                        <td class="shading-default left top">The live bin weight falls below the configured empty weight. This alarm can become
+                           active only for gravimetric feeder control.
+                        </td> 
+                        <td class="shading-default left top">The system will shutdown because of this alarm. Verify that the live bin is truly
+                           empty or near empty. Verify that the slidegate is in Auto control mode. If the load
+                           cells are not working, switch to Volumetric control mode.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">132</td> 
+                        <td class="shading-default left top">Failure to Fill Live Bin</td> 
+                        <td class="shading-default left top">The weight of material in the live bin failed to reach the high level within the allotted
+                           time after refill was commanded. When in feeder Gravimetric control mode the high
+                           level is based on a configured weight. When in feeder Volumetric control mode the
+                           high level is based on a high level sensor signal.
+                        </td> 
+                        <td class="shading-default left top">Either the surge bin had insufficient dry feed to fill the live bin, or dry feed is
+                           not able to flow freely from the surge bin to the live bin.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">133</td> 
+                        <td class="shading-default left top">Live Bin Weight Exceeds Calibrated Maximum Weight</td> 
+                        <td class="shading-default left top">The weight reported by the load cells is above the weight that the <span class="acronym" translate="no">PLC</span> has calculated the bin can hold based on bin volume and bulk density.
+                        </td> 
+                        <td class="shading-default left top">The Dry Feed Bulk Density is not correct. The Slidegate was left in HAND and the bin
+                           overfilled. LIW may not be accurate until the bin unpacks. If this keeps happening
+                           you should lower the high level % fill in the formula.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">134</td> 
+                        <td class="shading-default left top">Live Bin Door Not Closed</td> 
+                        <td class="shading-default left top">The Live Bin door is not closed. This is sensed by the limit switch attached to the
+                           Live Bin door. The Live Bin Motor and Feeder Screw HOAs are forced to the OFF mode
+                           when this alarm occurs
+                        </td> 
+                        <td class="shading-default left top">If the door appears to be closed perhaps the switch needs adjusting or is bad.</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAFJDFFF9">135</span></td> 
+                        <td class="shading-default left top">Live Bin Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> is telling the Live Bin Motor to run but it has not responded for at least 5 seconds.
+                        </td> 
+                        <td class="shading-default left top">Check the overloads or breaker to make sure the motor is getting power. If the motor
+                           actually runs then the problem is in the feedback of the auxiliary signal. If the
+                           motor starter doesn't pull in you may have a bad starter.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">136</td> 
+                        <td class="shading-default left top">High Dry Feed Rate</td> 
+                        <td class="shading-default left top">The Dry Feed Rate is above the setpoint plus the alarm offset for 3 minutes. This
+                           alarm is enabled only in the GRAVIMETRIC mode.
+                        </td> 
+                        <td class="shading-default left top">A disturbance has caused the Loss-In-Weight to think the Feed Rate is too high. If
+                           the system is having trouble controlling you may want to switch to VOLUMETRIC mode
+                           until you can find the problem.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">137</td> 
+                        <td class="shading-default left top">Low Dry Feed Rate</td> 
+                        <td class="shading-default left top">The Dry Feed Rate is below the setpoint minus the alarm offset for 1 minute. This
+                           alarm is enabled only in the GRAVIMETRIC mode.
+                        </td> 
+                        <td class="shading-default left top">This alarm could be caused by a disturbance or something blocking the feed from entering
+                           the feeder screw properly. Material could be bridging in the Live bin. The Live Bin
+                           may not be free to move like it should be in which case the actual Loss-In-Weight
+                           is much greater than what the <span class="acronym" translate="no">PLC</span> thinks. If the system is having trouble controlling you may want to switch to VOLUMETRIC
+                           mode until you can find the problem.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAJBAGBH6">138</span></td> 
+                        <td class="shading-default left top">Low/Low Dry Feed Rate</td> 
+                        <td class="shading-default left top">The Dry Feed Rate is below 15% of desired Feedrate setpoint for 90 seconds.  This
+                           alarm is enabled only in the GRAVIMETRIC mode.
+                        </td> 
+                        <td class="shading-default left top">You may have a severe case of the problems mentioned for Alarm 137. Switch to VOLUMETRIC
+                           if necessary.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">139</td> 
+                        <td class="shading-default left top">Feeder Screw Door Not Closed</td> 
+                        <td class="shading-default left top">Feeder Screw door is not closed. This is sensed by the limit switch attached to the
+                           Feeder Screw door. The Feeder Screw HOA is forced OFF when this alarm occurs.
+                        </td> 
+                        <td class="shading-default left top">If the door appears to be closed perhaps the switch needs adjusting or is bad.</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAEHFIEI1">140</span></td> 
+                        <td class="shading-default left top">Feeder Screw Motor Fault</td> 
+                        <td class="shading-default left top">The feeder screw motor does not run, or the feeder screw speed is below half the desired
+                           speed for 10 seconds.
+                        </td> 
+                        <td class="shading-default left top">Check the inverter to make sure it is not faulted. The tachometer may be broken. If
+                           the feeder runs when you try to start it for the first 10 seconds, the problem is
+                           with the tachometer or the running signal feedback.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">141</td> 
+                        <td class="shading-default left top">Preconditioner Safety Open or Not Locked</td> 
+                        <td class="shading-default left top">The preconditioner door is not closed and locked. This is sensed by the Fortress lock
+                           attached to the preconditioner doors. The preconditioner HOA is forced OFF when this
+                           alarm occurs.
+                        </td> 
+                        <td class="shading-default left top">All the Fortress lock keys need to be inserted into the Fortress lock housing and
+                           turned to their safe positions. When this condition is satisfied, the <span class="acronym" translate="no">PLC</span> energizes the locking solenoid inside the Fortress lock housing, causing the locked
+                           signal back to the <span class="acronym" translate="no">PLC</span> to change states. There may be a problem with the Fortress lock or with the status
+                           signal back to the <span class="acronym" translate="no">PLC</span>.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">142</td> 
+                        <td class="shading-default left top">HIP Steam Mix Valve Position Fault</td> 
+                        <td class="shading-default left top">There is a malfunction related to either the SMI open solenoid or the SMI close solenoid.
+                           
+                        </td> 
+                        <td class="shading-default left top">Verify that each solenoid functions when commanded, and verify that the status signal
+                           from each solenoid back to the <span class="acronym" translate="no">PLC</span> is correct.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">143</td> 
+                        <td class="shading-default left top">Preconditioner Safety Not in Place</td> 
+                        <td class="shading-default left top">The Fortress lock attached to the preconditioner doors does not have all the keys
+                           inserted into the housing and turned to their safe positions.
+                        </td> 
+                        <td class="shading-default left top">All the Fortress lock keys need to be inserted into the Fortress lock housing and
+                           turned to their safe positions.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAEBFGFE0">144</span></td> 
+                        <td class="shading-default left top">Downspout Not Connected</td> 
+                        <td class="shading-default left top">The downspout proof limit switch is not closed.  The preconditioner HOA, downspout
+                           HOA and extruder HOA are forced OFF when this alarm occurs.
+                        </td> 
+                        <td class="shading-default left top">This proof switch is mounted in a wet area where moisture can eventually work its
+                           way inside the switch and cause problems. 
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">145</td> 
+                        <td class="shading-default left top">Downspout Diverter Failure</td> 
+                        <td class="shading-default left top">The Downspout does not divert to Reject when commanded to do so, or does not divert
+                           to Process when commanded to do so, or if neither the Reject nor Process limit switch
+                           is closed for 10 seconds, or if both the Reject and Process limit switch are both
+                           closed for 10 seconds.
+                        </td> 
+                        <td class="shading-default left top">These two limit switches are also mounted in a wet area and could fail if not well
+                           sealed. The Downspout may be binding or plugged with material into the throat of the
+                           extruder and not able to move very freely. The air pressure to the Downspout may be
+                           too low to move the Downspout in the 10 seconds that is required.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">146</td> 
+                        <td class="shading-default left top">Extruder Lubrication Pump Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the lubrication pump motor to run but it has not responded for at least
+                           5 seconds.
+                        </td> 
+                        <td class="shading-default left top">Check the overloads or breaker to make sure the motor is getting power. If the motor
+                           runs then the problem is in the feedback of the auxiliary signal. If the motor starter
+                           doesn't engage, the starter may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAFEJFDA4">147</span></td> 
+                        <td class="shading-default left top">Low Extruder Lubrication Oil Flow</td> 
+                        <td class="shading-default left top">No lubrication oil flow is sensed for 10 seconds after the extruder and the lubrication
+                           pump have been running for 3 minutes.
+                        </td> 
+                        <td class="shading-default left top">The lubrication pump may not be running. The switch has a sensitivity adjustment that
+                           may need to be adjusted.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAHHADAE2">148</span></td> 
+                        <td class="shading-default left top">Extruder Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Someone may have lengthened the Wye-Delta time and the run contact is not engaging
+                           before the 15 second time is done. Check the overloads or breaker to make sure the
+                           motor is getting power. If the motor runs then the problem is in the feedback of the
+                           auxiliary signal. If the motor starter doesn't engage, the starter may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAJBCCCH4">149</span></td> 
+                        <td class="shading-default left top">High Extruder Motor Load</td> 
+                        <td class="shading-default left top">The extruder motor load is above the high value set in the formula for 5 seconds.
+                           The overload recovery procedure (see <a href="001_001_001.html#BABGEFBCG0">General Information</a>) is started on the occurrence of this alarm.
+                        </td> 
+                        <td class="shading-default left top">There are many things that can cause a high motor load. Some of the less obvious are:
+                           Gravimetric feed system is delivering more than expected because of outside influence
+                           - Place feed system in Volumetric mode. The high load is set below 95-100% in the
+                           formula. The load meter is not correct. Double check the load with an ammeter.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJACBHFEC7">150</span></td> 
+                        <td class="shading-default left top">High/High Extruder Motor Load</td> 
+                        <td class="shading-default left top">The load as reported by the power transducer or variable speed drive has been above
+                           the value set by Wenger for over 5 seconds. 
+                        </td> 
+                        <td class="shading-default left top">This is probably caused by a total loss of water or some other large loss of fluid
+                           to the extruder. This could also be caused if something disturbs the LIW system.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAIGAAJB9">151</span></td> 
+                        <td class="shading-default left top">Knife Hood Not Closed</td> 
+                        <td class="shading-default left top">The knife hood proof switch is open</td> 
+                        <td class="shading-default left top">Vibration or a plugged outlet can cause the knife hood to move enough to open the
+                           hood proof switch.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">152</td> 
+                        <td class="shading-default left top">Conehead Pressure Sensor Failure</td> 
+                        <td class="shading-default left top">The conehead pressure sensor fails or the input from the sensor is beyond an acceptable
+                           range for more than 1 minute.
+                        </td> 
+                        <td class="shading-default left top">The connector that routes the signal from the sensor back to the conehead may be faulty,
+                           or the pressure sensor itself may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJADEBBIE4">153</span></td> 
+                        <td class="shading-default left top">High Conehead Pressure</td> 
+                        <td class="shading-default left top">The pressure measured by the conehead pressure sensor has been above the level specified
+                           in the formula for over 5 seconds. The overload recovery procedure (see <a href="001_001_001.html#BABGEFBCG0">General Information</a>) is started on the occurrence of this alarm.
+                        </td> 
+                        <td class="shading-default left top">Check the formula to make sure the high conehead pressure limit is not set too low.</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAFDCAIF0">154</span></td> 
+                        <td class="shading-default left top">High/High Conehead Pressure</td> 
+                        <td class="shading-default left top">The pressure measured by the conehead pressure sensor has been above the level specified
+                           by Wenger for over 1 second.
+                        </td> 
+                        <td class="shading-default left top">Pressure at this level may harm the extruder and/or the die. Make sure all liquids
+                           are entering the process at the rate specified by your formula. Make sure the pressure
+                           sensor is functioning properly by checking it against an analog gauge.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">155</td> 
+                        <td class="shading-default left top">Knife Disconnect Not Closed</td> 
+                        <td class="shading-default left top">Either the knife disconnect is open or the knife hood proof switch is open. The knife
+                           motor HOA is forced OFF when this alarm occurs.
+                        </td> 
+                        <td class="shading-default left top">Vibration or a plugged outlet can cause the knife hood to move enough to open the
+                           hood proof switch.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAGHBJCG4">156</span></td> 
+                        <td class="shading-default left top">Knife Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the inverter to make sure it is not faulted. Make sure the knife is not too
+                           tight against the surface of the die.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">157</td> 
+                        <td class="shading-default left top">Liquid 1 Pump Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the inverter to make sure it is not faulted. Make sure the pump is not dead-headed,
+                           otherwise the pump may build up too much pressure and overload.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">158</td> 
+                        <td class="shading-default left top">Liquid 1 Agitator Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the overloads or breaker to make sure the motor is getting power. If the motor
+                           runs then the problem is in the feedback of the auxiliary signal. If the motor starter
+                           doesn't engage, the starter may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">159</td> 
+                        <td class="shading-default left top">Liquid 2 Pump Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the inverter to make sure it is not faulted. Make sure the pump is not dead-headed,
+                           otherwise the pump may build up too much pressure and overload.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">160</td> 
+                        <td class="shading-default left top">Liquid 2 Agitator Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the overloads or breaker to make sure the motor is getting power. If the motor
+                           runs then the problem is in the feedback of the auxiliary signal. If the motor starter
+                           doesn't engage, the starter may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">161</td> 
+                        <td class="shading-default left top">Liquid 3 Pump Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the inverter to make sure it is not faulted. Make sure the pump is not dead-headed,
+                           otherwise the pump may build up too much pressure and overload.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">162</td> 
+                        <td class="shading-default left top">Liquid 3 Agitator Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the overloads or breaker to make sure the motor is getting power. If the motor
+                           runs then the problem is in the feedback of the auxiliary signal. If the motor starter
+                           doesn't engage, the starter may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">163</td> 
+                        <td class="shading-default left top">Liquid 4 Pump Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the inverter to make sure it is not faulted. Make sure the pump is not dead-headed,
+                           otherwise the pump may build up too much pressure and overload.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">164</td> 
+                        <td class="shading-default left top">Liquid 4 Agitator Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the overloads or breaker to make sure the motor is getting power. If the motor
+                           runs then the problem is in the feedback of the auxiliary signal. If the motor starter
+                           doesn't engage, the starter may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">165</td> 
+                        <td class="shading-default left top">Liquid 5 Pump Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the inverter to make sure it is not faulted. Make sure the pump is not dead-headed,
+                           otherwise the pump may build up too much pressure and overload.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">166</td> 
+                        <td class="shading-default left top">Liquid 5 Agitator Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the overloads or breaker to make sure the motor is getting power. If the motor
+                           runs then the problem is in the feedback of the auxiliary signal. If the motor starter
+                           doesn't engage, the starter may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">167</td> 
+                        <td class="shading-default left top">Liquid 6 Pump Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the inverter to make sure it is not faulted. Make sure the pump is not dead-headed,
+                           otherwise the pump may build up too much pressure and overload.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">168</td> 
+                        <td class="shading-default left top">Liquid 6 Agitator Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the overloads or breaker to make sure the motor is getting power. If the motor
+                           runs then the problem is in the feedback of the auxiliary signal. If the motor starter
+                           doesn't engage, the starter may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">169</td> 
+                        <td class="shading-default left top">Liquid 7 Pump Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the inverter to make sure it is not faulted. Make sure the pump is not dead-headed,
+                           otherwise the pump may build up too much pressure and overload.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">170</td> 
+                        <td class="shading-default left top">Liquid 7 Agitator Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the overloads or breaker to make sure the motor is getting power. If the motor
+                           runs then the problem is in the feedback of the auxiliary signal. If the motor starter
+                           doesn't engage, the starter may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">171</td> 
+                        <td class="shading-default left top">Liquid 8 Pump Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the inverter to make sure it is not faulted. Make sure the pump is not dead-headed,
+                           otherwise the pump may build up too much pressure and overload.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">172</td> 
+                        <td class="shading-default left top">Liquid 8 Agitator Motor Fault</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has commanded the motor to run but it has not responded within the allotted time
+                           limit.
+                        </td> 
+                        <td class="shading-default left top">Check the overloads or breaker to make sure the motor is getting power. If the motor
+                           runs then the problem is in the feedback of the auxiliary signal. If the motor starter
+                           doesn't engage, the starter may be faulty.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJABIICDB9">173</span></td> 
+                        <td class="shading-default left top">Downstream Not Ready</td> 
+                        <td class="shading-default left top">The <span class="acronym" translate="no">PLC</span> has not received the downstream ready signal from the rest of the factory equipment
+                           for at least 5 seconds after a startup is initiated or while operating the Extruder
+                           anytime thereafter.
+                        </td> 
+                        <td class="shading-default left top">Check the downstream equipment to make sure everything is ready for product.</td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">182</td> 
+                        <td class="shading-default left top">High/High Liquid #1 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above its maximum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check to make sure the flow meter is not sending a false value. Check for vibration
+                           near the meter. If your setpoint is 100% of the analog scale you may be adding too
+                           much liquid even though it appears that you are achieving setpoint.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">183</td> 
+                        <td class="shading-default left top">High Liquid #1 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above the formula setpoint plus the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">If this is inverter controlled, you may have the pressure set too high. You can reduce
+                           the pressure by opening the pressure relief on the pump or the one supplied by Wenger.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">184</td> 
+                        <td class="shading-default left top">Low Liquid #1 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below the formula setpoint less the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Your nozzles are getting plugged or the in-line filter is getting plugged. The line
+                           pressure has decreased.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAGDGDHA5">185</span></td> 
+                        <td class="shading-default left top">Low/Low Liquid #1 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below its minimum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">The injection nozzles or the filter is completely plugged. The liquid pump has been
+                           turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">186</td> 
+                        <td class="shading-default left top">High/High Liquid #2 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above its maximum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check to make sure the flow meter is not sending a false value. Check for vibration
+                           near the meter. If your setpoint is 100% of the analog scale you may be adding too
+                           much liquid even though it appears that you are achieving setpoint.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">187</td> 
+                        <td class="shading-default left top">High Liquid #2 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above the formula setpoint plus the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">If this is inverter controlled, you may have the pressure set too high. You can reduce
+                           the pressure by opening the pressure relief on the pump or the one supplied by Wenger.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">188</td> 
+                        <td class="shading-default left top">Low Liquid #2 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below the formula setpoint less the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Your nozzles are getting plugged or the in-line filter is getting plugged. The line
+                           pressure has decreased.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAIGFGJB1">189</span></td> 
+                        <td class="shading-default left top">Low/Low Liquid #2 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below its minimum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">The injection nozzles or the filter is completely plugged. The liquid pump has been
+                           turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">190</td> 
+                        <td class="shading-default left top">High/High Liquid #3 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above its maximum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check to make sure the flow meter is not sending a false value. Check for vibration
+                           near the meter. If your setpoint is 100% of the analog scale you may be adding too
+                           much liquid even though it appears that you are achieving setpoint.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">191</td> 
+                        <td class="shading-default left top">High Liquid #3 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above the formula setpoint plus the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">If this is inverter controlled, you may have the pressure set too high. You can reduce
+                           the pressure by opening the pressure relief on the pump or the one supplied by Wenger.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">192</td> 
+                        <td class="shading-default left top">Low Liquid #3 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below the formula setpoint less the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Your nozzles are getting plugged or the in-line filter is getting plugged. The line
+                           pressure has decreased.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJADGCDIH4">193</span></td> 
+                        <td class="shading-default left top">Low/Low Liquid #3 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below its minimum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">The injection nozzles or the filter is completely plugged. The liquid pump has been
+                           turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">194</td> 
+                        <td class="shading-default left top">High/High Liquid 41 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above its maximum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check to make sure the flow meter is not sending a false value. Check for vibration
+                           near the meter. If your setpoint is 100% of the analog scale you may be adding too
+                           much liquid even though it appears that you are achieving setpoint.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">195</td> 
+                        <td class="shading-default left top">High Liquid #4 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above the formula setpoint plus the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">If this is inverter controlled, you may have the pressure set too high. You can reduce
+                           the pressure by opening the pressure relief on the pump or the one supplied by Wenger.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">196</td> 
+                        <td class="shading-default left top">Low Liquid #4 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below the formula setpoint less the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Your nozzles are getting plugged or the in-line filter is getting plugged. The line
+                           pressure has decreased.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAFDCCGJ9">197</span></td> 
+                        <td class="shading-default left top">Low/Low Liquid #4 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below its minimum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">The injection nozzles or the filter is completely plugged. The liquid pump has been
+                           turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">198</td> 
+                        <td class="shading-default left top">High/High Liquid #5 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above its maximum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check to make sure the flow meter is not sending a false value. Check for vibration
+                           near the meter. If your setpoint is 100% of the analog scale you may be adding too
+                           much liquid even though it appears that you are achieving setpoint.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">199</td> 
+                        <td class="shading-default left top">High Liquid #5 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above the formula setpoint plus the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">If this is inverter controlled, you may have the pressure set too high.  You can reduce
+                           the pressure by opening the pressure relief on the pump or the one supplied by Wenger.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">200</td> 
+                        <td class="shading-default left top">Low Liquid #5 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below the formula setpoint less the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Your nozzles are getting plugged or the in-line filter is getting plugged. The line
+                           pressure has decreased.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJADEHCJD0">201</span></td> 
+                        <td class="shading-default left top">Low/Low Liquid #5 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below its minimum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">The injection nozzles or the filter is completely plugged. The liquid pump has been
+                           turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">202</td> 
+                        <td class="shading-default left top">High/High Liquid #6 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above its maximum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check to make sure the flow meter is not sending a false value. Check for vibration
+                           near the meter. If your setpoint is 100% of the analog scale you may be adding too
+                           much liquid even though it appears that you are achieving setpoint.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">203</td> 
+                        <td class="shading-default left top">High Liquid #6 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above the formula setpoint plus the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">If this is inverter controlled, you may have the pressure set too high. You can reduce
+                           the pressure by opening the pressure relief on the pump or the one supplied by Wenger.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">204</td> 
+                        <td class="shading-default left top">Low Liquid #6 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below the formula setpoint less the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Your nozzles are getting plugged or the in-line filter is getting plugged. The line
+                           pressure has decreased.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJABJBIGJ6">205</span></td> 
+                        <td class="shading-default left top">Low/Low Liquid #6 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below its minimum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">The injection nozzles or the filter is completely plugged. The liquid pump has been
+                           turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">206</td> 
+                        <td class="shading-default left top">High/High Liquid #7 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above its maximum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check to make sure the flow meter is not sending a false value. Check for vibration
+                           near the meter. If your setpoint is 100% of the analog scale you may be adding too
+                           much liquid even though it appears that you are achieving setpoint.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">207</td> 
+                        <td class="shading-default left top">High Liquid #7 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above the formula setpoint plus the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">If this is inverter controlled, you may have the pressure set too high. You can reduce
+                           the pressure by opening the pressure relief on the pump or the one supplied by Wenger.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">208</td> 
+                        <td class="shading-default left top">Low Liquid #7 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below the formula setpoint less the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Your nozzles are getting plugged or the in-line filter is getting plugged. The line
+                           pressure has decreased.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAHDJJBA9">209</span></td> 
+                        <td class="shading-default left top">Low/Low Liquid #7 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below its minimum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">The injection nozzles or the filter is completely plugged. The liquid pump has been
+                           turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">210</td> 
+                        <td class="shading-default left top">High/High Liquid #8 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above its maximum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">Check to make sure the flow meter is not sending a false value. Check for vibration
+                           near the meter. If your setpoint is 100% of the analog scale you may be adding too
+                           much liquid even though it appears that you are achieving setpoint.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">211</td> 
+                        <td class="shading-default left top">High Liquid #8 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is above the formula setpoint plus the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">If this is inverter controlled, you may have the pressure set too high. You can reduce
+                           the pressure by opening the pressure relief on the pump or the one supplied by Wenger.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top">212</td> 
+                        <td class="shading-default left top">Low Liquid #8 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below the formula setpoint less the alarm offset for longer
+                           than the alarm timeout period.
+                        </td> 
+                        <td class="shading-default left top">Your nozzles are getting plugged or the in-line filter is getting plugged. The line
+                           pressure has decreased.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"><span id="CJAEJFCDD5">213</span></td> 
+                        <td class="shading-default left top">Low/Low Liquid #8 Flow</td> 
+                        <td class="shading-default left top">The liquid flow rate is below its minimum set by Wenger for longer than the alarm
+                           timeout period.
+                        </td> 
+                        <td class="shading-default left top">The injection nozzles or the filter is completely plugged. The liquid pump has been
+                           turned off.
+                        </td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                     <tr> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top">Shutdown:</td> 
+                        <td class="shading-default left top"></td> 
+                        <td class="shading-default left top"></td> 
+                     </tr> 
+                  </tbody> 
+               </table>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_004_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_005_005.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_006_001.html">Next Section &gt;</a></li>
+                     <li><a href="001_006_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

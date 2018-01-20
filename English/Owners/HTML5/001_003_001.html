@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>APM Screens</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <h1 id="BABGEFBCG0"><span class="chapter-number">3</span> <span class="acronym" translate="no">APM</span> Screens
+               </h1>
+               <section>
+                  <h2 id="d6e1154"><span class="chapter-number">3.1</span> Information Common to All Screens
+                  </h2> 
+                  <section>
+                     <h3 id="d6e1158"><span class="chapter-number">3.1.1</span> Section Overview
+                     </h3> 
+                     <p>This section addresses some of the Automated Process Management (<span class="acronym" translate="no">APM</span>) software features that are common to many of the major <span class="acronym" translate="no">APM</span> screens. First discussed are the <span class="acronym" translate="no">APM</span> header and status bar, two features that are visible regardless of which <span class="acronym" translate="no">APM</span> screen is selected for display. Next discussed are the shapes that are commonly used
+                        to represent various types of Wenger extruder system components, such as motors, valves,
+                        pumps, etc. Also discussed are the graphical color conventions that are used to quickly
+                        convey status information of the various extruder system components. Finally, there
+                        is an extensive and detailed explanation of the various types of Hand-Off-Auto (<span class="acronym" translate="no">HOA</span>) faceplate’s that operators will frequently use to configure automatic control of
+                        the extruder system by the <span class="acronym" translate="no">PLC</span>. These classes of <span class="acronym" translate="no">HOA</span> faceplate’s are for fixed speed motors, variable speed motors, on/off valves, proportional
+                        flow control valves, and temperature controllers.
+                     </p>
+                  </section> 
+                  <section>
+                     <h3 id="d6e1187"><span class="chapter-number">3.1.2</span> Header and Status Bar
+                     </h3> 
+                     <div>
+                        <p>There are two regions that are always visible on the <span class="acronym" translate="no">APM</span> monitor, regardless of which <span class="acronym" translate="no">APM</span> screen is being displayed. These are the header and the status bar (see <a href="001_003_001.html#CHDCEJJGD1">Figure 3.1</a>).
+                        </p> 
+                        <figure id="CHDCEJJGD1">
+                           <figcaption><span class="figure-number">Figure 3.1</span> Main Screen
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_001.png"></figure> 
+                        <ol>
+                           <li><strong>Header Bar</strong> - This thin rectangular region that runs horizontally along the top of the monitor
+                              from the left edge to the right edge is itself composed of three fields that will
+                              be described in more detail below.
+                           </li> 
+                           <li><span class="acronym" translate="no">APM</span> <strong>Status Bar</strong> - This rectangular region along the bottom of the monitor displays various diagnostic
+                              messages.
+                           </li>
+                        </ol>
+                     </div> 
+                     <section>
+                        <h4 id="d6e1223"><span class="chapter-number">3.1.2.1</span> Main Screen Header - Left Zone
+                        </h4> 
+                        <p>The left side of the header displays the system status of the extruder (see <a href="001_003_001.html#CHDFGGIIB5">Figure 3.2</a>). System status (1) and (2) is an indication of the current overall operating state
+                           of the extruder system. For example, when the extruder has completed its startup sequence
+                           and is running, this region of the Header will display “Extruder Running”. When the
+                           system is not running, or has completed its shutdown sequence, this region of the
+                           Header will display “Extruder Stopped”. The beginning of specific key events in the
+                           startup and shutdown sequence will be displayed during the startup and shutdown of
+                           the system. Below the system status area is where information is displayed pertaining
+                           to the formula presently used to control the extruder. Both formula name (3) and revision
+                           (4) are displayed. Formulas will be discussed in later, <a href="001_003_008.html#id17AIFE00OYK">See Section 3.8, Formula Screen.</a>. Below the system status area is displayed the current date and time (5). The <span class="acronym" translate="no">APM</span> software user account under which the user is currently logged in is displayed (6),
+                           and the Wenger shop order number that was assigned to the customer's extruder system
+                           (7) is always displayed.
+                        </p> 
+                        <figure id="CHDFGGIIB5">
+                           <figcaption><span class="figure-number">Figure 3.2</span> Left Zone
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_002.png"></figure>
+                     </section> 
+                     <section>
+                        <h4 id="d6e1243"><span class="chapter-number">3.1.2.2</span> Main Screen Header - Mid Zone
+                        </h4> 
+                        <p>The mid region of the header (see <a href="001_003_001.html#CHDGGJFIE2">Figure 3.3</a>) displays several items unrelated to each other. The extruder load (1), displayed
+                           at the top in a light blue background color, is a measure of the extruder motor's
+                           energy consumption expressed as a percent of full load. By clicking the (Home) Main
+                           button (3), in a gray background color, the user can quickly return to the Main screen
+                           from any other <span class="acronym" translate="no">APM</span> screen. Between the extruder load display and the (Home) Main button is a space (2),
+                           shown empty in <a href="001_003_001.html#CHDCEJJGD1">Figure 3.1</a>, where “Emergency Stop” text will appear in a red foreground color when the emergency
+                           stop button has been pressed but before it has been reset.
+                        </p> 
+                        <figure id="CHDGGJFIE2">
+                           <figcaption><span class="figure-number">Figure 3.3</span> Mid Zone
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_003.png"></figure>
+                     </section> 
+                     <section>
+                        <h4 id="d6e1263"><span class="chapter-number">3.1.2.3</span> Main Screen Header - Right Zone
+                        </h4> 
+                        <p>The right side of the header displays the three most current extruder system alarms
+                           (see <a href="001_003_001.html#CHDBHAACJ7">Figure 3.4</a>).
+                        </p> 
+                        <figure id="CHDBHAACJ7">
+                           <figcaption><span class="figure-number">Figure 3.4</span> Right Zone
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_004.png"></figure> 
+                        <p>All alarms that have arisen and displayed after the most recent alarms acknowledgment
+                           by the user will be displayed in red foreground color (as seen in <a href="001_003_001.html#CHDBHAACJ7">Figure 3.4</a>). All acknowledged alarms appear in yellow foreground color.
+                        </p>
+                     </section> 
+                     <section>
+                        <h4 id="d6e1283"><span class="chapter-number">3.1.2.4</span> Status Bar
+                        </h4> 
+                        <p>The <span class="acronym" translate="no">APM</span> status bar at the bottom of the screen displays diagnostic information pertaining
+                           to the behavior of the <span class="acronym" translate="no">APM</span> software. It should not be confused with the extruder system status information displayed
+                           in the header. The information displayed in the <span class="acronym" translate="no">APM</span> status bar will probably be of more interest to Wenger Technicians than to customer
+                           personnel.
+                        </p>
+                     </section>
+                  </section> 
+                  <section>
+                     <h3 id="d6e1299"><span class="chapter-number">3.1.3</span> Graphical Shapes and Cooler Conventions
+                     </h3> 
+                     <section>
+                        <h4 id="d6e1303"><span class="chapter-number">3.1.3.1</span> Devices
+                        </h4> 
+                        <p>The various types of components that make up the extruder system, such as motors,
+                           pumps, valves, and fans, are depicted graphically on a number of <span class="acronym" translate="no">APM</span> screens. All screens that display the status of such equipment (e.g., whether motors
+                           are running or stopped) use a common color scheme to quickly communicate equipment
+                           status to the operator, regardless of the type of equipment.
+                        </p> 
+                        <p>The status for valves (i.e., open or closed) is communicated by the fill color of
+                           each respective valve's graphical depiction. Referring to <a href="001_003_001.html#CHDFIAEGF8">Figure 3.5</a>, an open valve is depicted with a green color (1), while a closed valve is depicted
+                           with a blue color(2).
+                        </p> 
+                        <figure id="CHDFIAEGF8">
+                           <figcaption><span class="figure-number">Figure 3.5</span> Valve Status
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_005.png"></figure> 
+                        <p>Referring to <a href="001_003_001.html#CHDEAGBFG8">Figure 3.6</a>, a running motor is depicted with a green colored image (1), while a stopped motor
+                           is depicted with a blue colored image (2). In addition, the graphics for some types
+                           of devices, such as motors, are accompanied by ellipses, wherein the status will be
+                           displayed with text, in the case below, either On or Off.
+                        </p> 
+                        <figure id="CHDEAGBFG8">
+                           <figcaption><span class="figure-number">Figure 3.6</span> Motor Status
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_006.png"></figure> 
+                        <p>Each status ellipse, in addition to displaying text that communicates the running
+                           or not running status of the corresponding device motor, also displays the control
+                           mode (Hand, Off or Auto) that the <span class="acronym" translate="no">PLC</span> software recognizes the device to be in, indicated by the background color of the
+                           ellipse. A blue background color signifies that the <span class="acronym" translate="no">PLC</span> considers the device to be in the Off control mode, white signifies the device is
+                           in Auto control mode, and yellow signifies the device is in Hand control mode. Lastly,
+                           a red ellipse background color that alternates with blue, white or yellow indicates
+                           that the device in question has encountered some type of fault.
+                        </p> 
+                        <p>So, for example, referring to <a href="001_003_001.html#CHDBAADFD3">Figure 3.7</a>, the full status of the extruder lube pump is:
+                        </p> 
+                        <ol>
+                           <li>Not currently running, and in the Off control mode.</li> 
+                           <li>Not currently running, and in the Auto control mode.</li> 
+                           <li>Running, and in the Auto control mode.</li> 
+                           <li>Running, and in the Hand control mode</li> 
+                           <li>Not currently running because of a fault condition</li>
+                        </ol> 
+                        <figure id="CHDBAADFD3">
+                           <figcaption><span class="figure-number">Figure 3.7</span> Lube Pump Status
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_007.png"></figure>
+                     </section> 
+                     <section>
+                        <h4 id="d6e1377"><span class="chapter-number">3.1.3.2</span> Process Flows
+                        </h4> 
+                        <p>Three types of process flows are depicted graphically with colors on <span class="acronym" translate="no">APM</span> screens: ingredients and product (this includes raw feed, oil, color, fat, etc.),
+                           process water, and process steam. (Note that water and steam are also used in the
+                           extruder temperature control jackets, but these are considered temperature control
+                           elements rather than process flows.) Colors only indicate the binary status (path
+                           is open for flow vs path is closed to flow) of the equipment through which material
+                           normally travels.
+                        </p> 
+                        <p>For ingredients and product, just as for equipment, green and blue are the two colors
+                           used to indicate binary flow status, green signifying the path that is open to product
+                           flow, and blue signifying that the flow through the equipment in question is prevented.
+                           In <a href="001_003_001.html#CHDHBHFCC1">Figure 3.8</a>, the green color (1) of the conduit between the knife hood diverter and the dryer
+                           indicates that product can flow, but notice from the blue color (2) immediately below
+                           the knife hood diverter that product is prevented from flowing up through the knife
+                           hood.
+                        </p> 
+                        <figure id="CHDHBHFCC1">
+                           <figcaption><span class="figure-number">Figure 3.8</span> Product Flow Indicators
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_008.png"></figure> 
+                        <p>For process water, light blue and black are the two colors used to indicate binary
+                           flow status, light blue signifying that process water can flow, and black signifying
+                           that process water cannot flow. In <a href="001_003_001.html#CHDJIHBBA1">Figure 3.9</a>, notice how process water is being injected into the extruder at 15 kg/hr (1), but
+                           that no process water is being injected into the preconditioner above (2).
+                        </p> 
+                        <p>For process steam, white and black are the two colors used to indicate binary flow
+                           status, white signifying that process steam can flow, and black signifying that process
+                           steam cannot flow. In <a href="001_003_001.html#CHDJIHBBA1">Figure 3.9</a>, notice that process steam is being injected into the preconditioner at 25 kg/hr
+                           (3), but that no process steam is being injected into the extruder (4).
+                        </p> 
+                        <figure id="CHDJIHBBA1">
+                           <figcaption><span class="figure-number">Figure 3.9</span> Process Water &amp; Steam Flow Status
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_009.png"></figure>
+                     </section>
+                  </section> 
+                  <section>
+                     <h3 id="d6e1415"><span class="chapter-number">3.1.4</span> Hand-Off-Auto and Proportional-Integral-Derivative Faceplate’s
+                     </h3> 
+                     <div>
+                        <p>A Hand-Off-Auto (<span class="acronym" translate="no">HOA</span>) or Proportional-Integral-Derivative (<span class="acronym" translate="no">PID</span>) faceplate is a pop-up window (i.e., small faceplate) that appear when the operator
+                           clicks an <span class="acronym" translate="no">HOA</span> or <span class="acronym" translate="no">PID</span> button pertaining to a specific device. Each <span class="acronym" translate="no">HOA</span> faceplate presents the operator with options that he can choose that determine how
+                           the corresponding extruder system device or condition is controlled by the <span class="acronym" translate="no">PLC</span>. There is an <span class="acronym" translate="no">HOA</span> faceplate for each device and a <span class="acronym" translate="no">PID</span> faceplate for each process flow or temperature that the <span class="acronym" translate="no">PLC</span> controls. Most of these faceplate’s are accessible from the Extruder Overview screen.
+                           (<a href="001_003_003.html#BABBFGJJF7">See Section 3.3, Extruder Overview Screen.</a>) Other faceplate’s are accessible from the Extruder Barrel Temperatures screen (<a href="001_003_004.html#BABBEEJFE0">See Section 3.4, Extruder Barrel Temperatures Screen.</a>), and from the Extruder Liquids 1 and Extruder Liquids 2 screens (<a href="001_003_005.html#id17AIF0F07Y4">See Section 3.5, Extruder Liquids 1 Screen.</a> and <a href="001_003_006.html#id17AIF5080HS">See Section 3.6, Extruder Liquids 2 Screen.</a>, respectively).
+                        </p> 
+                        <p>The options that a faceplate presents to the operator for device or condition control
+                           depend on the nature of the device or condition being controlled. There are devices
+                           that are driven by fixed-speed motors, so the <span class="acronym" translate="no">HOA</span> faceplate’s for these will use the same template and will offer the same control
+                           options. There are also variables speed motors, so the <span class="acronym" translate="no">HOA</span> faceplate’s for these will offer the same control options. There are discrete position
+                           gates for handling the flow of solid materials, so the <span class="acronym" translate="no">HOA</span> faceplate’s for these will offer the similar control options. There are proportional
+                           control valves for controlling the flow of liquids and vapors using flow <span class="acronym" translate="no">PID</span> control algorithms, all of which use a common <span class="acronym" translate="no">PID</span> faceplate template. Lastly, there are proportional control valves for controlling
+                           the flow of steam and cooling water using temperature <span class="acronym" translate="no">PID</span> control algorithms, all of which use a common <span class="acronym" translate="no">PID</span> faceplate template. The faceplate’s described above are listed below in approximate
+                           order of increasing complexity:
+                        </p> 
+                        <ul>
+                           <li><span class="acronym" translate="no">HOA</span> faceplate’s for motors driving fixed-speed devices.
+                           </li> 
+                           <li><span class="acronym" translate="no">HOA</span> faceplate’s for discrete-position solid material handling gates.
+                           </li> 
+                           <li><span class="acronym" translate="no">HOA</span> faceplate’s for motors driving variable-speed devices.
+                           </li> 
+                           <li><span class="acronym" translate="no">PID</span> faceplate’s for proportional position valve for controlling liquid and vapor flow
+                              rates
+                           </li> 
+                           <li><span class="acronym" translate="no">PID</span> faceplate’s for proportional position valves for controlling temperatures.
+                           </li>
+                        </ul>
+                     </div> 
+                     <section>
+                        <h4 id="d6e1516"><span class="chapter-number">3.1.4.1</span> <span class="acronym" translate="no">HOA</span> Faceplate’s for Motors Driving Fixed-Speed Devices
+                        </h4> 
+                        <p>The <span class="acronym" translate="no">HOA</span> for motors that drive fixed-speed devices are the simplest <span class="acronym" translate="no">HOA</span> to understand, so this type of <span class="acronym" translate="no">HOA</span> faceplate will be addressed first. Most fixed-speed motors are unidirectional, but
+                           some are bidirectional. Examples of devices driven by fixed-speed motors are:
+                        </p> 
+                        <ul>
+                           <li>Live Bin Agitators</li> 
+                           <li>Certain Types of Preconditioners</li> 
+                           <li>Extruder Lube Oil Pumps</li> 
+                           <li>Liquid Tank Agitators</li>
+                        </ul> 
+                        <p>The only parameter for a fixed-speed device motor that an operator can change using
+                           its <span class="acronym" translate="no">HOA</span> faceplate is the device's control mode. Using the <span class="acronym" translate="no">HOA</span> faceplate for a fixed-speed motor, the operator can change its control mode to either
+                           Hand, Off, or Auto.
+                        </p> 
+                        <blockquote>
+                           <p><strong>Hand Control Mode</strong> - Setting a fixed-speed device motor to Hand control mode instructs the <span class="acronym" translate="no">PLC</span> that the operator is commanding the motor to run, overriding the <span class="acronym" translate="no">PLC</span>'s Auto control mode logic.
+                           </p> 
+                           <p><strong>Off Control Mode</strong> - Setting a fixed-speed device motor to Off control mode instructs the <span class="acronym" translate="no">PLC</span> that the operator is commanding the motor to stop, overriding the <span class="acronym" translate="no">PLC</span>'s Auto control mode logic.
+                           </p> 
+                           <p><strong>Auto Control Mode </strong>- Setting a fixed-speed device motor to Auto control mode instructs the <span class="acronym" translate="no">PLC</span> that the decision whether the device should run or stop is to be made by the <span class="acronym" translate="no">PLC</span>'s Auto control mode logic (algorithms programmed into the <span class="acronym" translate="no">PLC</span> that the <span class="acronym" translate="no">PLC</span> uses to decide at any time whether to run the device; <a href="001_003_015.html#id17AIFI00DE9">See Section 3.15, Display Languages switching.</a> for a discussion of these algorithms.
+                           </p>
+                        </blockquote> 
+                        <div class="alert">
+                           <div class="alert-symbol warning"></div>
+                           <div class="alert-statement"><span class="warning"></span>  
+                              <p>The <span class="acronym" translate="no">PLC</span> attempts to prevent any device from running if there are active conditions for which
+                                 running the device might cause injury to personnel or damage to equipment. These potential
+                                 unsafe conditions vary with each device. However, the extruder system operator is
+                                 ultimately responsible for ensuring that the extruder system is safe to run.
+                              </p>
+                           </div>
+                        </div> 
+                        <p>The live bin agitator will be used as an example in this discussion. The <span class="acronym" translate="no">HOA</span> button for the live bin agitator motor (1) is shown in <a href="001_003_001.html#CHDBIEGGF9">Figure 3.10</a>. Clicking this button causes the <span class="acronym" translate="no">HOA</span> faceplate for the live bin agitator motor to appear.
+                        </p> 
+                        <figure id="CHDBIEGGF9">
+                           <figcaption><span class="figure-number">Figure 3.10</span> <span class="acronym" translate="no">HOA</span> Button for Live Bin Agitator Motor (example)
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_010.png"></figure> 
+                        <p>The live bin agitator motor <span class="acronym" translate="no">HOA</span> faceplate with the device in the Off control mode appears in <a href="001_003_001.html#CHDHJCHGA3">Figure 3.11</a>. Notice that the Off button has been clicked, the device is in the Off control mode,
+                           and that the device's state is Stopped (not running).
+                        </p> 
+                        <figure id="CHDHJCHGA3">
+                           <figcaption><span class="figure-number">Figure 3.11</span>  Live Bin Agitator Motor <span class="acronym" translate="no">HOA</span> Dialog Box
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_011.png"></figure> 
+                        <ol>
+                           <li><strong>Name Indicator</strong> - Indicates the name of the device that this <span class="acronym" translate="no">HOA</span> is controlling (in this case the live bin agitator motor).
+                           </li> 
+                           <li><strong>State Indicator</strong> - Specifies whether the device state is Running or Stopped (in this case Stopped).
+                           </li> 
+                           <li><strong>Control Mode Indicator</strong> - Specifies whether the device's control mode is Hand, Off or Auto.
+                           </li> 
+                           <li><strong>“Hand” Button</strong> - Places the device in the Hand control mode.
+                           </li> 
+                           <li><strong>“Off” Button</strong> - Places the device in the Off control mode.
+                           </li> 
+                           <li><strong>“Auto” Button</strong> - Places the device in the Auto control mode.
+                           </li> 
+                           <li>“<strong>Exit” Button</strong> - Closes the <span class="acronym" translate="no">HOA</span> faceplate.
+                           </li>
+                        </ol> 
+                        <p>The live bin agitator motor <span class="acronym" translate="no">HOA</span> faceplate with the device in the Hand control mode appears in <a href="001_003_001.html#CHDDJBGDD3">Figure 3.12</a>. Notice that the device's control mode (1) has changed from Off to Hand, and that
+                           the device's state (2) has changed from Stopped to Running. The <span class="acronym" translate="no">PLC</span> monitors for certain unsafe conditions, and if it determines that any of these are
+                           active, the <span class="acronym" translate="no">PLC</span> attempts to keep the device in the Stopped state, even if the device is in the Hand
+                           control mode.
+                        </p> 
+                        <div class="alert">
+                           <div class="alert-symbol warning"></div>
+                           <div class="alert-statement"><span class="warning"></span>  
+                              <p>The <span class="acronym" translate="no">PLC</span> attempts to prevent any device from running if there are active conditions for which
+                                 running the device might cause injury to personnel or damage to equipment. These potential
+                                 unsafe conditions vary with each device. However, the extruder system operator is
+                                 ultimately responsible for ensuring that the extruder system is safe to run.
+                              </p>
+                           </div>
+                        </div> 
+                        <figure id="CHDDJBGDD3">
+                           <figcaption><span class="figure-number">Figure 3.12</span> Live Bin Motor <span class="acronym" translate="no">HOA</span> Faceplate
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_012.png"></figure> 
+                        <p>The live bin agitator motor <span class="acronym" translate="no">HOA</span> faceplate with the device in the Auto control mode appears in <a href="001_003_001.html#CHDGIGFFD7">Figure 3.13</a>. Notice that the device's control mode (1) has changed from Hand to Auto, and that
+                           the device's state (2) has changed from Running to Stopped. When a device is in the
+                           Auto control mode, the <span class="acronym" translate="no">PLC</span> rather than the operator decides when the device needs to run and when it needs to
+                           be stopped.
+                        </p> 
+                        <figure id="CHDGIGFFD7">
+                           <figcaption><span class="figure-number">Figure 3.13</span> Live Bin Motor <span class="acronym" translate="no">HOA</span> Faceplate
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_013.png"></figure> 
+                        <p>Most devices driven by fixed speed motors are unidirectional, but the motor for the
+                           <span class="acronym" translate="no">DDC</span>-type of preconditioner is bi-directional (forward and reverse). The motor runs in
+                           the forward direction when the extruder is used for production, but it can be instructed
+                           to run in the reverse direction to facilitate cleaning. For the <span class="acronym" translate="no">DDC</span> motor <span class="acronym" translate="no">HOA</span> there are two buttons that allow the device to be placed in the Hand control mode,
+                           one labeled Forward for running the motor in the forward direction and one labeled
+                           Reverse for running the motor in the reverse direction (see <a href="001_003_001.html#CHDFJIGEA1">Figure 3.14</a>).
+                        </p> 
+                        <figure id="CHDFJIGEA1">
+                           <figcaption><span class="figure-number">Figure 3.14</span> <span class="acronym" translate="no">DDC</span> Motor <span class="acronym" translate="no">HOA</span> Faceplate
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_014.png"></figure> 
+                        <ol>
+                           <li><strong>Name Indicator</strong> - Indicates that this <span class="acronym" translate="no">HOA</span> faceplate is for controlling the <span class="acronym" translate="no">DDC</span> motor.
+                           </li> 
+                           <li><strong>State Indicator</strong> - Specifies whether the <span class="acronym" translate="no">DDC</span> is running in the forward direction, running in the reverse direction, or stopped
+                              (i.e., not running).
+                           </li> 
+                           <li><strong>Control Mode Indicator</strong> - Specifies whether the <span class="acronym" translate="no">DDC</span> control mode is Hand, Off or Auto.
+                           </li> 
+                           <li><strong>“Forward” Button</strong> - Places the <span class="acronym" translate="no">DDC</span> in the Hand control mode and commands the <span class="acronym" translate="no">DDC</span> to run in the forward direction.
+                           </li> 
+                           <li><strong>“Reverse” Button</strong> - Places the <span class="acronym" translate="no">DDC</span> in the Hand control mode and commands the <span class="acronym" translate="no">DDC</span> to run in the reverse direction.
+                           </li> 
+                           <li><strong>“Off” Button</strong> - Places the <span class="acronym" translate="no">DDC</span> in the Off control mode.
+                           </li> 
+                           <li><strong>“Auto” Button</strong> - Places the <span class="acronym" translate="no">DDC</span> in the Auto control mode.
+                           </li> 
+                           <li><strong>“Exit” Button</strong> - Closes the <span class="acronym" translate="no">DDC</span> <span class="acronym" translate="no">HOA</span> faceplate
+                           </li>
+                        </ol>
+                     </section> 
+                     <section>
+                        <h4 id="d6e1868"><span class="chapter-number">3.1.4.2</span> <span class="acronym" translate="no">HOA</span> Faceplate’s for Motors Driving Variable-Speed Devices
+                        </h4> 
+                        <p>Since the <span class="acronym" translate="no">HOA</span> for devices driven by variable-speed motors are similar to <span class="acronym" translate="no">HOA</span> for devices driven by fixed-speed motors, this type of <span class="acronym" translate="no">HOA</span> faceplate will be addressed next. Examples of devices driven by variable-speed motors
+                           are:
+                        </p> 
+                        <ul>
+                           <li>Extruder's</li> 
+                           <li>Feeders</li> 
+                           <li>Certain Types of Preconditioners</li> 
+                           <li>Knives</li> 
+                           <li>Liquid Pumps</li>
+                        </ul> 
+                        <p>There are two parameters for a variable-speed device motor that an operator can change
+                           using its <span class="acronym" translate="no">HOA</span> faceplate, these being the device's control mode and its speed. The motor speed can
+                           only be changed by the operator using the <span class="acronym" translate="no">HOA</span> faceplate when the device is in Hand control mode. When the device is in Auto control
+                           mode, the device speed is determined from formula parameter values. Using the <span class="acronym" translate="no">HOA</span> faceplate for a variable-speed motor, the operator can change its control mode to
+                           either Hand, Off, or Auto.
+                        </p> 
+                        <blockquote>
+                           <p><strong>Hand Control Mode</strong> - Setting a variable-speed device motor to Hand control mode instructs the <span class="acronym" translate="no">PLC</span> that the operator is commanding the motor to run, overriding the <span class="acronym" translate="no">PLC</span>'s Auto control mode logic. When a variable-speed device is in Hand control mode the
+                              device speed is determined from its manual setpoint, expressed as a percentage that
+                              ranges from 0% (the minimum speed that the motor is capable of) to 100% (the maximum
+                              speed that the motor is capable of). Using the <span class="acronym" translate="no">HOA</span> faceplate the operator can enter the manual setpoint directly as an integer value,
+                              or he can ramp the setpoint up and down using an up arrow button or down arrow button,
+                              respectively. The faceplate objects for specifying the device's manual setpoint only
+                              appear on the <span class="acronym" translate="no">HOA</span> faceplate when the Hand control mode has been selected.
+                           </p> 
+                           <p><strong>Off Control Mode</strong> - Setting a variable-speed device motor to Off control mode instructs the <span class="acronym" translate="no">PLC</span> that the operator is commanding the motor to stop, overriding the <span class="acronym" translate="no">PLC</span>'s Auto control mode logic (no different than for fixed-speed devices).
+                           </p> 
+                           <p><strong>Auto Control Mode</strong> - Setting a variable-speed device motor to Auto control mode instructs the <span class="acronym" translate="no">PLC</span> that the decision whether the device should run or stop is to be made by the <span class="acronym" translate="no">PLC</span>'s Auto control mode logic (algorithms programmed into the <span class="acronym" translate="no">PLC</span> that the <span class="acronym" translate="no">PLC</span> uses to decide at any time whether to run the device, <a href="001_003_015.html#id17AIFI00DE9">See Section 3.15, Display Languages switching.</a> for a discussion of these algorithms). The device's Auto control mode speed setpoint
+                              is determined by the <span class="acronym" translate="no">PLC</span>, usually from a corresponding formula parameter value. The speed setpoints for some
+                              devices, such as the extruder and knife, can be changed by the operator on other <span class="acronym" translate="no">APM</span> screens. For other devices, such as the feeder screw and the liquid pumps, the speed
+                              setpoints are calculated by the <span class="acronym" translate="no">PLC</span> from other parameters, such as the desired dry feed rate. Regardless, Auto control
+                              mode speed setpoints cannot be changed using <span class="acronym" translate="no">HOA</span> faceplate’s.
+                           </p>
+                        </blockquote> 
+                        <p>The <span class="acronym" translate="no">PLC</span> monitors for certain unsafe conditions, and if it determines that any of these are
+                           active, the <span class="acronym" translate="no">PLC</span> attempts to keep the device in the Stopped state, even if the device is in the Hand
+                           control mode.
+                        </p> 
+                        <div class="alert">
+                           <div class="alert-symbol warning"></div>
+                           <div class="alert-statement"><span class="warning"></span>  
+                              <p>The <span class="acronym" translate="no">PLC</span> attempts to prevent any device from running if there are active conditions for which
+                                 running the device might cause injury to personnel or damage to equipment. These potential
+                                 unsafe conditions vary with each device. However, the extruder system operator is
+                                 ultimately responsible for ensuring that the extruder system is safe to run.
+                              </p>
+                           </div>
+                        </div> 
+                        <p>The extruder will be used as an example in this discussion. The <span class="acronym" translate="no">HOA</span> button for the extruder motor (1) is shown in <a href="001_003_001.html#CHDBHHHCI9">Figure 3.15</a>. Clicking this button causes the <span class="acronym" translate="no">HOA</span> faceplate for the extruder motor to appear.
+                        </p> 
+                        <figure id="CHDBHHHCI9">
+                           <figcaption><span class="figure-number">Figure 3.15</span> <span class="acronym" translate="no">HOA</span> Button for Extruder Motor (example)
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_015.png"></figure> 
+                        <p>The extruder motor <span class="acronym" translate="no">HOA</span> faceplate with the device in the Off control mode appears in <a href="001_003_001.html#CHDGBCGHJ2">Figure 3.16</a>. Notice that the Off button has been clicked, that the device is in the Off control
+                           mode, that the device's state is Stopped (not running), and that the device's actual
+                           speed is 0 RPM.
+                        </p> 
+                        <figure id="CHDGBCGHJ2">
+                           <figcaption><span class="figure-number">Figure 3.16</span> Extruder Motor <span class="acronym" translate="no">HOA</span> Faceplate
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_016.png"></figure> 
+                        <ol>
+                           <li><strong>Name Indicator</strong> - Indicates that this <span class="acronym" translate="no">HOA</span> faceplate is for controlling the live bin agitator motor.
+                           </li> 
+                           <li><strong>State Indicator</strong> - Specifies whether the device is running or stopped.
+                           </li> 
+                           <li><strong>Control Mode Indicator</strong> - Specifies whether the device's control mode is Hand, Off or Auto.
+                           </li> 
+                           <li><strong>“Hand” Button</strong> - Places the device in the Hand control mode.
+                           </li> 
+                           <li><strong>“Off” Button</strong> - Places the device in the Off control mode.
+                           </li> 
+                           <li><strong>“Auto” Button</strong> - Places the device in the Auto control mode.
+                           </li> 
+                           <li><strong>“Exit” Button</strong> - Closes the <span class="acronym" translate="no">HOA</span> faceplate.
+                           </li> 
+                           <li><strong>Speed Indicator</strong> - Indicates the current speed of the devices in engineering units
+                           </li> 
+                           <li><strong>Percent Output Indicator</strong> - Indicates the device speed as a percentage of its maximum speed. This value reflects
+                              the manual setpoint when the device is in Hand control mode, but it reflects the auto
+                              setpoint when the device is in Auto control mode.
+                           </li>
+                        </ol> 
+                        <p>Indicates the device speed as a percentage of its maximum speed. This value reflects
+                           the manual setpoint when the device is in Hand control mode, but it reflects the auto
+                           setpoint when the device is in Auto control mode.
+                        </p> 
+                        <figure>
+                           <figcaption><span class="figure-number">Figure 3.17</span> Extruder Motor <span class="acronym" translate="no">HOA</span> Faceplate
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_017.png"></figure> 
+                        <p>The extruder motor <span class="acronym" translate="no">HOA</span> faceplate with the device in the Hand control mode appears in <a href="001_003_001.html#CHDECJFHA5">Figure 3.18</a>. Notice that the Hand button has been clicked, that the device is in the Hand control
+                           mode (1), that the device's state (2) is Running, that the device's manual speed setpoint
+                           (3) is 50%, and that the device's actual speed (4) is 226 RPM, or 50% of its maximum
+                           speed. But notice that now, since the device is in Hand control mode, a text box (5)
+                           for entering the manual speed setpoint has appeared along with up and down arrow buttons
+                           (6) for ramping the manual speed setpoint up and down, respectively.
+                        </p> 
+                        <figure id="CHDECJFHA5">
+                           <figcaption><span class="figure-number">Figure 3.18</span> Extruder Motor <span class="acronym" translate="no">HOA</span> Faceplate
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_018.png"></figure>
+                     </section> 
+                     <section>
+                        <h4 id="d6e2129"><span class="chapter-number">3.1.4.3</span> <span class="acronym" translate="no">HOA</span> Faceplate’s for Gates
+                        </h4> 
+                        <p>There are several gates that are part of the extruder system. These gates are discrete-position
+                           devices, meaning that they can be commanded to either of two or three positions. Using
+                           the <span class="acronym" translate="no">HOA</span> faceplate for the corresponding gate, the operator can change the device's control
+                           mode, and when in either the Hand or Off control mode, the operator can set the gate's
+                           discrete position. These discrete positions are named differently on the <span class="acronym" translate="no">HOA</span> faceplate’s, depending on the gate. These devices are:
+                        </p> 
+                        <ul>
+                           <li>Dry Feed Slide Gates</li> 
+                           <li>Downspouts</li> 
+                           <li>Back Pressure Valves (<span class="acronym" translate="no">BPV</span>)
+                           </li> 
+                           <li>Knifehood Diverters</li>
+                        </ul> 
+                        <p>The dry feed slide gate is a two-position gate situated between the surge bin and
+                           the live bin, and is used to refill the live bin with dry feed from the surge bin.
+                           The slide gate has two discrete positions: completely open, which allows dry feed
+                           to flow by gravity from the surge bin into the live bin, and completely closed, which
+                           allows no dry feed to flow. Thus, the two positions for the slide gate are named Open
+                           and Closed.
+                        </p> 
+                        <p>The downspout is a two-position gate situated between the preconditioner and the extruder
+                           and is used to channel feed mixture that flows by gravity out of the preconditioner
+                           into the extruder inlet. The downspout has two discrete positions: one position channels
+                           the feed mixture from the preconditioner into the inlet of the extruder, while the
+                           other position channels feed mixture from the preconditioner out of the extruder system
+                           altogether (in which case it must be collected somehow or it will pile up on the production
+                           facility floor). Thus, the two positions for the downspout are called Extruder and
+                           Bypass.
+                        </p> 
+                        <p>The knifehood diverter is a two-position gate situated between the top of the knifehood
+                           and the inlet of the processing equipment downstream of the extruder system, and is
+                           used to allow extrudate slices to be sucked into the downstream processing system,
+                           via negative pressure created by the downstream pneumatic product transfer equipment.
+                           The knifehood diverter has two positions: completely open, which allows raw product
+                           to travel downstream for further processing, and completely closed, in which case
+                           the extrudate slices are rejected and fall out of the bottom of the knifehood (in
+                           which case they must be collected somehow or they will pile up on the production facility
+                           floor). Thus, the two positions for the knifehood diverter are called Process and
+                           Reject.
+                        </p> 
+                        <p>Using the <span class="acronym" translate="no">HOA</span> faceplate for gate device, the operator can change its control mode to either Hand,
+                           Off, or Auto.
+                        </p> 
+                        <blockquote>
+                           <p><strong>Hand Control Mode</strong> - Setting a gate device to Hand control mode instructs the <span class="acronym" translate="no">PLC</span> that the operator is commanding the gate position, overriding the <span class="acronym" translate="no">PLC</span>'s Auto control mode logic. Which of the discrete gate positions corresponds to the
+                              Hand control mode depends on the gate: Open for the slide gate, Extruder for the downspout,
+                              and Process for the Knifehood diverter.
+                           </p> 
+                           <p><strong>Off Control Mode</strong> - Setting a gate device to Off control mode instructs the <span class="acronym" translate="no">PLC</span> that the operator is commanding the gate position, overriding the <span class="acronym" translate="no">PLC</span>'s Auto control mode logic. Which of the discrete gate positions corresponds to the
+                              Off control mode depends on the gate: Closed for the slide gate, Bypass for the downspout,
+                              and Reject for the Knifehood diverter.
+                           </p> 
+                           <p><strong>Auto Control Mode</strong> - Setting a gate device to Auto control mode instructs the <span class="acronym" translate="no">PLC</span> that the decision whether the device should run or stop is to be made by the <span class="acronym" translate="no">PLC</span>'s Auto control mode logic (algorithms programmed into the <span class="acronym" translate="no">PLC</span> that the <span class="acronym" translate="no">PLC</span> uses to decide at any time whether to run the device; <a href="001_003_006.html#id17AIF5080HS">See Section 3.6, Extruder Liquids 2 Screen.</a> for a discussion of these algorithms).
+                           </p>
+                        </blockquote> 
+                        <p>The <span class="acronym" translate="no">PLC</span> monitors for certain unsafe conditions, and if it determines that any of these are
+                           active, the <span class="acronym" translate="no">PLC</span> attempts to keep the device in the Stopped state, even if the device is in the Hand
+                           control mode.
+                        </p> 
+                        <div class="alert">
+                           <div class="alert-symbol warning"></div>
+                           <div class="alert-statement"><span class="warning"></span>  
+                              <p>The <span class="acronym" translate="no">PLC</span> attempts to prevent any device from running if there are active conditions for which
+                                 running the device might cause injury to personnel or damage to equipment. These potential
+                                 unsafe conditions vary with each device. However, the extruder system operator is
+                                 ultimately responsible for ensuring that the extruder system is safe to run.
+                              </p>
+                           </div>
+                        </div> 
+                        <p>The dry feed slide gate will be used as an example in this discussion. The <span class="acronym" translate="no">HOA</span> button for the slide gate (1) is shown in <a href="001_003_001.html#CHDDHBIBB4">Figure 3.19</a>. Clicking this button causes the <span class="acronym" translate="no">HOA</span> faceplate for the slide gate to appear.
+                        </p> 
+                        <figure id="CHDDHBIBB4">
+                           <figcaption><span class="figure-number">Figure 3.19</span> <span class="acronym" translate="no">HOA</span> Button for Slide Gate (example)
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_019.png"></figure> 
+                        <p>The dry feed slide gate <span class="acronym" translate="no">HOA</span> faceplate with the device in the Off control mode appears in <a href="001_003_001.html#CHDCAJDIE3">Figure 3.20</a>. Notice that the Close button has been clicked, the gate is in the Off control mode,
+                           and that the gate's state is Closed.
+                        </p> 
+                        <figure id="CHDCAJDIE3">
+                           <figcaption><span class="figure-number">Figure 3.20</span> Slide Gate <span class="acronym" translate="no">HOA</span> Faceplate
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_020.png"></figure> 
+                        <ol>
+                           <li><strong>Name Indicator</strong> - Indicates that this <span class="acronym" translate="no">HOA</span> faceplate is for controlling the dry feed slide gate.
+                           </li> 
+                           <li><strong>State Indicator</strong> - Specifies the gate's current position.
+                           </li> 
+                           <li><strong>Control Mode Indicator</strong> - Specifies whether the gate's control mode is Hand, Off or Auto.
+                           </li> 
+                           <li><strong>“Hand” Button</strong> - Places the gate in the Hand control mode The caption for the Hand button, in this
+                              case “<strong>OPEN</strong>” button, depends on the particular gate.
+                           </li> 
+                           <li><strong>“Off” Button</strong> - Places the gate in the Off control mode. The caption for the Off button, in this
+                              case “<strong>CLOSE</strong>” button, depends on the particular gate.
+                           </li> 
+                           <li><strong>“Auto” Button</strong> - Places the device in the Auto control mode.
+                           </li> 
+                           <li><strong>“Exit” Button</strong> - Closes the <span class="acronym" translate="no">HOA</span> faceplate.
+                           </li>
+                        </ol> 
+                        <p>The dry feed slide gate <span class="acronym" translate="no">HOA</span> faceplate with the device in the Hand control mode appears in <a href="001_003_001.html#CHDJDEBJB9">Figure 3.21</a>. Notice that the device's control mode (1) has changed from Off to Hand, and that
+                           the device's state (2) has changed from Closed to Open. The <span class="acronym" translate="no">PLC</span> monitors for certain unsafe conditions, and if it determines that any of these are
+                           active, the <span class="acronym" translate="no">PLC</span> attempts to keep the device in the de-energized state, even if the device is in the
+                           Hand control mode.
+                        </p> 
+                        <div class="alert">
+                           <div class="alert-symbol warning"></div>
+                           <div class="alert-statement"><span class="warning"></span>  
+                              <p>The <span class="acronym" translate="no">PLC</span> attempts to prevent any device from running if there are active conditions for which
+                                 running the device might cause injury to personnel or damage to equipment. These potential
+                                 unsafe conditions vary with each device. However, the extruder system operator is
+                                 ultimately responsible for ensuring that the extruder system is safe to run.
+                              </p>
+                           </div>
+                        </div> 
+                        <figure id="CHDJDEBJB9">
+                           <figcaption><span class="figure-number">Figure 3.21</span> Slide Gate <span class="acronym" translate="no">HOA</span> Faceplate
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_021.png"></figure> 
+                        <p>The dry feed slide gate <span class="acronym" translate="no">HOA</span> faceplate with the gate in the Auto control mode appears in <a href="001_003_001.html#CHDJFACEC1">Figure 3.22</a>. Notice that the gate's control mode (1) has changed from Hand to Auto, and that
+                           the gate's state (2) has changed from Open to Closed. When a gate is in the Auto control
+                           mode, the <span class="acronym" translate="no">PLC</span> rather than the operator decides when the gate needs to be open and when it needs
+                           to be closed.
+                        </p> 
+                        <figure id="CHDJFACEC1">
+                           <figcaption><span class="figure-number">Figure 3.22</span> Slide Gate <span class="acronym" translate="no">HOA</span> Faceplate
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_022.png"></figure>
+                     </section> 
+                     <section>
+                        <h4 id="d6e2390"><span class="chapter-number">3.1.4.4</span> <span class="acronym" translate="no">PID</span> Faceplate’s for Controlling Flow Rates
+                        </h4> 
+                        <p>A flow rate <span class="acronym" translate="no">PID</span> control loop, when placed in Auto control mode, maintains a constant liquid or vapor
+                           flow to match the desired flow rate (i.e., the control loop's Auto control mode setpoint)
+                           either by varying a control valve position (as in the case for process water and steam
+                           injected into the preconditioner and extruder), or by varying a metering pump speed
+                           (as in the case of most customer-specific liquids such as oils, dyes, flavorings).
+                           This same flow rate <span class="acronym" translate="no">PID</span> control loop, when placed in Manual control mode, maintains a constant control valve
+                           position or metering pump speed (i.e., the control loop's Manual control mode setpoint)
+                           at the expense of a constant liquid or vapor flow rate through the valve or pump,
+                           which may vary with other conditions, such as upstream and downstream pressures.
+                        </p> 
+                        <p>There are a number of flow rate <span class="acronym" translate="no">PID</span> control loops that are used to control extruder system flows: These flows are:
+                        </p> 
+                        <ul>
+                           <li>Process water to the preconditioner.</li> 
+                           <li>Process steam to the preconditioner.</li> 
+                           <li>Customer specific liquids to the preconditioner.</li> 
+                           <li>Process water to the extruder.</li> 
+                           <li>Process steam to the extruder.</li>
+                        </ul> 
+                        <p>There are three parameters for a flow <span class="acronym" translate="no">PID</span> control loop that an operator can change using its <span class="acronym" translate="no">PID</span> faceplate, these being the control loop's control mode, the flow rate setpoint (the
+                           Auto control mode setpoint), and the control valve position or metering pump speed
+                           (the Manual control mode setpoint). The flow rate setpoint can only be changed using
+                           the <span class="acronym" translate="no">PID</span> faceplate when the <span class="acronym" translate="no">PID</span> control loop is in Auto control mode, and the control valve position or metering
+                           pump speed can only be changed using the <span class="acronym" translate="no">PID</span> faceplate when the control loop is in Manual control mode. Using the <span class="acronym" translate="no">PID</span> faceplate the operator can switch between Auto and Manual control modes. There is
+                           no Off control mode.
+                        </p> 
+                        <blockquote>
+                           <p><strong>Manual Control Mode</strong> - Setting a flow <span class="acronym" translate="no">PID</span> control loop to Manual control mode instructs the <span class="acronym" translate="no">PLC</span> to maintain a constant control valve position (the degree to which it is open) or
+                              metering pump speed. This desired valve position or pump speed is the manual setpoint,
+                              expressed as a percentage that ranges from 0% (the valve is completely closed or the
+                              pump is stopped) to 100% (the valve is completely open or the pump is running at its
+                              maximum speed). Using the <span class="acronym" translate="no">PID</span> faceplate, the operator can enter the manual setpoint directly as a numerical value,
+                              or he can ramp the setpoint up and down using the up or down arrow buttons, respectively.
+                              The means of specifying the device's manual setpoint only appear on the <span class="acronym" translate="no">PID</span> faceplate when the Manual control mode has been selected.
+                           </p> 
+                           <p><strong>Auto Control Mode</strong> - Setting a flow <span class="acronym" translate="no">PID</span> control loop to Auto control mode instructs the <span class="acronym" translate="no">PLC</span> to maintain a constant flow rate of material, specifically mass flow rate. This desired
+                              mass flow rate is calculated from the auto setpoint, which is expressed as a percentage
+                              by weight of the dry feed rate. Thus, if the extruder steam auto setpoint is specified
+                              as 10% of feed rate, and the dry feed rate is 1000 kg/hr, the extruder steam control
+                              loop will attempt to maintain the extruder steam flow rate of 100 kg/hr. Using the
+                              <span class="acronym" translate="no">PID</span> faceplate, the operator can enter the auto setpoint directly as a numerical value,
+                              or he can ramp the setpoint up and down using up or down arrow buttons, respectively.
+                              The means of specifying the device's auto setpoint only appear on the <span class="acronym" translate="no">PID</span> faceplate when the Auto control mode has been selected.
+                           </p>
+                        </blockquote> 
+                        <p>The flow of process water to the preconditioner will be used as an example in this
+                           discussion. The <span class="acronym" translate="no">PID</span> button (1) for control of process water to the preconditioner is shown in <a href="001_003_001.html#CHDEBCFCC9">Figure 3.23</a>. Clicking this button causes the preconditioner process water <span class="acronym" translate="no">PID</span> faceplate to appear (see <a href="001_003_001.html#CHDEFBFID2">Figure 3.24</a>).
+                        </p> 
+                        <figure id="CHDEBCFCC9">
+                           <figcaption><span class="figure-number">Figure 3.23</span> <span class="acronym" translate="no">PID</span> Button for Control of Process Water (example)
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_023.png"></figure> 
+                        <figure id="CHDEFBFID2">
+                           <figcaption><span class="figure-number">Figure 3.24</span> Water/Steam <span class="acronym" translate="no">PID</span> Faceplate (A-Auto Mode; B-Manual Mode)
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_024.png"></figure> 
+                        <ol>
+                           <li><strong>“Auto” Button</strong> - Clicking this button will cause the <span class="acronym" translate="no">PID</span> control loop to switch from Manual control mode to Auto control mode.
+                           </li> 
+                           <li><strong>“Manual” Button</strong> - Clicking this button will cause the <span class="acronym" translate="no">PID</span> control loop to switch from Auto control mode to Manual control mode.
+                           </li> 
+                           <li><strong>Control Mode Indicator</strong> - Indicates the <span class="acronym" translate="no">PID</span> control loop's current control mode, Auto in <a href="001_003_001.html#CHDEFBFID2">Figure 3.24</a>, side [A] and Manual in <a href="001_003_001.html#CHDEFBFID2">Figure 3.24</a>, side [B].
+                           </li> 
+                           <li><strong>Auto Control Mode Flow Rate Setpoint Select</strong> - This group of controls allow the operator to change the control loop's flow rate
+                              setpoint, ramping up or down by clicking the arrow buttons, or entering a numerical
+                              value by clicking inside the white rectangular field. Notice in <a href="001_003_001.html#CHDEFBFID2">Figure 3.24</a>, side [B] that the auto setpoint is only displayed but cannot be changed when in
+                              Manual control mode.
+                           </li> 
+                           <li><strong>Manual Control Mode Control Valve Position Select</strong> - This group of controls allow the operator to change the flow control valve's position
+                              setpoint, ramping up or down by clicking the arrow buttons, or entering a numerical
+                              value by clicking inside the white rectangular field. Notice in <a href="001_003_001.html#CHDEFBFID2">Figure 3.24</a>, side [A] that the manual setpoint is only displayed but cannot be changed when in
+                              Auto control mode.
+                           </li> 
+                           <li><strong>Desired Flow Rate Indicator</strong> - Bar graph that displays the current flow rate setpoint in units of weight/hour
+                              (converted from percent of dry feed rate). The color of this bar graph, which is always
+                              green, doesn't signify anything.
+                           </li> 
+                           <li><strong>Actual Flow Rate Indicator</strong> - Bar graph that displays the current flow rate actual value in units of weight/hour
+                              (converted from percent of dry feed rate). The color of this bar graph can change,
+                              depending on whether the flow rate is within normal operating range (blue), mildly
+                              outside of normal operating range (yellow), or severely outside of normal operating
+                              range (red). Notice in <a href="001_003_001.html#CHDEFBFID2">Figure 3.24</a>, side [A] that the actual flow rate is within the normal range (blue), but in <a href="001_003_001.html#CHDEFBFID2">Figure 3.24</a>, side [B] the actual flow rate is in the mildly excessive range (yellow).
+                           </li> 
+                           <li><strong>Normal and Alarm Operating Ranges Indicator</strong> - This bar graph indicates three flow rate operating ranges: normal (blue), mildly
+                              excessive (yellow), and severely excessive (red).
+                           </li> 
+                           <li><strong>Control Valve Position Indicator</strong> - This bar graph indicates the position of the flow control valve, expressed as the
+                              degree to which it is open, as a percentage of maximum open.
+                           </li> 
+                           <li><strong>“Exit” Button</strong> - Clicking this button closes the <span class="acronym" translate="no">PID</span> control faceplate.
+                           </li> 
+                           <li><strong>“Edit” Button</strong> - Clicking this button allows the user to tune the <span class="acronym" translate="no">PID</span> control loop. This button is not visible to users logged in as Operator user types,
+                              so this button will not be discussed any further.
+                           </li>
+                        </ol>
+                     </section> 
+                     <section>
+                        <h4 id="d6e2616"><span class="chapter-number">3.1.4.5</span> <span class="acronym" translate="no">PID</span> Faceplate’s for Controlling Temperatures
+                        </h4> 
+                        <p>The <span class="acronym" translate="no">PID</span> faceplate’s for controlling temperatures are similar to the <span class="acronym" translate="no">PID</span> faceplate’s for controlling flow rates. However, for two reasons, controlling extruder
+                           barrel temperatures with <span class="acronym" translate="no">PID</span> control loops is somewhat more complex than controlling flow rates with <span class="acronym" translate="no">PID</span> control loops. First, controlling the temperature of an extruder barrel zone requires
+                           moderating both the flow of water for cooling and the flow of steam for heating. Thus,
+                           varying the positions of two valves are necessary in temperature control, whereas
+                           varying the position of only one valve or the speed of one pump is required in flow
+                           control. Second, the valves for controlling steam or cooling water to the extruder
+                           barrel jackets are on-off valves rather than proportional-position control valves.
+                           For each of these valves, what is ultimately controlled is not valve position but
+                           rather the ratio of time over a fixed time period, say ten seconds, that each valve
+                           is completely open vs completely closed.
+                        </p> 
+                        <p>A temperature <span class="acronym" translate="no">PID</span> control loop, when placed in Auto control mode, attempts to maintain a temperature
+                           to match the desired temperature (i.e., the control loop's Auto control setpoint).
+                           When in Auto control mode and the actual temperature is below the desired temperature,
+                           the <span class="acronym" translate="no">PLC</span> closes completely the cooling water valve while the <span class="acronym" translate="no">PLC</span> varies the length of time during a fixed length time period that the steam valve
+                           is completely open. When in Auto control mode and the actual temperature is above
+                           the desired temperature, the <span class="acronym" translate="no">PLC</span> closes completely the steam valve while the <span class="acronym" translate="no">PLC</span> varies the length of time during a fixed length time period that the cooling water
+                           valve is completely open. This same temperature <span class="acronym" translate="no">PID</span> control loop, when placed in Manual control mode, maintains constant time-based ratios
+                           for the each of the two valves (derived from the control loop's Manual control setpoint),
+                           thus allowing the temperature to vary with other conditions, such as steam and cooling
+                           water upstream pressures or production rate changes.
+                        </p> 
+                        <p>There are a number of temperature <span class="acronym" translate="no">PID</span> control loops that are used to control extruder system temperatures, depending on
+                           the number of extruder barrel temperature zones that were provided with the customer's
+                           extruder system.
+                        </p> 
+                        <p>There are three parameters for a temperature <span class="acronym" translate="no">PID</span> control loop that an operator can change using its <span class="acronym" translate="no">PID</span> faceplate, these being the control loops' control mode, the temperature setpoint
+                           (the Auto control mode setpoint) and the <span class="acronym" translate="no">PID</span> control loop output (the Manual control mode setpoint). The temperature setpoint
+                           can only be changed using the <span class="acronym" translate="no">PID</span> faceplate when the <span class="acronym" translate="no">PID</span> control loop is in Auto control mode, and the <span class="acronym" translate="no">PID</span> control loop output can only be changed using the <span class="acronym" translate="no">PID</span> faceplate when the control loop is in Manual control mode. Using the <span class="acronym" translate="no">PID</span> faceplate the operator can switch between Auto and Manual control modes. There is
+                           no Off control mode.
+                        </p> 
+                        <blockquote>
+                           <p><strong>Manual Control Mode </strong>- Setting a temperature <span class="acronym" translate="no">PID</span> control loop to Manual control mode instructs the <span class="acronym" translate="no">PLC</span> to maintain constant time-based ratios that the two control valves are open or closed.
+                              This desired <span class="acronym" translate="no">PID</span> control loop output is the manual setpoint, expressed as a percentage that ranges
+                              from 0% (maximum cooling) to 100% (maximum heating). A 50% manual setpoint corresponds
+                              to no heating or cooling. Thus, when the manual setpoint is 0%, the cooling water
+                              valve is open 100% of the time while the steam valve remains completely closed. When
+                              the manual setpoint is 25%, the cooling water valve is open 50% of the time while
+                              the steam valve remains completely closed. When the manual setpoint is 50%, both the
+                              cooling water valve and the steam valve remain completely closed. When the manual
+                              setpoint is 75%, the steam valve is open 50% of the time while the cooling water valve
+                              remains completely closed. And finally, when the manual setpoint is 100%, the steam
+                              valve is open 100% of the time while the cooling water valve remains completely closed.
+                              Using the <span class="acronym" translate="no">PID</span> faceplate, the operator can enter the manual setpoint directly as a numerical value,
+                              or he can ramp the setpoint up and down using the up or down arrow buttons, respectively.
+                              The means of specifying the device's manual setpoint only appear on the <span class="acronym" translate="no">PID</span> faceplate when the Manual control mode has been selected.
+                           </p> 
+                           <p><strong>Auto Control Mode</strong> - Setting a flow <span class="acronym" translate="no">PID</span> control loop to Auto control mode instructs the <span class="acronym" translate="no">PLC</span> to maintain a constant zone temperature. Using the <span class="acronym" translate="no">PID</span> faceplate, the operator can enter the auto setpoint directly as a numerical value,
+                              or he can ramp the setpoint up and down using up or down arrow buttons, respectively.
+                              The means of specifying the device's auto setpoint only appear on the <span class="acronym" translate="no">PID</span> faceplate when the Auto control mode has been selected.
+                           </p>
+                        </blockquote> 
+                        <p>The temperature of the extruder barrel's temperature zone 1 will be used as an example
+                           in this discussion. The <span class="acronym" translate="no">PID</span> button (1) for control of extruder barrel zone 1 temperature is shown in <a href="001_003_001.html#CHDGGCJCE8">Figure 3.25</a>. Clicking this button causes the zone 1 temperature <span class="acronym" translate="no">PID</span> faceplate to appear (see <a href="001_003_001.html#CHDHIEHHB0">Figure 3.26</a>).
+                        </p> 
+                        <figure id="CHDGGCJCE8">
+                           <figcaption><span class="figure-number">Figure 3.25</span> <span class="acronym" translate="no">PID</span> Button for Zone 1 Barrel Temperature (example)
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_025.png"></figure> 
+                        <figure id="CHDHIEHHB0">
+                           <figcaption><span class="figure-number">Figure 3.26</span> Extruder Zone All <span class="acronym" translate="no">PID</span> Faceplate (A-Auto; C-Edit; B-Manual)
+                           </figcaption> <img src="../../../images/APM_Screens_Figure_026.png"></figure> 
+                        <ol>
+                           <li><strong>Control Mode Indicator</strong> - Indicates the <span class="acronym" translate="no">PID</span> control loop's current control mode, Auto in <a href="001_003_001.html#CHDHIEHHB0">Figure 3.26</a>, side [A] and Manual in <a href="001_003_001.html#CHDHIEHHB0">Figure 3.26</a>, side [C].
+                           </li> 
+                           <li><strong>Auto Control Mode Temperature Setpoint Select</strong> - This group of controls allow the operator to change the <span class="acronym" translate="no">PID</span> control loop's temperature setpoint, ramping up or down by clicking the arrow buttons,
+                              or entering a numerical value by clicking inside the white rectangular field. Notice
+                              in <a href="001_003_001.html#CHDHIEHHB0">Figure 3.26</a>, side [C] that the auto setpoint can be changed, but it will have no effect on the
+                              water and steam valves while in manual control mode.
+                           </li> 
+                           <li><strong>Desired Temperature Indicator</strong> - Bar graph that displays the current temperature setpoint. The color of this bar
+                              graph, which is always green, doesn't signify anything.
+                           </li> 
+                           <li><strong>Actual Temperature Indicator</strong> - Bar graph and numerical indicators that displays the actual temperature. The color
+                              of this bar graph can change, depending on whether the temperature is within normal
+                              operating range (blue), mildly outside of normal operating range (yellow), or severely
+                              outside of normal operating range (red). Notice that actual temperature is mildly
+                              outside of normal range (yellow).
+                           </li> 
+                           <li><span class="acronym" translate="no">PID</span> <strong>Control Loop Output Indicator</strong> - In Auto control mode, the numerical and graphical indicators display the relative
+                              magnitude of heating or cooling being. When the displayed output value is between
+                              0% and 50%, the percentage of time that the cooling water valve is open is between
+                              100% open and 0% open, respectively. At the same time the heating steam valve is completely
+                              closed whenever the output display is below 50%. When the displayed output value is
+                              between 50% and 100%, the percentage of time that the heating steam valve is open
+                              is between 0% open and 100% open, respectively. At the same time the cooling water
+                              valve is completely closed whenever the output display is above 50%. Therefore, when
+                              the displayed output value is exactly 50% neither heating nor cooling is being commanded,
+                              and thus both steam and water valves are completely closed. When the displayed output
+                              value is exactly 0% maximum cooling is being commanded, and thus the water valve is
+                              completely open while the steam valve is completely closed. And when the displayed
+                              output value is exactly 100% maximum heating is being commanded, and thus the steam
+                              valve is completely open while the water valve is completely closed.
+                           </li> 
+                           <li><span class="acronym" translate="no">PID</span> <strong>Control Loop Output Select </strong>- This group of controls allow the operator to change <span class="acronym" translate="no">PID</span> control loop's manual setpoint, ramping up or down by clicking the arrow buttons,
+                              or entering a numerical value by clicking inside the white rectangular field, or grabbing
+                              and moving the vertical slider with the mouse. Notice in <a href="001_003_001.html#CHDHIEHHB0">Figure 3.26</a>, side [A] that when in Auto control mode, the manual setpoint is only displayed but
+                              cannot be changed, and that what serves as a vertical slider in Manual control mode
+                              functions only as a vertical indicator in Auto control mode.
+                           </li> 
+                           <li><strong>“Edit” Button</strong> - Clicking this button makes visible a panel, shown in <a href="001_003_001.html#CHDHIEHHB0">Figure 3.26</a>, center [B], with which the <span class="acronym" translate="no">PID</span> control loop's control mode can be switched between Auto and Manual.
+                           </li> 
+                           <li><strong>“Auto” Button</strong> - Clicking this button sets the <span class="acronym" translate="no">PID</span> control loop to Auto control mode.
+                           </li> 
+                           <li><strong>“Manual” Button</strong> - Clicking this button sets the <span class="acronym" translate="no">PID</span> control loop to Manual control mode.
+                           </li> 
+                           <li><strong>“Hide” Button</strong> - Clicking this button hides the panel shown in the <a href="001_003_001.html#CHDHIEHHB0">Figure 3.26</a>, center [B]
+                           </li> 
+                           <li><strong>“Exit” Button</strong> - Clicking this button closes the <span class="acronym" translate="no">PID</span> faceplate.
+                           </li>
+                        </ol>
+                     </section>
+                  </section>
+               </section>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_002_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_002_001.html">&lt; Previous Section</a></li>
+                     <li><a href="001_003_002.html">Next Section &gt;</a></li>
+                     <li><a href="001_004_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

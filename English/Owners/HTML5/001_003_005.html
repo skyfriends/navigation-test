@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Extruder Liquids 1 Screen</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_003_001.html">3&nbsp;&nbsp;APM Screens</a></p>
+               </div>
+               <h2 id="id17AIF0F07Y4"><span class="chapter-number">3.5</span> Extruder Liquids 1 Screen
+               </h2> 
+               <section>
+                  <h3 id="d6e5748"><span class="chapter-number">3.5.1</span> Section Overview
+                  </h3> 
+                  <p>The Extruder Liquids 1 screen allows the user to monitor and control the flow rates
+                     of the following liquids:
+                  </p> 
+                  <ul>
+                     <li>Process water to the preconditioner.</li> 
+                     <li>Process steam to the preconditioner.</li> 
+                     <li>Process water (different than temperature control water) to the extruder.</li> 
+                     <li>Process steam (different than temperature control steam) to the extruder.</li>
+                  </ul> 
+                  <p>This screen also displays the most important formula-specific operating conditions
+                     on the right-side of the screen from which the corresponding setpoints can also be
+                     changed.
+                  </p> 
+                  <p>The Extruder Liquids 1 screen is accessed by clicking the (F4) Liquid Control button
+                     in the region of the Main screen with the forest green background color. It can also
+                     be accessed from any screen by pressing the F4 function key on the <span class="acronym" translate="no">APM</span> console keyboard.
+                  </p>
+               </section> 
+               <section>
+                  <h3 id="d6e5781"><span class="chapter-number">3.5.2</span> Details
+                  </h3> 
+                  <p>An example of the Extruder Liquids 1 screen is reproduced in <a href="001_003_005.html#CHDDICJAD4">Figure 3.61</a>. This screen shows a <span class="acronym" translate="no">PID</span> control loop faceplate for each of the four liquids that are standard for every Wenger
+                     extruder system.
+                  </p> 
+                  <figure id="CHDDICJAD4">
+                     <figcaption><span class="figure-number">Figure 3.61</span> Extruder Liquids 1 Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_061.png"></figure> 
+                  <ol>
+                     <li><strong>Preconditioner Process Water Flow</strong> <span class="acronym" translate="no">PID</span> <strong>Control Loop Faceplate</strong> - This faceplate provides the operator with the most options concerning monitoring
+                        and changing the control loop's behavior.
+                     </li> 
+                     <li><strong>Preconditioner Process Steam Flow</strong> <span class="acronym" translate="no">PID</span> <strong>Control Loop Faceplate</strong> - This faceplate provides the operator with the most options concerning monitoring
+                        and changing the control loop's behavior.
+                     </li> 
+                     <li><strong>Extruder Process Water Flow</strong> <span class="acronym" translate="no">PID</span> <strong>Control Loop Faceplate</strong> - This faceplate provides the operator with the most options concerning monitoring
+                        and changing the control loop's behavior.
+                     </li> 
+                     <li><strong>Extruder Process Steam Flow </strong><span class="acronym" translate="no">PID</span> <strong>Control Loop Faceplate</strong> - This faceplate provides the operator with the most options concerning monitoring
+                        and changing the control loop's behavior.
+                     </li> 
+                     <li><strong>Setpoints and Actual Values of Most Important Operating Conditions</strong> - This panel displays the setpoints and current values of the operating conditions
+                        that are most crucial to the current product's formulation.
+                     </li> 
+                     <li><strong>Navigating Buttons</strong> - Some screens, such as this one, provide buttons at the bottom of the screen that
+                        allow the user to quickly switch to other screens without needing to go to the Main
+                        screen first.
+                     </li>
+                  </ol> 
+                  <p>The top-right corner of the Extruder Liquids 1 screen has been reproduced in <a href="001_003_005.html#CHDDBGDJF1">Figure 3.62</a>. The process water/steam flow rates are displayed in the right-most column. To the
+                     left is a column that displays, in white background colors, the flow rate setpoints
+                     as percentages of the dry feed rate setpoint. To change a water or steam flow rate
+                     setpoint, click on the corresponding setpoint in a white rectangle. A faceplate will
+                     appear from which you can enter a new setpoint as a percentage of feed rate.
+                  </p> 
+                  <figure id="CHDDBGDJF1">
+                     <figcaption><span class="figure-number">Figure 3.62</span> Expanded View of Top Right Side of The Extruder Liquids 1 Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_062.png"></figure> 
+                  <ol>
+                     <li><strong>Preconditioner Process Steam Setpoint and Flow Rate</strong></li> 
+                     <li><strong>Preconditioner Process Water Setpoint and Flow Rate</strong></li> 
+                     <li><strong>Extruder Process Steam Setpoint and Flow Rate</strong></li> 
+                     <li><strong>Extruder Process Water Setpoint and Flow Rate</strong></li>
+                  </ol> 
+                  <p>The <span class="acronym" translate="no">PID</span> control loop faceplate’s for the four liquids have identical functionalities. Each
+                     faceplate allows the operator to place the corresponding flow rate <span class="acronym" translate="no">PID</span> control loop in either Auto control mode or Manual control mode. In Auto mode, the
+                     <span class="acronym" translate="no">PLC</span> varies the respective flow control valve position to maintain a constant flow rate
+                     that is determined from the setpoint. In Manual control mode, the <span class="acronym" translate="no">PLC</span> maintains the control valve position as per the operator's input. In <a href="001_003_005.html#CHDBDJHEE6">Figure 3.63</a>, side [A], the extruder steam flow rate control loop is in Auto control mode, while
+                     in <a href="001_003_005.html#CHDBDJHEE6">Figure 3.63</a>, side [B] the extruder steam flow rate control loop is in Manual control mode. The
+                     <span class="acronym" translate="no">PLC</span> ensures that the flow control valve output remains constant when the operator changes
+                     between Auto control mode and Manual control mode; this is referred to as “bumpless”
+                     control mode switching.
+                  </p> 
+                  <figure id="CHDBDJHEE6">
+                     <figcaption><span class="figure-number">Figure 3.63</span> Cylinder Water <span class="acronym" translate="no">PID</span> Faceplate (A-Auto Mode; B-Manual Mode)
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_063.png"></figure> 
+                  <ol>
+                     <li><strong>“Auto” Button</strong> - Clicking this button will cause the <span class="acronym" translate="no">PLC</span> to switch from Manual control mode to Auto control mode.
+                     </li> 
+                     <li><strong>“Manual” Button</strong> - Clicking this button will cause the <span class="acronym" translate="no">PLC</span> to switch from Auto control mode to Manual control mode.
+                     </li> 
+                     <li><strong>Auto Control Mode Flow Rate Setpoint Select</strong> - Indicates the control loop's current control mode, Auto in <a href="001_003_005.html#CHDBDJHEE6">Figure 3.63</a>, side [A] and Manual in <a href="001_003_005.html#CHDBDJHEE6">Figure 3.63</a>, side [B].
+                     </li> 
+                     <li><strong>Auto Control Mode Flow Rate Setpoint Select</strong> - This group of controls allow the operator to change the current flow control loop's
+                        setpoint, ramping up or down by clicking the arrow buttons, or entering a numerical
+                        value by clicking inside the white rectangular field. Notice in <a href="001_003_005.html#CHDBDJHEE6">Figure 3.63</a>, side [B] that the setpoint is only displayed but cannot be changed when in Manual
+                        control mode.
+                     </li> 
+                     <li><strong>Manual Control Mode Control Valve Position Select</strong> - This group of controls allow the operator to change the flow control valve's output
+                        command, ramping up or down by clicking the arrow buttons, or entering a numerical
+                        value by clicking inside the white rectangular field. Notice in <a href="001_003_005.html#CHDBDJHEE6">Figure 3.63</a>, side [A] that the flow control valve output command is only displayed but cannot
+                        be changed when in Auto control mode.
+                     </li> 
+                     <li><strong>Setpoint Indicator</strong> - Bar graph that displays the current flow rate setpoint in units of weight/hour
+                        (converted from percent of dry feed rate). The color of this bar graph, which is always
+                        green, doesn't signify anything.
+                     </li> 
+                     <li><strong>Flow Rate Indicator</strong> - Bar graph that displays the current flow rate actual value in units of weight/hour
+                        (converted from percent of dry feed rate). The color of this bar graph can change,
+                        depending on whether the flow rate is within normal operating range (blue), mildly
+                        outside of normal operating range (yellow), or severely outside of normal operating
+                        range (red). Notice in <a href="001_003_005.html#CHDBDJHEE6">Figure 3.63</a>, side [A] that the actual flow rate is with the normal range (blue), but in <a href="001_003_005.html#CHDBDJHEE6">Figure 3.63</a>, side [B] the actual flow rate is in the mildly excessive range (yellow).
+                     </li> 
+                     <li><strong>Normal and Alarm Operating Ranges Indicator</strong> - This bar graph indicates the three flow rate operating ranges: normal (blue), mildly
+                        excessive (yellow), and severely excessive (red).
+                     </li>
+                  </ol>
+               </section>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_002_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_003_004.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_003_006.html">Next Section &gt;</a></li>
+                     <li><a href="001_004_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

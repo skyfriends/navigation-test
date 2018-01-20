@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Extruder System Normal Shutdown Sequence</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_004_001.html">4&nbsp;&nbsp;Programmable Logic Controller</a></p>
+               </div>
+               <h2 id="d6e8747"><span class="chapter-number">4.6</span>  Extruder System Normal Shutdown Sequence
+               </h2> 
+               <p>To initiate an <span class="acronym" translate="no">PLC</span>-managed extruder system normal shutdown, the operator brings up the Overview screen
+                  on the control room <span class="acronym" translate="no">APM</span> console, clicks the “(F5) Extruder Commands” button, and on the Commands Menu dialog
+                  box that appears, clicks the “Normal Shutdown” button. The normal shutdown sequence
+                  of operations that the <span class="acronym" translate="no">PLC</span> executes are listed below in the order that they take place.
+               </p> 
+               <ol>
+                  <li>The <span class="acronym" translate="no">PLC</span> displays the system status in the upper left corner of the <span class="acronym" translate="no">APM</span> monitor “Stopping Extruder.”
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> ceases refilling the surge bin and live bin if they are at or below low level.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> increases the flow rate of process water to the extruder by the same formula value
+                     of extra extruder water for startup.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> stops the screw feeder. The <span class="acronym" translate="no">PLC</span> also causes a button with the caption “Bypass Preconditioner Empty Time” to be displayed
+                     on the Overview screen.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> stops the live bin agitator.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> waits for a time delay to expire that was started when the screw feeder stopped.
+                     The length of this time delay was configured by the Wenger Technicians during initial
+                     installation and system startup. When this time delay expires, the <span class="acronym" translate="no">PLC</span> stops the flow of process water, process steam and all liquids to the preconditioner.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> waits for another time delay to expire that was started when the screw feeder stopped.
+                     The length of this time delay was configured by the Wenger Technicians during initial
+                     installation and system startup. When this time delay expires, the <span class="acronym" translate="no">PLC</span> positions the downspout to the bypass position for about two seconds. The operator
+                     can skip this delay at any time by clicking the “Bypass Preconditioner Empty Time”
+                     button.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> stops the flow of process steam to the extruder.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> positions the downspout to the process position for about five seconds.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> positions the downspout to the bypass position for the remainder of the shutdown
+                     sequence.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> places the knifehood diverter in the Reject position. The <span class="acronym" translate="no">PLC</span> ignores the signal from the knifehood diverter switch located near the extruder for
+                     the remainder of the shutdown sequence.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> stops the preconditioner.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> waits for a time delay to expire that was started when the downspout was placed in
+                     the Bypass position for the last time. The length of this time delay was configured
+                     by the Wenger Technicians during initial installation and system startup. When this
+                     time delay expires, the <span class="acronym" translate="no">PLC</span> stops the flow of process water to the extruder.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> waits for another time delay to expire that was started when the downspout was placed
+                     in the Bypass position for the last time. The length of this time delay was configured
+                     by the Wenger Technicians during initial installation and system startup. When this
+                     time delay expires, the <span class="acronym" translate="no">PLC</span> stops the extruder motor.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> stops the knife.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> stops the extruder lubrication pump.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> stops the extruder lubrication auxiliary oil filter pump.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> stops the flow of process water to the extruder.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> stops the flow of barrel temperature control water and steam to the extruder.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span>'s normal startup sequence is concluded.
+                  </li>
+               </ol> 
+               <div class="alert">
+                  <div class="alert-symbol note"></div>
+                  <div class="alert-statement"><span class="note"></span>  
+                     <p>During the shutdown sequence the operator can restart the extruder by clicking the
+                        Start Extruder button on the Command Menu dialog box, up to the point when the downspout
+                        is placed in the Bypass position for the first time. Thereafter, the operator must
+                        wait for the shutdown sequence to conclude before starting the extruder again.  If
+                        the operator chooses to restart the extruder during a shutdown, all required devices
+                        will be set in the run mode immediately. There will not be any sequence associated
+                        with this restart mode.
+                     </p>
+                  </div>
+               </div> 
+               <div class="alert">
+                  <div class="alert-symbol caution"></div>
+                  <div class="alert-statement"><span class="caution"></span>  
+                     <p>After the extruder system is shutdown, the operator should set the knife disconnect
+                        switch to the Off position before removing the knife safety shield and before removing
+                        the knife drive shaft from the knife bearing assembly.
+                     </p>
+                  </div>
+               </div>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_003_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_004_005.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_004_007.html">Next Section &gt;</a></li>
+                     <li><a href="001_005_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

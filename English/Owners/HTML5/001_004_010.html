@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Preconditioner Flush Sequences</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_004_001.html">4&nbsp;&nbsp;Programmable Logic Controller</a></p>
+               </div>
+               <h2 id="CHDIFACEF2"><span class="chapter-number">4.10</span> Preconditioner Flush Sequences
+               </h2> 
+               <p>There are two preconditioner flush sequences whose purpose is to assist is removing
+                  material from the preconditioner: the normal flush sequence and the wet flush sequence.
+                  The only difference between these two sequences is that the normal flush does not
+                  involve injecting process water or process steam into the preconditioner while the
+                  wet flush does. The normal preconditioner flush sequence is intended to be executed
+                  first, followed by the wet preconditioner flush, the rationale being that it is preferable
+                  to remove as much of the dryer material in the preconditioner before attempting to
+                  flush out the remainder with water. This utility sequence is intended to be performed
+                  only when the extruder system is not in operation, as after a production run is concluded,
+                  or just prior to the start of a production run. This sequence should be executed with
+                  all extruder system devices not running and with the downspout placed in the Bypass
+                  position.
+               </p> 
+               <p>To initiate an <span class="acronym" translate="no">PLC</span>-managed preconditioner flush, the operator brings up the Overview screen on the control
+                  room <span class="acronym" translate="no">APM</span> console, presses the F10 function key on the keyboard, and on the Utility dialog
+                  box that appears (see <a href="001_004_010.html#CIHJBFBJJ3">Figure 4.2</a> ), clicks the Normal Flush Cylinder button (1). The operator can prematurely terminate
+                  the flush sequence by clicking the Stop Flushing Cylinder button (3) (otherwise, the
+                  <span class="acronym" translate="no">PLC</span> by default terminates the sequence after 4 minutes). Following this, the operator
+                  clicks the Wet Flush Cylinder button (2). Again, the operator can prematurely terminate
+                  the flush sequence by clicking the Stop Flushing Cylinder button (3) (the <span class="acronym" translate="no">PLC</span> otherwise terminates the sequence after 4 minutes).
+               </p> 
+               <figure id="CIHJBFBJJ3">
+                  <figcaption><span class="figure-number">Figure 4.2</span> Utility Screen
+                  </figcaption> <img src="../../../images/PLC_Figure_02.png"></figure> 
+               <ol>
+                  <li><strong>“Normal Flush Cylinder” Button</strong> - Clicking this button will command the <span class="acronym" translate="no">PLC</span> to initiate the cylinder normal flush sequence.
+                  </li> 
+                  <li><strong>“Wet Flush Cylinder” Button</strong> - Clicking this button will command the <span class="acronym" translate="no">PLC</span> to initiate the cylinder wet flush sequence.
+                  </li> 
+                  <li><strong>“Wet Flush Cylinder” Button</strong> - Clicking this button will command the <span class="acronym" translate="no">PLC</span> to terminate whichever cylinder flushing sequence is in progress.
+                  </li>
+               </ol>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_003_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_004_009.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_004_011.html">Next Section &gt;</a></li>
+                     <li><a href="001_005_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

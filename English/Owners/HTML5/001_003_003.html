@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Extruder Overview Screen</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_003_001.html">3&nbsp;&nbsp;APM Screens</a></p>
+               </div>
+               <h2 id="BABBFGJJF7"><span class="chapter-number">3.3</span> Extruder Overview Screen
+               </h2> 
+               <section>
+                  <h3 id="d6e3320"><span class="chapter-number">3.3.1</span> Section Overview
+                  </h3> 
+                  <p>This section discusses the Extruder Overview screen. The operation of most of the
+                     extruder system devices and conditions can be monitored and controlled from this screen.
+                     For example, most of the extruder system devices with electrical drives can be monitored
+                     and controlled from this screen. Many of the extruder system fluids flows can be monitored
+                     and controlled from this screen. The operation of the various components that make
+                     up the dry feed system are monitored and controlled from this screen. To make the
+                     details of the Extruder Overview screen easier to grasped, the screen is explained
+                     by dividing the screen down into a handful of functional areas:
+                  </p> 
+                  <ul>
+                     <li>Feeder Section</li> 
+                     <li>Preconditioner Section</li> 
+                     <li>Extruder Section</li> 
+                     <li>Knife Section</li> 
+                     <li>Other</li>
+                  </ul> 
+                  <p>The Extruder Overview screen is accessed by clicking the “(F1) Extruder Overview”
+                     button in the region of the Main screen with the forest green background color. It
+                     can also be accessed from any screen by pressing the F1 function key on the <span class="acronym" translate="no">APM</span> console keyboard.
+                  </p>
+               </section> 
+               <section>
+                  <h3 id="d6e3354"><span class="chapter-number">3.3.2</span> Entire Screen
+                  </h3> 
+                  <p>An example of the Extruder Overview screen after the extruder system has successfully
+                     completed startup is reproduced in<a href="001_003_003.html#CHDGCFGFG0">Figure 3.32</a>. The green colors indicate devices that are currently in Running states. The flow
+                     of material through the extruder system progresses from left to right. The customer
+                     is responsible for always maintaining a sufficient level of dry feed material in the
+                     Surge Bin (1) when the extruder system is in operation. The amount of dry feed material
+                     in the Live Bin (2) is maintained by gravity flow of dry feed to the live bin from
+                     the surge bin through a two-position gate called the Slide Gate (3) when the mass
+                     of dry feed in the live bin drops below a minimum weight. The Screw Feeder (4) transfers
+                     dry feed from the live bin to the Preconditioner (5) at a constant mass rate that
+                     is specified by the customer. In the preconditioner, the dry feed is mixed with Preconditioner
+                     Process Water (6), Preconditioner Process Steam (7), and any customer-specific liquids
+                     (e.g., oils, dyes, flavorings) that are required by the customer's recipes to formulate
+                     the product. (Note that the flow of customer-specific liquids is not shown on this
+                     screen, but only on the liquid screens.) The feed mixture then flows into the extruder
+                     through the two-position gate called the Downspout (8). The feed mixture is cooked
+                     as both thermal and mechanical energy is added to it as it travels under high pressure
+                     through the Extruder Barrel (9). The thermal energy is added by maintaining elevated
+                     temperatures on the zones of the barrel (discussed in <a href="001_003_004.html#BABBEEJFE0">See Section 3.4, Extruder Barrel Temperatures Screen.</a>). The mechanical energy is added by maintaining high pressures inside the extruder
+                     barrel, in part with the design of the extruder barrel internal screw, and in part
+                     with the Back Pressure Valve (<span class="acronym" translate="no">BPV</span>) (12). In addition, while the feed mixture is being cooked inside the extruder barrel,
+                     Extruder Process Water (10) and Extruder Process Steam (11) is added to the feed mixture
+                     as called for by the product recipe. As the cooked raw product is forced out through
+                     the end of the extruder barrel and shaped by the extruder dies, it is sliced into
+                     kibbles with a Knife (13) rotating at high speeds. These product kibbles are then
+                     pulled through the Knife Hood (14) to equipment downstream of the extruder system
+                     via a negative pressure pneumatic product transfer system. An Indicator (15) of the
+                     status of the downstream processing equipment, whether it is ready to receive raw
+                     product from the extruder system, is provided.
+                  </p> 
+                  <p>On the top of the Extruder Overview screen are some objects that will be discussed
+                     in detail <a href="001_003_003.html#CIHCCCJHD5">See Section 3.3.5, Extruder Section.</a>. There are two Buttons (16) and (17) that bring forward faceplatees that provide
+                     options for extruder system control such as starting, stopping and flushing the extruder
+                     system. There is a Button (18) that commands all extruder system devices to their
+                     Auto control modes. There is a Faceplate (19) that provides status and control options
+                     for operation of the dry feed system. And there is a faceplate (20) that displays
+                     dry feed totals and energy statistics.
+                  </p> 
+                  <p>At the bottom of the Extruder Overview screen is a bank of Buttons (21) that allow
+                     the operator to quickly change to another of the most commonly used screens
+                  </p> 
+                  <figure id="CHDGCFGFG0">
+                     <figcaption><span class="figure-number">Figure 3.32</span> Extruder View Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_032.png"></figure>
+               </section> 
+               <section>
+                  <h3 id="d6e3382"><span class="chapter-number">3.3.3</span> Feeder Section
+                  </h3> 
+                  <div>
+                     <p>The feeder section consists of the surge bin, the live bin, and the screw feeder (see
+                        <a href="001_003_003.html#CHDECHGJG2">Figure 3.33</a>). The feeder section can be operated in either of two mode: gravimetric (based on
+                        weight) or volumetric. Most customers will prefer operating in gravimetric mode since
+                        it is the more accurate of the two.
+                     </p> 
+                     <figure id="CHDECHGJG2">
+                        <figcaption><span class="figure-number">Figure 3.33</span> Expanded View of Feeder Section of The Extruder Overview Screen
+                        </figcaption> <img src="../../../images/APM_Screens_Figure_033.png"></figure> 
+                     <ol>
+                        <li><strong>Surge Bin High Level Sensor</strong> - Green indicates that the level of dry feed material in the surge bin is above the
+                           level sensor, white indicates below the level sensor.
+                        </li> 
+                        <li><strong>Live Bin Refill Slide Gate Status/Control</strong> - Displays the slide gate position, whether open or closed. Also, provides an <span class="acronym" translate="no">HOA</span> button with which the slide gate <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDCHJFDB6">Figure 3.34</a> can be displayed.
+                        </li> 
+                        <li><strong>Live Bin Contents Numerical Indicator</strong> - Displays the weight of dry feed in the live bin.
+                        </li> 
+                        <li><strong>Live Bin Contents Level Indicator</strong> - Indicates the level of dry feed in the live bin relative to the high and low levels
+                           sensors. The yellow rectangle shrinks vertically as the dry feed level in the live
+                           bin drops. The yellow rectangle grows vertically as the dry feed level in the live
+                           bin rises.
+                        </li> 
+                        <li><strong>Live Bin High Level Sensor</strong> - Green indicates that the level of dry feed material in the live bin is above the
+                           high level sensor, white indicates below the high level sensor.
+                        </li> 
+                        <li><strong>Live Bin Low Level Sensor</strong> - Green indicates that the level of dry feed material in the live bin is above the
+                           low level sensor, white indicates below the low level sensor.
+                        </li> 
+                        <li><strong>Live Bin Agitator Status/Control</strong> - Displays the live bin agitator motor status, whether it is running or stopped.
+                           Also, provides a button with which the live bin agitator <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDCCFIEB2">Figure 3.35</a> can be displayed.
+                        </li> 
+                        <li><strong>Feeder Status/Control</strong> - Displays the screw feeder motor status, whether it is running or stopped, along
+                           with its speed. Also, provides a button with which the screw feeder <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDIADCIC8">Figure 3.36</a> can be displayed.
+                        </li>
+                     </ol> 
+                     <p>The surge bin is refilled when signaled by the <span class="acronym" translate="no">PLC</span>. The <span class="acronym" translate="no">PLC</span> issues the surge bin refill signal when a predetermined period of time has elapsed
+                        after the level of dry feed has dropped below the surge bin high-level sensor. The
+                        customer is responsible for constantly monitoring the refill signal from the <span class="acronym" translate="no">PLC</span> and refilling the surge bin when requested.
+                     </p> 
+                     <p>The live bin is refilled when signaled by the <span class="acronym" translate="no">PLC</span>. How the <span class="acronym" translate="no">PLC</span> determines when to issue the live bin refill signal depends on whether the feeder
+                        section is being operated in gravimetric mode or volumetric mode. (see <a href="001_003_003.html#CJAJIJGCC2">See Section 3.3.3.1, Gravimetric Feed Mode.</a> for a discussion of these to feed section modes of operation). The live bin agitator
+                        ensures that the dry feed material in the live bin is maintained at a more-or-less
+                        consistent bulk density regardless of the level of material in the bin.
+                     </p> 
+                     <p>The screw feeder delivers dry feed to the preconditioner at the desired feed rate.</p> 
+                     <figure id="CHDCHJFDB6">
+                        <figcaption><span class="figure-number">Figure 3.34</span> Slide Gate <span class="acronym" translate="no">HOA</span> Faceplate
+                        </figcaption> <img src="../../../images/APM_Screens_Figure_034.png"></figure> 
+                     <ol>
+                        <li><strong>Name Indicator</strong> - Indicates that this <span class="acronym" translate="no">HOA</span> faceplate is for controlling the dry feed material slide gate.
+                        </li> 
+                        <li><strong>State Indicator</strong> - Specifies whether the slide gate is open or closed.
+                        </li> 
+                        <li><strong>Control Mode Indicator</strong> - Specifies whether the slide gate control mode is Hand, Off or Auto.
+                        </li> 
+                        <li><strong>“Open” Button</strong> - Places the slide gate in the Hand control mode and commands the slide gate to open.
+                        </li> 
+                        <li><strong>“Close” Button</strong> - Places the slide gate in the Hand control mode and commands the slide gate to close.
+                        </li> 
+                        <li><strong>“Auto” Button</strong> - Places the slide gate in the Auto control mode.
+                        </li> 
+                        <li><strong>“Exit” Button</strong> - Closes the slide gate <span class="acronym" translate="no">HOA</span> faceplate.
+                        </li>
+                     </ol> 
+                     <figure id="CHDCCFIEB2">
+                        <figcaption><span class="figure-number">Figure 3.35</span> Live Bin Motor <span class="acronym" translate="no">HOA</span> Faceplate
+                        </figcaption> <img src="../../../images/APM_Screens_Figure_035.png"></figure> 
+                     <ol>
+                        <li><strong>Name Indicator</strong> - Indicates that this <span class="acronym" translate="no">HOA</span> faceplate is for controlling the live bin agitator.
+                        </li> 
+                        <li><strong>State Indicator</strong> - Specifies whether the live bin agitator is running or stopped.
+                        </li> 
+                        <li><strong>Control Mode Indicator</strong> - Specifies whether the live bin agitator control mode is Hand, Off or Auto.
+                        </li> 
+                        <li><strong>“Hand” Button</strong> - Places the live bin agitator in the Hand control mode.
+                        </li> 
+                        <li><strong>“Off” Button</strong> - Places the live bin agitator in the Off control mode.
+                        </li> 
+                        <li><strong>“Auto” Button</strong> - Places the live bin agitator in the Auto control mode.
+                        </li> 
+                        <li><strong>“Exit” Button</strong> - Closes the live bin agitator <span class="acronym" translate="no">HOA</span> faceplate.
+                        </li>
+                     </ol> 
+                     <figure id="CHDIADCIC8">
+                        <figcaption><span class="figure-number">Figure 3.36</span> Feeder Motor <span class="acronym" translate="no">HOA</span> Faceplate
+                        </figcaption> <img src="../../../images/APM_Screens_Figure_036.png"></figure> 
+                     <ol>
+                        <li><strong>Name Indicator</strong> - Indicates that this <span class="acronym" translate="no">HOA</span> faceplate is for controlling the screw feeder.
+                        </li> 
+                        <li><strong>State Indicator</strong> - Specifies whether the screw feeder is running or stopped.
+                        </li> 
+                        <li><strong>Control Mode Indicator</strong> - Specifies whether the screw feeder control mode is Hand, Off or Auto.
+                        </li> 
+                        <li><strong>“Hand” Button</strong> - Places the screw feeder in the Hand control mode.
+                        </li> 
+                        <li><strong>“Off” Button</strong> - Places the screw feeder in the Off control mode.
+                        </li> 
+                        <li><strong>“Auto” Button</strong> - Places the screw feeder in the Auto control mode.
+                        </li> 
+                        <li><strong>“Exit Indicator</strong> - Closes the screw feeder <span class="acronym" translate="no">HOA</span> faceplate.
+                        </li> 
+                        <li><strong>Speed Indicator</strong> - Displays the screw feeder speed in RPM.
+                        </li> 
+                        <li><strong>Percent Output</strong> - Displays the screw feeder speed as a percentage of its maximum speed.
+                        </li> 
+                        <li><strong>Manual Setpoint</strong> - When in Hand control mode allows the operator to set the screw feeder speed as
+                           a percentage of its maximum speed. The setpoint can be entered directly as an integer
+                           between 0% and 100%, or the setpoint can be incremented and decremented by clicking
+                           the up and down arrow buttons respectively.
+                        </li>
+                     </ol>
+                  </div> 
+                  <section>
+                     <h4 id="CJAJIJGCC2"><span class="chapter-number">3.3.3.1</span> Gravimetric Feed Mode
+                     </h4> 
+                     <p>When the feeder section is being operated in gravimetric mode, the level of dry feed
+                        material in the live bin is determined from the input from the live bin load cells
+                        which measure the weight of the material inside it. The volume of dry feed material
+                        in the live bin is calculated by applying the known dry feed density specified as
+                        a parameter in the currently loaded formula. Finally, the level of dry feed material
+                        in the live bin is calculated by applying the known volume and dimensions of the cylindrically-shaped
+                        live bin. The two live bin level sensors indicate when the level of dry feed material
+                        in the live bin is above and below each level, respectively.
+                     </p> 
+                     <p>The <span class="acronym" translate="no">PLC</span> issues an output signal to open the surge bin slide gate to fill the live bin when
+                        the live bin weight drops below a predetermined value. The <span class="acronym" translate="no">PLC</span> monitors the weight increase in the live bin as the live bin is refilling. The <span class="acronym" translate="no">PLC</span> issues an output to close the surge bin slide gate when the live bin weight reaches
+                        a predetermined value. Note that the live bin will always fill to a weight slightly
+                        greater than the weight value calculated to close the surge bin slide gate because
+                        of the in-transit inventory of material between the surge bin slide gate and the material
+                        level in the live bin.
+                     </p>
+                  </section> 
+                  <section>
+                     <h4 id="d6e3707"><span class="chapter-number">3.3.3.2</span> Volumetric Feed Mode
+                     </h4> 
+                     <p>When the feeder section is being operated in volumetric mode, the live bin is refilled
+                        based on input from the live bin high level sensor. If the live bin high level sensor
+                        input signal is false for a period of time that is calculated from the volumetric
+                        feed rate setpoint, the live bin capacity, and the formula bulk density, the <span class="acronym" translate="no">PLC</span> issues an output signal to open the surge bin slide gate to refill the live bin.
+                        The surge bin slide gate is opened and the live bin is filled until the high-level
+                        sensor is reached.
+                     </p>
+                  </section>
+               </section> 
+               <section>
+                  <h3 id="d6e3717"><span class="chapter-number">3.3.4</span> Preconditioner Section
+                  </h3> 
+                  <p>The preconditioner section is where dry feed material is mixed with process steam,
+                     process water, and any customer-specific liquids (e.g., oils, dyes, flavorings) before
+                     the mixture flows down to the extruder inlet through the downspout (see <a href="001_003_003.html#CHDEGDFIC9">Figure 3.37</a>). This section includes the preconditioner, the downspout, and the equipment necessary
+                     for controlling the flow of preconditioner process water and process steam.
+                  </p> 
+                  <p>Wenger provides three varieties of preconditioners:</p> 
+                  <ul>
+                     <li>Differential Diameter Conditioner (<span class="acronym" translate="no">DDC</span>)
+                     </li> 
+                     <li>High Intensity Preconditioner (<span class="acronym" translate="no">HIP</span>)
+                     </li> 
+                     <li>High Shear Conditioner (<span class="acronym" translate="no">HSC</span>)
+                     </li>
+                  </ul> 
+                  <p>The <span class="acronym" translate="no">DDC</span> features two mixer shafts. These mixer shafts rotate at different speeds but are
+                     driven by a single constant-speed motor (one shaft rotates at the motor's speed while
+                     the other is linked to the motor through a fixed-ratio gear reducer). The two <span class="acronym" translate="no">DDC</span> mixer shafts rotate at fixed speeds that the operator cannot change. When the <span class="acronym" translate="no">DDC</span> is in the Auto control mode the <span class="acronym" translate="no">PLC</span> always determines the rotation directions of the two shafts. But the operator can
+                     override the <span class="acronym" translate="no">PLC</span> and select the direction of rotation (forward or reverse) for the two mixer shafts
+                     by setting the <span class="acronym" translate="no">DDC</span> to Hand control mode (clicking the <span class="acronym" translate="no">DDC</span> <span class="acronym" translate="no">HOA</span> button (1) in <a href="001_003_003.html#CHDEGDFIC9">Figure 3.37</a>), and then clicking either the Forward or Reverse direction buttons on the <span class="acronym" translate="no">DDC</span> <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDCECIAB3">Figure 3.38</a>.
+                  </p> 
+                  <p>The <span class="acronym" translate="no">HIP</span> features two mixer shafts. Each of these two mixer shafts is driven by its own dedicated
+                     motor. The speed that each mixer shaft rotates is independent of the speed of the
+                     other shaft, and the rotational speed of each mixer shaft is selectable by the operator.
+                     Similarly, the direction that each mixer shaft rotates is independent of the direction
+                     of the other shaft, and the direction of each mixer shaft is selectable by the operator.
+                     The speed and direction of each mixer shaft can be specified by the operator in Hand
+                     control mode via an <span class="acronym" translate="no">HOA</span> faceplate, and can be specified by formula parameters in Auto control mode.
+                  </p> 
+                  <p>The <span class="acronym" translate="no">HSC</span> features a single mixer shaft that rotates in the forward direction only, but the
+                     speed that the mixer shaft rotates is selectable by the operator in Hand control mode
+                     via an <span class="acronym" translate="no">HOA</span> faceplate, and can be specified by a formula parameter in Auto control mode.
+                  </p> 
+                  <p>From this point on in this document only the operation of the <span class="acronym" translate="no">DDC</span> type of preconditioner will be discussed.
+                  </p> 
+                  <p>The preconditioner process water and process steam flow rates each depend in Auto
+                     control mode on the recipe for the specific product being formulated, and are each
+                     usually specified as a percentage of the dry feed rate. When the process water <span class="acronym" translate="no">PID</span> control loop is in the Auto control mode the <span class="acronym" translate="no">PLC</span> always determines the process water flow rate. The operator can change the process
+                     water Auto control mode flow rate setpoint by clicking the Water <span class="acronym" translate="no">PID</span> button (2) in <a href="001_003_003.html#CHDEGDFIC9">Figure 3.37</a>), and then changing the value in the setpoint text box (4) in the Cylinder Water
+                     <span class="acronym" translate="no">PID</span> faceplate in <a href="001_003_003.html#CHDEGEBJA7">Figure 3.39</a>. Changing the process steam setpoint is done in the same fashion. The operator can
+                     also override the <span class="acronym" translate="no">PLC</span> and set the process water flow control valve to a specific position by clicking the
+                     Water <span class="acronym" translate="no">PID</span> button (2) in <a href="001_003_003.html#CHDEGDFIC9">Figure 3.37</a>), setting the process water flow to Manual control mode and then changing the value
+                     in the percent output text box (5) of the Cylinder Water <span class="acronym" translate="no">PID</span> faceplate in <a href="001_003_003.html#CHDEGEBJA7">Figure 3.39</a>. The same holds for changing the process steam flow control valve position.
+                  </p> 
+                  <p>The downspout is a two-position gate that either channels feed mixture into the extruder
+                     inlet or bypasses the extruder (in which case feed mixture material will fall to the
+                     shop floor unless there is a means of collecting it ready to be used). The downspout
+                     can be commanded to either of two states, the Extruder state or the Bypass state,
+                     these names reflecting the respective positions. When the downspout is in the Auto
+                     control mode the <span class="acronym" translate="no">PLC</span> always determines the position of the downspout. But the operator can override the
+                     <span class="acronym" translate="no">PLC</span> and specify the downspout position by setting the downspout to Hand control mode
+                     (clicking the Downspout <span class="acronym" translate="no">HOA</span> button (3) in <a href="001_003_003.html#CHDEGDFIC9">Figure 3.37</a>), and then clicking either Extruder or Bypass buttons on the Downspout <span class="acronym" translate="no">HOA</span> Faceplate in <a href="001_003_003.html#CHDFGBEFF3">Figure 3.40</a>.
+                  </p> 
+                  <figure id="CHDEGDFIC9">
+                     <figcaption><span class="figure-number">Figure 3.37</span> Expanded View of Perconditioner Section of The Extruder Overview Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_037.png"></figure> 
+                  <ol>
+                     <li><strong>Preconditioner Status/Control and</strong> <span class="acronym" translate="no">HOA</span> <strong>Button</strong> - Displays whether the preconditioner is running or stopped, and displays the direction
+                        of mixer rotation. Also, provides a button with which the <span class="acronym" translate="no">DDC</span> <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDCECIAB3">Figure 3.38</a>, can be displayed.
+                     </li> 
+                     <li><strong>Preconditioner Process Water Status/Control and</strong> <span class="acronym" translate="no">PID</span> <strong>Button</strong> - Displays the mass flow rate of process water into the preconditioner, and which
+                        of the four process water injection nozzles are open. Also, provides a button with
+                        which the process water <span class="acronym" translate="no">PID</span> faceplate in <a href="001_003_003.html#CHDEGEBJA7">Figure 3.39</a>, can be displayed.
+                     </li> 
+                     <li><strong>Preconditioner Process Steam Status/Control and</strong> <span class="acronym" translate="no">PID</span> <strong>Button</strong> - Displays the mass flow rate of process steam into the preconditioner. Also, provides
+                        a button with which the process steam <span class="acronym" translate="no">PID</span> faceplate, similar to the one for preconditioner process water in <a href="001_003_003.html#CHDEGEBJA7">Figure 3.39</a>, can be displayed.
+                     </li> 
+                     <li><strong>Downspout Status/Control and</strong> <span class="acronym" translate="no">HOA</span> <strong>Button</strong> - Displays the downspout position, whether channeling feed mixture to the extruder
+                        or bypassing it. Also, provides a button with which the downspout <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDFGBEFF3">Figure 3.40</a>, can be displayed.
+                     </li> 
+                     <li><strong>Downspout Temperature</strong> - Displays the temperature of the feed mixture in the downspout.
+                     </li>
+                  </ol> 
+                  <p>The <span class="acronym" translate="no">DDC</span> <span class="acronym" translate="no">HOA</span> faceplate and its status and control features is shown in <a href="001_003_003.html#CHDCECIAB3">Figure 3.38</a>:
+                  </p> 
+                  <figure id="CHDCECIAB3">
+                     <figcaption><span class="figure-number">Figure 3.38</span> <span class="acronym" translate="no">DDC</span> <span class="acronym" translate="no">HOA</span> Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_038.png"></figure> 
+                  <ol>
+                     <li><strong>Name Indicator</strong> - Indicates that this <span class="acronym" translate="no">HOA</span> faceplate is for controlling the <span class="acronym" translate="no">DDC</span> motor.
+                     </li> 
+                     <li><strong>State Indicator</strong> - Specifies whether the <span class="acronym" translate="no">DDC</span> is running in the forward direction, running in the reverse direction, or off (i.e.,
+                        stopped).
+                     </li> 
+                     <li><strong>Control Mode Indicator</strong> - Specifies whether the <span class="acronym" translate="no">DDC</span> control mode is Hand, Off or Auto.
+                     </li> 
+                     <li><strong>“Forward” Button</strong> - Places the <span class="acronym" translate="no">DDC</span> in the Hand control mode and commands the <span class="acronym" translate="no">DDC</span> to run in the forward direction.
+                     </li> 
+                     <li><strong>“Reverse” Button</strong> - Places the <span class="acronym" translate="no">DDC</span> in the Hand control mode and commands the <span class="acronym" translate="no">DDC</span> to run in the reverse direction.
+                     </li> 
+                     <li><strong>“Off” Button</strong> - Places the <span class="acronym" translate="no">DDC</span> in the Off control mode.
+                     </li> 
+                     <li><strong>“Auto” Button</strong> - Places the <span class="acronym" translate="no">DDC</span> in the Auto control mode.
+                     </li> 
+                     <li><strong>“Exit” Button</strong> - Closes the <span class="acronym" translate="no">DDC</span> <span class="acronym" translate="no">HOA</span> faceplate.
+                     </li>
+                  </ol> 
+                  <p>The preconditioner process water <span class="acronym" translate="no">PID</span> faceplate and its status and control features is shown in <a href="001_003_003.html#CHDEGEBJA7">Figure 3.39</a> (the preconditioner process steam <span class="acronym" translate="no">PID</span> faceplate features are identical to those for the process water and thus won't be
+                     shown).
+                  </p> 
+                  <figure id="CHDEGEBJA7">
+                     <figcaption><span class="figure-number">Figure 3.39</span> Water/Steam <span class="acronym" translate="no">PID</span> Faceplate (A-Auto Mode; B-Manual Mode)
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_039.png"></figure> 
+                  <ol>
+                     <li><strong>“Auto” Button</strong> - Clicking this button will cause the <span class="acronym" translate="no">PID</span> control loop to switch from Manual control mode to Auto control mode.
+                     </li> 
+                     <li><strong>“Manual” Button</strong> - Clicking this button will cause the <span class="acronym" translate="no">PID</span> control loop to switch from Auto control mode to Manual control mode.
+                     </li> 
+                     <li><strong>Control Mode Indicator</strong> - Indicates the <span class="acronym" translate="no">PID</span> control loop's current control mode, Auto in <a href="001_003_003.html#CHDEGEBJA7">Figure 3.39</a>, side [A] and Manual in <a href="001_003_003.html#CHDEGEBJA7">Figure 3.39</a>, side [B].
+                     </li> 
+                     <li><strong>Auto Control Mode Flow Rate Setpoint Select</strong> - This group of controls allow the operator to change the control loop's flow rate
+                        setpoint, ramping up or down by clicking the arrow buttons, or entering a numerical
+                        value by clicking inside the white rectangular field. Notice in <a href="001_003_003.html#CHDEGEBJA7">Figure 3.39</a>, side [B] that the auto setpoint is only displayed but cannot be changed when in
+                        Manual control mode.
+                     </li> 
+                     <li><strong>Manual Control Mode Control Valve Position Select</strong> - This group of controls allow the operator to change the flow control valve's position
+                        setpoint, ramping up or down by clicking the arrow buttons, or entering a numerical
+                        value by clicking inside the white rectangular field. Notice in <a href="001_003_003.html#CHDEGEBJA7">Figure 3.39</a>, side [A] that the manual setpoint is only displayed but cannot be changed when in
+                        Auto control mode.
+                     </li> 
+                     <li><strong>Desired Flow Rate Indicator</strong> - Bar graph that displays the current flow rate setpoint in units of weight/hour
+                        (converted from percent of dry feed rate). The color of this bar graph, which is always
+                        green, doesn't signify anything.
+                     </li> 
+                     <li><strong>Actual Flow Rate Indicator</strong> - Bar graph that displays the current flow rate actual value in units of weight/hour
+                        (converted from percent of dry feed rate). The color of this bar graph can change,
+                        depending on whether the flow rate is within normal operating range (blue), mildly
+                        outside of normal operating range (yellow), or severely outside of normal operating
+                        range (red). Notice in <a href="001_003_003.html#CHDEGEBJA7">Figure 3.39</a>, side [A] that the actual flow rate is within the normal range (blue), but in <a href="001_003_003.html#CHDEGEBJA7">Figure 3.39</a>, side [B] the actual flow rate is in the mildly excessive range (yellow).
+                     </li> 
+                     <li><strong>Normal and Alarm Operating Ranges</strong> - This bar graph indicates three flow rate operating ranges: normal (blue), mildly
+                        excessive (yellow), and severely excessive (red).
+                     </li> 
+                     <li><strong>Control Valve Position Indicator</strong> - This bar graph indicates the position of the flow control valve, expressed as the
+                        degree to which it is open, as a percentage of maximum open.
+                     </li> 
+                     <li><strong>“Exit” Button</strong> - Clicking this button closes the <span class="acronym" translate="no">PID</span> control faceplate.
+                     </li> 
+                     <li><strong>“Edit” Button</strong> - Clicking this button allows the user to tune the <span class="acronym" translate="no">PID</span> control loop. This button is not visible to users logged in as Operator user types,
+                        so this button will not be discussed any further.
+                     </li>
+                  </ol> 
+                  <p>The downspout <span class="acronym" translate="no">HOA</span> faceplate and its status and control features is shown in <a href="001_003_003.html#CHDFGBEFF3">Figure 3.40</a>:
+                  </p> 
+                  <figure id="CHDFGBEFF3">
+                     <figcaption><span class="figure-number">Figure 3.40</span> Downspout <span class="acronym" translate="no">HOA</span> Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_040.png"></figure> 
+                  <ol>
+                     <li><strong>Name Indicator</strong> - Indicates that this <span class="acronym" translate="no">HOA</span> faceplate is for controlling the downspout.
+                     </li> 
+                     <li><strong>State Indicator</strong> - Specifies whether the downspout is channeling feed mixture into the extruder or
+                        bypassing it.
+                     </li> 
+                     <li><strong>Control Mode Indicator</strong> - Specifies whether the downspout control mode is Hand, Off or Auto.
+                     </li> 
+                     <li><strong>“Extruder” Button</strong> - Places the downspout in the Hand control mode and commands the downspout to the
+                        extruder position (feed mixture will be channeled into the extruder inlet).
+                     </li> 
+                     <li><strong>“Bypass” Button</strong> - Places the downspout in the Hand control mode and commands the downspout to the
+                        bypass position (a means of collecting feed mixture as it exits the downspout must
+                        be ready).
+                     </li> 
+                     <li><strong>“Auto” Button</strong> - Places the downspout in the Auto control mode.
+                     </li> 
+                     <li><strong>“Exit” Button</strong> - Closes the downspout <span class="acronym" translate="no">HOA</span> faceplate.
+                     </li>
+                  </ol>
+               </section> 
+               <section>
+                  <h3 id="CIHCCCJHD5"><span class="chapter-number">3.3.5</span> Extruder Section
+                  </h3> 
+                  <p>The extruder section is where the feed mixture is cooked under high pressure. This
+                     section includes the extruder, the lube pump, the <span class="acronym" translate="no">BPV</span>, and the process water and process steam that are injected into the extruder barrel
+                     (not to be confused with the water and steam that are circulated through the extruder
+                     barrel jackets and used to control the temperatures of the various extruder barrel
+                     temperature zones). <a href="001_003_003.html#CHDJEGIHF9">Figure 3.41</a> reproduces the region of the Extruder Overview screen where the extruder section
+                     can be seen.
+                  </p> 
+                  <p>The extruder motor only rotates in the forward direction. Its speed is usually specified
+                     in RPM as a formula item in Auto control mode that depends on the recipe for whatever
+                     product is being produced. When the extruder is in the Auto control mode the <span class="acronym" translate="no">PLC</span> always determines the extruder speed. But the operator can override the <span class="acronym" translate="no">PLC</span> and specify the extruder speed by setting the extruder to Hand control mode (clicking
+                     the Extruder <span class="acronym" translate="no">HOA</span> button (1) in <a href="001_003_003.html#CHDJEGIHF9">Figure 3.41</a>), and then changing the value in the manual setpoint text box (10) on the Extruder
+                     <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDICIFHE9">Figure 3.43</a>.
+                  </p> 
+                  <p>The lube pump is a fixed speed device that circulates lubrication oil through the
+                     extruder motor bearing housing. The lube pump must be running before the extruder
+                     motor can be started. When the lube pump is in the Auto control mode the <span class="acronym" translate="no">PLC</span> always determines whether the lube pump is running or stopped. But the operator can
+                     override the <span class="acronym" translate="no">PLC</span> and control the lube pump by clicking the Lube Pump <span class="acronym" translate="no">HOA</span> button (2) in <a href="001_003_003.html#CHDJEGIHF9">Figure 3.41</a>, and then clicking either Hand (4) or Off (5) buttons on the Lube Pump <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDGBHCJI2">Figure 3.44</a>.
+                  </p> 
+                  <p>The extruder process water and process steam flow rates each depend in Auto control
+                     mode on the recipe for the specific product being formulated, and each are usually
+                     specified as a percentage of the dry feed rate. When the extruder process water <span class="acronym" translate="no">PID</span> control loop is in the Auto control mode the <span class="acronym" translate="no">PLC</span> always determines the process water flow rate. The operator can change the process
+                     water Auto control mode flow rate setpoint by clicking the Water <span class="acronym" translate="no">PID</span> button (4) in <a href="001_003_003.html#CHDJEGIHF9">Figure 3.41</a>), and then changing the value in the setpoint text box (4) on the Extruder Water
+                     <span class="acronym" translate="no">PID</span> faceplate in <a href="001_003_003.html#CHDDBBGDG4">Figure 3.45</a>. Changing the extruder process steam setpoint is done in the same fashion. The operator
+                     can also override the <span class="acronym" translate="no">PLC</span> and set the extruder process water flow control valve to a specific position by clicking
+                     the Water <span class="acronym" translate="no">HOA</span> button (4) in <a href="001_003_003.html#CHDJEGIHF9">Figure 3.41</a>), setting the process water <span class="acronym" translate="no">PID</span> control loop to Manual control mode and then changing the value in the percent output
+                     text box (5) of the Extruder Water <span class="acronym" translate="no">PID</span> faceplate in <a href="001_003_003.html#CHDJEGIHF9">Figure 3.41</a>. The same holds for changing the extruder process steam flow control valve position.
+                  </p> 
+                  <p>The <span class="acronym" translate="no">BPV</span> is a valve that has a single inlet and two outlets. One outlet, called the process
+                     outlet, channels raw product material from the extruder through a shaping die and
+                     then on to the knife. The other outlet, called the reject outlet, channels material
+                     down through an opening at the bottom of the <span class="acronym" translate="no">BPV</span> and out of the extruder system (where a container should be in place to collect the
+                     rejected raw product). The <span class="acronym" translate="no">BPV</span> can be controlled in either of three states: Process, Reject and Die Relief. When
+                     the <span class="acronym" translate="no">BPV</span> is commanded to the Process state the <span class="acronym" translate="no">BPV</span> allows raw product to flow from the extruder through the valve's process outlet,
+                     the size of which can be enlarged or restricted to maintain a desired pressure at
+                     the end of the extruder. When the <span class="acronym" translate="no">BPV</span> is commanded to the Reject state the <span class="acronym" translate="no">BPV</span> allows raw product to flow from the extruder through the valve's reject outlet. When
+                     the <span class="acronym" translate="no">BPV</span> is commanded to the Die Relief state the <span class="acronym" translate="no">BPV</span> allows raw product to flow from the extruder to both the process outlet and reject
+                     outlet. In addition, the size of the process outlet opening is set to its maximum.
+                     When the <span class="acronym" translate="no">BPV</span> is in the Auto control mode the <span class="acronym" translate="no">PLC</span> always determines whether the <span class="acronym" translate="no">BPV</span> is in the Process, Reject or Die Relief control mode. But the operator can override
+                     the <span class="acronym" translate="no">PLC</span> and control the <span class="acronym" translate="no">BPV</span> by clicking the <span class="acronym" translate="no">BPV</span> <span class="acronym" translate="no">HOA</span> button (3) in <a href="001_003_003.html#CHDJEGIHF9">Figure 3.41</a>, and then clicking either Hand (4) or Off (5) buttons in the <span class="acronym" translate="no">BPV</span> <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDJJJGHH0">Figure 3.46</a>.
+                  </p> 
+                  <figure id="CHDJEGIHF9">
+                     <figcaption><span class="figure-number">Figure 3.41</span> Expanded View of Extruder Section of The Extruder Overview Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_041.png"></figure> 
+                  <ol>
+                     <li><strong>Extruder Status/Control</strong> - Displays whether the extruder is running or stopped. Also, provides a button with
+                        which the extruder <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDICIFHE9">Figure 3.43</a>, can be displayed.
+                     </li> 
+                     <li><strong>Lube Pump Status/Control</strong> - Displays whether the extruder's lube pump is running or stopped. Also, provides
+                        a button with which the lube pump <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDGBHCJI2">Figure 3.44</a>, can be displayed.
+                     </li> 
+                     <li><strong>Extruder Process Water Status/Control</strong> - Displays the mass flow rate of process water into the extruder. Also, provides
+                        a button with which the process water <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDDBBGDG4">Figure 3.45</a>, can be displayed.
+                     </li> 
+                     <li><strong>Extruder Process Steam Status/Control</strong> - Displays the mass flow rate of process steam into the extruder. Also, provides
+                        a button with which the extruder process steam <span class="acronym" translate="no">HOA</span> faceplate, similar to the one for extruder process water in <a href="001_003_003.html#CHDDBBGDG4">Figure 3.45</a>, can be displayed.
+                     </li> 
+                     <li><span class="acronym" translate="no">BPV</span><strong> Status/Control</strong> - Displays whether the <span class="acronym" translate="no">BPV</span> is running or stopped. Also, provides a button with which the <span class="acronym" translate="no">BPV</span> <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDJJJGHH0">Figure 3.46</a>, can be displayed.
+                     </li> 
+                     <li><strong>Motor Load Indicator</strong> - Displays the level of AC current being drawn by the extruder motor as a percentage
+                        of the maximum rated current.
+                     </li> 
+                     <li><strong>Head Pressure Indicator</strong> - Displays the conehead pressure (i.e., the pressure on the immediate upstream side
+                        of the <span class="acronym" translate="no">BPV</span>).
+                     </li>
+                  </ol> 
+                  <p>When the extruder system startup sequence is being executed by the <span class="acronym" translate="no">PLC</span>, at some point in the startup sequence the <span class="acronym" translate="no">PLC</span> will determine that conditions will be such that it is safe for the <span class="acronym" translate="no">BPV</span> to be changed from the Reject position to the Process position. It will be at this
+                     point that the <span class="acronym" translate="no">PLC</span> will prompt the operator to command the <span class="acronym" translate="no">BPV</span> position change by displaying a button (1) as in <a href="001_003_003.html#CHDBGDFGI6">Figure 3.42</a>. The <span class="acronym" translate="no">PLC</span> will wait until the operator has clicked this button to change the <span class="acronym" translate="no">BPV</span> position from Reject to Process.
+                  </p> 
+                  <figure id="CHDBGDFGI6">
+                     <figcaption><span class="figure-number">Figure 3.42</span> <span class="acronym" translate="no">BPV</span> Position Change Button (example)
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_042.png"></figure> 
+                  <p>The extruder <span class="acronym" translate="no">HOA</span> faceplate and its status and control features is shown in <a href="001_003_003.html#CHDICIFHE9">Figure 3.43</a>:
+                  </p> 
+                  <figure id="CHDICIFHE9">
+                     <figcaption><span class="figure-number">Figure 3.43</span> Extruder Motor <span class="acronym" translate="no">HOA</span> Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_043.png"></figure> 
+                  <ol>
+                     <li><strong>Name Indicator</strong> - Indicates that this <span class="acronym" translate="no">HOA</span> is for controlling the extruder motor.
+                     </li> 
+                     <li><strong>State Indicator</strong> - Specifies whether the extruder is running or stopped.
+                     </li> 
+                     <li><strong>Control Mode Indicator</strong> - Specifies whether the extruder control mode is Hand, Off or Auto.
+                     </li> 
+                     <li><strong>“Hand” Button</strong> - Places the extruder in the Hand control mode.
+                     </li> 
+                     <li><strong>“Off” Button</strong> - Places the extruder in the Off control mode.
+                     </li> 
+                     <li><strong>“Auto” Button</strong> - Places the extruder in the Auto control mode.
+                     </li> 
+                     <li><strong>“Exit” Button</strong> - Closes the extruder <span class="acronym" translate="no">HOA</span> faceplate.
+                     </li> 
+                     <li><strong>Speed Indicator</strong> - Displays the extruder speed in RPM.
+                     </li> 
+                     <li><strong>Percent Output</strong> - Displays the extruder speed as a percentage of its maximum speed.
+                     </li> 
+                     <li><strong>Manual Setpoint</strong> - When in Hand control mode allows the operator to set the extruder speed as a percentage
+                        of its maximum speed.
+                     </li>
+                  </ol> 
+                  <p>The lube pump <span class="acronym" translate="no">HOA</span> faceplate and its status and control features is shown in <a href="001_003_003.html#CHDGBHCJI2">Figure 3.44</a>:
+                  </p> 
+                  <figure id="CHDGBHCJI2">
+                     <figcaption><span class="figure-number">Figure 3.44</span> Lube Pump <span class="acronym" translate="no">HOA</span> Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_044.png"></figure> 
+                  <ol>
+                     <li><strong>Name Indicator</strong> - Indicates that this <span class="acronym" translate="no">HOA</span> is for controlling the lube pump.
+                     </li> 
+                     <li><strong>State Indicator</strong> - Specifies whether the lube pump is running or stopped.
+                     </li> 
+                     <li><strong>Control Mode Indicator</strong> - Specifies whether the lube pump control mode is Hand, Off or Auto.
+                     </li> 
+                     <li><strong>“Hand” Button</strong> - Places the lube pump in the Hand control mode.
+                     </li> 
+                     <li><strong>“Off” Button</strong> - Places the lube pump in the Off control mode.
+                     </li> 
+                     <li><strong>“Auto” Button</strong> - Places the lube pump in the Auto control mode.
+                     </li> 
+                     <li><strong>“Exit” Button</strong> - Closes the lube pump <span class="acronym" translate="no">HOA</span> faceplate.
+                     </li>
+                  </ol> 
+                  <p>The extruder process water <span class="acronym" translate="no">PID</span> faceplate and its status and control features is shown in <a href="001_003_003.html#CHDDBBGDG4">Figure 3.45</a> (the extruder process steam <span class="acronym" translate="no">PID</span> faceplate features are identical and so it won't be shown).
+                  </p> 
+                  <figure id="CHDDBBGDG4">
+                     <figcaption><span class="figure-number">Figure 3.45</span> Water/Steam <span class="acronym" translate="no">PID</span> Faceplate (A-Auto Mode; B-Manual Mode)
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_045.png"></figure> 
+                  <ol>
+                     <li><strong>“Auto” Button</strong> - Clicking this button will cause the <span class="acronym" translate="no">PID</span> control loop to switch from Manual control mode to Auto control mode.
+                     </li> 
+                     <li><strong>“Manual” Button</strong> - Clicking this button will cause the <span class="acronym" translate="no">PID</span> control loop to switch from Auto control mode to Manual control mode.
+                     </li> 
+                     <li><strong>Control Mode Indicator</strong> - Indicates the <span class="acronym" translate="no">PID</span> control loop's current control mode, Auto in <a href="001_003_003.html#CHDDBBGDG4">Figure 3.45</a>, side [A] and Manual in <a href="001_003_003.html#CHDDBBGDG4">Figure 3.45</a>, side [B] .
+                     </li> 
+                     <li><strong>Auto Control Mode Flow Rate Setpoint Select</strong> - This group of controls allow the operator to change the control loop's flow rate
+                        setpoint, ramping up or down by clicking the arrow buttons, or entering a numerical
+                        value by clicking inside the white rectangular field. Notice in the <a href="001_003_003.html#CHDDBBGDG4">Figure 3.45</a>, side [B] that the auto setpoint is only displayed but cannot be changed when in
+                        Manual control mode.
+                     </li> 
+                     <li><strong>Manual Control Mode Control Valve Position Select</strong> - This group of controls allow the operator to change the flow control valve's position
+                        setpoint, ramping up or down by clicking the arrow buttons, or entering a numerical
+                        value by clicking inside the white rectangular field. Notice in <a href="001_003_003.html#CHDDBBGDG4">Figure 3.45</a>, side [A] that the manual setpoint is only displayed but cannot be changed when in
+                        Auto control mode.
+                     </li> 
+                     <li><strong>Desired Flow Rate Indicator</strong> - Bar graph that displays the current flow rate setpoint in units of weight/hour
+                        (converted from percent of dry feed rate). The color of this bar graph, which is always
+                        green, doesn't signify anything.
+                     </li> 
+                     <li><strong>Actual Flow Rate Indicator</strong> - Bar graph that displays the current flow rate actual value in units of weight/hour
+                        (converted from percent of dry feed rate). The color of this bar graph can change,
+                        depending on whether the flow rate is within normal operating range (blue), mildly
+                        outside of normal operating range (yellow), or severely outside of normal operating
+                        range (red). Notice in <a href="001_003_003.html#CHDDBBGDG4">Figure 3.45</a>, side [A] that the actual flow rate is within the normal range (blue), but in <a href="001_003_003.html#CHDDBBGDG4">Figure 3.45</a>, side [B] the actual flow rate is in the mildly excessive range (yellow).
+                     </li> 
+                     <li><strong>Normal and Alarm Operating Range Indicator</strong> - This bar graph indicates three flow rate operating ranges: normal (blue), mildly
+                        excessive (yellow), and severely excessive (red).
+                     </li> 
+                     <li><strong>Control Valve Position Indicator</strong> - This bar graph indicates the position of the flow control valve, expressed as the
+                        degree to which it is open, as a percentage of maximum open.
+                     </li> 
+                     <li><strong>“Exit” Button</strong> - Clicking this button closes the <span class="acronym" translate="no">PID</span> control faceplate.
+                     </li> 
+                     <li><strong>“Edit” Button</strong> - Clicking this button allows the user to tune the <span class="acronym" translate="no">PID</span> control loop. This button is not visible to users logged in as Operator user types,
+                        so this button will not be discussed any further.
+                     </li>
+                  </ol> 
+                  <p>The <span class="acronym" translate="no">BPV</span> <span class="acronym" translate="no">HOA</span> faceplate and its status and control features is shown in <a href="001_003_003.html#CHDJJJGHH0">Figure 3.46</a>:
+                  </p> 
+                  <figure id="CHDJJJGHH0">
+                     <figcaption><span class="figure-number">Figure 3.46</span> <span class="acronym" translate="no">BPV</span> <span class="acronym" translate="no">HOA</span> Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_046.png"></figure> 
+                  <ol>
+                     <li><strong>Name Indicator</strong> - Indicates that this <span class="acronym" translate="no">HOA</span> faceplate is for controlling the <span class="acronym" translate="no">BPV</span>.
+                     </li> 
+                     <li><strong>Position Indicator</strong> - Specifies whether the <span class="acronym" translate="no">BPV</span> is in the Process position, the Reject position, or the Die Relief position.
+                     </li> 
+                     <li><strong>Position Command Indicator</strong> - Specifies whether the <span class="acronym" translate="no">BPV</span> is commanded to the Process, Reject or Die Relief position.
+                     </li> 
+                     <li><strong>“Die Relief” Button</strong> - Commands the <span class="acronym" translate="no">BPV</span> to the Die Relief position.
+                     </li> 
+                     <li><strong>“Reject” Button</strong> - Commands the <span class="acronym" translate="no">BPV</span> to the Reject position.
+                     </li> 
+                     <li><strong>“Process” Button</strong> - Commands the <span class="acronym" translate="no">BPV</span> to the Process position.
+                     </li> 
+                     <li><strong>“Exit” Button</strong> - Closes the <span class="acronym" translate="no">BPV</span> <span class="acronym" translate="no">HOA</span> faceplate.
+                     </li> 
+                     <li>“<strong>Hand” Button</strong> - Places the <span class="acronym" translate="no">BPV</span> in the Hand control mode (also applies power to the <span class="acronym" translate="no">BPV</span>).
+                     </li> 
+                     <li><strong>“Off” Button</strong> - Places the <span class="acronym" translate="no">BPV</span> in the Off control mode (also removes power from the <span class="acronym" translate="no">BPV</span>).
+                     </li> 
+                     <li><strong>“Auto” Button</strong> - Places the <span class="acronym" translate="no">BPV</span> in the Auto control mode (also applies power to the <span class="acronym" translate="no">BPV</span>).
+                     </li> 
+                     <li><strong>Control Mode Indicator</strong> - Specifies whether the <span class="acronym" translate="no">BPV</span> control mode is Hand, Off or Auto.
+                     </li> 
+                     <li><span class="acronym" translate="no">BPV</span><strong>% Open Setpoint</strong> - Displays the valve% open setpoint that is used when the <span class="acronym" translate="no">BPV</span> is in Auto control mode and commanded to the Process position.
+                     </li> 
+                     <li><strong>Server Power Indicator</strong> - Indicates whether power is being applied to the <span class="acronym" translate="no">BPV</span>.
+                     </li>
+                  </ol>
+               </section> 
+               <section>
+                  <h3 id="d6e4942"><span class="chapter-number">3.3.6</span> Knife Section
+                  </h3> 
+                  <p>The knife section is where the raw product that is forced under pressure out of the
+                     extruder section through shaping die is then cut to length and conveyed out of the
+                     extruder system. This section includes the knife and the knife hood. <a href="001_003_003.html#CHDJCGGJE6">Figure 3.47</a> reproduces the region of the Extruder Overview screen where the knife section can
+                     be seen.
+                  </p> 
+                  <p>The knife speed is usually specified in RPM as a formula item that depends on the
+                     recipe for whatever product is being produced. The knife hood is a channel or ductwork
+                     through which the product is pneumatically conveyed to equipment downstream of the
+                     extruder system, usually a dryer, for further processing. Typically, there is a product
+                     transfer fan and airlock downstream of the extruder system that, when the knife hood
+                     diverter is open, creates a pressure drop sufficient to pull the product through the
+                     knife hood and over to the downstream equipment. This negative pressure is not exerted
+                     on the knife hood when the knife hood diverter is closed. In this case, any raw product
+                     exiting the extruder and cut by the knife will fall out through the bottom of the
+                     knife hood. (The product transfer fan and airlock are sometimes provided as the last
+                     section of the extruder system, but they are more typically the first section of a
+                     dryer system, and so they won't be addressed in this document.)
+                  </p> 
+                  <figure id="CHDJCGGJE6">
+                     <figcaption><span class="figure-number">Figure 3.47</span> Expanded View of Knife Section of The Extruder Overview Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_047.png"></figure> 
+                  <ol>
+                     <li><strong>Knife Status/Control</strong> - Displays whether the knife is running or stopped. Also, provides a button with
+                        which the knife <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDFGIFGE3">Figure 3.50</a>, can be displayed.
+                     </li> 
+                     <li><strong>Knife Hood Status/Control</strong> - Displays whether the knife hood gate is open or closed. Also, provides a button
+                        with which the knife hood <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_003.html#CHDJAFEDE5">Figure 3.51</a>, can be displayed.
+                     </li> 
+                     <li><strong>Knife Speed Indicator</strong> - Displays the knife speed in RPM.
+                     </li>
+                  </ol> 
+                  <p>When the extruder system startup sequence is being executed by the <span class="acronym" translate="no">PLC</span>, at some point in the startup sequence, just prior to when the knife is to be started,
+                     the <span class="acronym" translate="no">PLC</span> will prompt the operator to confirm that the knife is safe to start by displaying
+                     a button (1) as in <a href="001_003_003.html#CHDJJEECJ2">Figure 3.48</a>. The <span class="acronym" translate="no">PLC</span> will not start the knife until the operator has clicked this button to confirm that
+                     the knife is safe to start.
+                  </p> 
+                  <figure id="CHDJJEECJ2">
+                     <figcaption><span class="figure-number">Figure 3.48</span> <span class="acronym" translate="no">PID</span> Button for Knife Confirmation
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_048.png"></figure> 
+                  <p>When the extruder system startup sequence is being executed by the <span class="acronym" translate="no">PLC</span>, at some point in the startup sequence the <span class="acronym" translate="no">PLC</span> will determine that conditions will be such that it is ok for the knife hood diverter
+                     to be changed from the Reject position to the Process position. It will be at this
+                     point that the <span class="acronym" translate="no">PLC</span> will prompt the operator to command the knife hood diverter position change by displaying
+                     a button (1) as in <a href="001_003_003.html#CHDCAGCHE0">Figure 3.49</a>. The <span class="acronym" translate="no">PLC</span> will wait until the operator has clicked this button to change the knife hood diverter
+                     position from Reject to Process.
+                  </p> 
+                  <figure id="CHDCAGCHE0">
+                     <figcaption><span class="figure-number">Figure 3.49</span> <span class="acronym" translate="no">PID</span> Button for Zone 1 Barrel Temperature (example)
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_049.png"></figure> 
+                  <p>The knife <span class="acronym" translate="no">HOA</span> faceplate and its status and control features is shown in <a href="001_003_003.html#CHDFGIFGE3">Figure 3.50</a>:
+                  </p> 
+                  <figure id="CHDFGIFGE3">
+                     <figcaption><span class="figure-number">Figure 3.50</span> Knife Motor <span class="acronym" translate="no">HOA</span> Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_050.png"></figure> 
+                  <ol>
+                     <li><strong>Name Indicator</strong> - Indicates that this <span class="acronym" translate="no">HOA</span> faceplate is for controlling the knife motor.
+                     </li> 
+                     <li><strong>State Indicator</strong> - Specifies whether the knife is running or stopped.
+                     </li> 
+                     <li><strong>Control Mode Indicator</strong> - Specifies whether the knife control mode is Hand, Off or Auto.
+                     </li> 
+                     <li><strong>“Hand” Button</strong> - Places the knife in the Hand control mode.
+                     </li> 
+                     <li><strong>“Off” Button</strong> - Places the knife in the Off control mode.
+                     </li> 
+                     <li><strong>“Auto” Button</strong> - Places the knife in the Auto control mode.
+                     </li> 
+                     <li><strong>“Exit” Button</strong> - Closes the knife <span class="acronym" translate="no">HOA</span> faceplate.
+                     </li> 
+                     <li><strong>Speed Indicator</strong> - Displays the knife speed in RPM.
+                     </li> 
+                     <li><strong>Percent Output</strong> - Displays the knife speed as a percentage of its maximum speed.
+                     </li> 
+                     <li><strong>Manual Setpoint</strong> - When in Hand control mode allows the operator to set the knife speed as a percentage
+                        of its maximum speed.
+                     </li>
+                  </ol> 
+                  <p>The knife hood diverter <span class="acronym" translate="no">HOA</span> faceplate and its status and control features in <a href="001_003_003.html#CHDJAFEDE5">Figure 3.51</a>:
+                  </p> 
+                  <figure id="CHDJAFEDE5">
+                     <figcaption><span class="figure-number">Figure 3.51</span> Pnuematic Hood <span class="acronym" translate="no">HOA</span> Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_051.png"></figure> 
+                  <ol>
+                     <li><strong>Name</strong> - Indicates that this <span class="acronym" translate="no">HOA</span> faceplate is for controlling the knife hood diverter.
+                     </li> 
+                     <li><strong>State indicator</strong> - Specifies whether the knife hood diverter is open (i.e., in the Process position)
+                        or closed (i.e., in the Reject position).
+                     </li> 
+                     <li><strong>Control mode</strong> - Specifies whether the knife hood diverter control mode is Process, Reject or Auto.
+                     </li> 
+                     <li><strong>“Process” Button</strong> - Places the knife hood diverter in the Hand control mode and commands the diverter
+                        gate to the Process position (diverter opens to allow raw product to be conveyed to
+                        the processing equipment downstream of the extruder system).
+                     </li> 
+                     <li><strong>“Bypass” Button</strong> - Places the knife hood diverter in the Hand control mode and commands the diverter
+                        date to the Reject position (diverter closes, causing raw product to fall by gravity
+                        down and out through the bottom of the knife hood).
+                     </li> 
+                     <li><strong>“Auto” Button</strong> - Places the knife hood diverter in the Auto control mode.
+                     </li> 
+                     <li><strong>“Exit” Button</strong> - Closes the knife hood diverter <span class="acronym" translate="no">HOA</span> faceplate.
+                     </li>
+                  </ol>
+               </section> 
+               <section>
+                  <h3 id="d6e5190"><span class="chapter-number">3.3.7</span> Miscellaneous Features
+                  </h3> 
+                  <p>The features on the faceplate shown in <a href="001_003_003.html#CHDDHIBCF5">Figure 3.52</a>, pertain mainly to the how the dry feed system functions. The operator can use this
+                     faceplate to set the dry feed setpoint and mode of control, and calculate the dry
+                     feed bulk density.
+                  </p> 
+                  <figure id="CHDDHIBCF5">
+                     <figcaption><span class="figure-number">Figure 3.52</span> Dry Feed System Functions Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_052.png"></figure> 
+                  <ol>
+                     <li><strong>Feed Rate Setpoint Indicator</strong> - Allows the user to enter a new dry feed rate setpoint.
+                     </li> 
+                     <li><strong>Current Mode Indicator</strong> - Indicates the dry feed control mode, either gravimetric or volumetric.
+                     </li> 
+                     <li><strong>“Gravimetric Feed” Button</strong> - Clicking this button commands the <span class="acronym" translate="no">PLC</span> to use gravimetric mode for dry feed rate control.
+                     </li> 
+                     <li><strong>“Volumetric Feed” Button</strong> - Clicking this button commands the <span class="acronym" translate="no">PLC</span> to use volumetric mode for dry feed rate control.
+                     </li> 
+                     <li><strong>Feed Rate Indicator</strong> - Displays the current dry feed mass flow rate.
+                     </li> 
+                     <li><strong>Feeder Screw Speed Indicator</strong> - Displays the current screw speed in RPM.
+                     </li> 
+                     <li><strong>“Enable” Button</strong> - Clicking this button enables the <span class="acronym" translate="no">PLC</span> to continuously update the dry feed bulk density.
+                     </li> 
+                     <li><strong>“Disable” Button</strong> - Clicking this button commands the <span class="acronym" translate="no">PLC</span> to stop updating the dry feed bulk density.
+                     </li> 
+                     <li><strong>Current Mode Indicator</strong> - Indicates whether bulk density correction is currently enabled or disabled.
+                     </li> 
+                     <li><strong>System Steam Pressure Indicator</strong> - Displays the status (OK or Not OK) of the system steam pressure.
+                     </li> 
+                     <li><strong>System Water Pressure Indicator</strong> - Displays the status (OK or Not OK) of the system water pressure.
+                     </li> 
+                     <li><strong>System Air Pressure Indicator</strong> - Displays the status (OK or Not OK) of the system air pressure.
+                     </li>
+                  </ol> 
+                  <p>The faceplate shown in <a href="001_003_003.html#CHDJJCFFB5">Figure 3.53</a> totalized feed rate usage and average energy usage statistics, and allows the operator
+                     to reset these totals.
+                  </p> 
+                  <figure id="CHDJJCFFB5">
+                     <figcaption><span class="figure-number">Figure 3.53</span> Dry Feed Totals Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_053.png"></figure> 
+                  <ol>
+                     <li><strong>Current Indicator</strong> - Displays the total weight of dry feed that has been consumed since this statistic
+                        was reset. This number can be accumulated over multiple production runs.
+                     </li> 
+                     <li><strong>Previous Indicator</strong> - Displays the previous value for the totalized dry feed (just prior to the last
+                        time that the statistic was reset.
+                     </li> 
+                     <li><strong>Specific Mechanical Energy Usage Indicator</strong> - Displays the power that is currently being consumed by the extruder motor.
+                     </li> 
+                     <li><strong>Specific Mechanical Energy Usage Indicator</strong> - Displays the average hourly rate that mechanical energy is being consumed by the
+                        extruder motor per ton of dry feed material.
+                     </li> 
+                     <li><strong>“Reset” Button</strong> - Clicking this button copies the current totalized dry feed amount to the previous
+                        totalized dry feed amount, and then sets the current totalized dry feed amount to
+                        zero.
+                     </li>
+                  </ol> 
+                  <p>Clicking the (F5) Extruder Commands button (1) in <a href="001_003_003.html#CHDCHCHFB6">Figure 3.54</a> causes the Extruder Commands faceplate in <a href="001_003_003.html#CHDBIEDCJ2">Figure 3.55</a> to appear. Clicking the (F6) Bypass/Confirm Menu button (2) in <a href="001_003_003.html#CHDCHCHFB6">Figure 3.54</a> causes the Bypass/Confirm Menu faceplate in <a href="001_003_003.html#CHDEIJAAF4">Figure 3.56</a> to appear. Clicking the All Auto button (3) in <a href="001_003_003.html#CHDCHCHFB6">Figure 3.54</a> instructs the <span class="acronym" translate="no">PLC</span> to place all extruder system devices into their respective Auto control modes.
+                  </p> 
+                  <figure id="CHDCHCHFB6">
+                     <figcaption><span class="figure-number">Figure 3.54</span> Extruder Buttons
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_054.png"> 
+                     <ol class="legend-list">
+                        <li class="legend-item">Extruder Commands button</li> 
+                        <li class="legend-item">Bypass/Confirm Menu button</li> 
+                        <li class="legend-item">All Auto button</li>
+                     </ol>
+                  </figure> 
+                  <p>The Extruder Commands faceplate is shown in <a href="001_003_003.html#CHDBIEDCJ2">Figure 3.55</a>. It features a group of buttons with which the operator can instruct the <span class="acronym" translate="no">PLC</span> to supervise and handle the details of starting up and shutting down the extruder
+                     system. As an example, when the operator clicks the Start Extruder button the <span class="acronym" translate="no">PLC</span> will be instructed to execute a normal startup of the extruder system. This is a
+                     sequence of steps, starting with ensuring that the surge bin is filled with dry feed
+                     material and ending with opening the knife hood diverter to allow raw product to be
+                     conveyed to processing equipment downstream of the extruder system. The normal startup
+                     sequence ensures that each motor is started up at the proper time, that the flow of
+                     water and steam begin flowing at the proper time and at the specified rates, that
+                     the extruder barrel zones are controlled at the specified temperatures, and that the
+                     downspout, <span class="acronym" translate="no">BPV</span> and knife hood gates are positioned when the necessary conditions are satisfied.
+                     When any abnormal conditions are encountered during the sequence a corresponding operator
+                     alarm is triggered. These automated sequences allow for optimal, consistent, repeatable
+                     extruder system operation, minimize human error, and relieve operators of the responsibility
+                     of executing the required sequence steps. All <span class="acronym" translate="no">PLC</span> supervised startup and shutdown sequences are described in detail in <a href="001_001_001.html#BABGEFBCG0">General Information</a>.
+                  </p> 
+                  <figure id="CHDBIEDCJ2">
+                     <figcaption><span class="figure-number">Figure 3.55</span> Extruder Commands Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_055.png"></figure> 
+                  <ol>
+                     <li><strong>“Pre-Start Extruder” Button</strong> - Clicking this button commands the <span class="acronym" translate="no">PLC</span> to execute an extruder system prestart sequence.
+                     </li> 
+                     <li><strong>“Start Extruder” Button</strong> - Clicking this button commands the <span class="acronym" translate="no">PLC</span> to execute an extruder system normal startup sequence.
+                     </li> 
+                     <li><strong>“Warm Restart Extruder” Button</strong> - Clicking this button commands the <span class="acronym" translate="no">PLC</span> to execute an extruder system warm restart sequence.
+                     </li> 
+                     <li><strong>“Normal Shutdown” Button</strong> - Clicking this button commands the <span class="acronym" translate="no">PLC</span> to execute an extruder system normal shutdown sequence.
+                     </li> 
+                     <li><strong>“Empty Bins Shutdown” Button</strong> - Clicking this button commands the <span class="acronym" translate="no">PLC</span> to execute an extruder system empty bins shutdown sequence.
+                     </li> 
+                     <li><strong>“Quick Shutdown” Button</strong> - Clicking this button commands the <span class="acronym" translate="no">PLC</span> to execute an extruder system quick shutdown sequence.
+                     </li> 
+                     <li><strong>Exit button</strong> - Clicking this button closes the Commands faceplate.
+                     </li>
+                  </ol> 
+                  <p>The Extruder Commands faceplate is shown in <a href="001_003_003.html#CHDEIJAAF4">Figure 3.56</a>. It features a group of buttons with which the operator can instruct the <span class="acronym" translate="no">PLC</span> to supervise and handle the details of starting up and shutting down the extruder
+                     system. As an example, when the operator clicks the Start Extruder button the <span class="acronym" translate="no">PLC</span> will be instructed to execute a normal startup of the extruder system. This is a
+                     sequence of steps, starting with ensuring that the surge bin is filled with dry feed
+                     material and ending with opening the knife hood diverter to allow raw product to be
+                     conveyed to processing equipment downstream of the extruder system. The normal startup
+                     sequence ensures that each motor is started up at the proper time, that the flow of
+                     water and steam begin flowing at the proper time and at the specified rates, that
+                     the extruder barrel zones are controlled at the specified temperatures, and that the
+                     downspout, <span class="acronym" translate="no">BPV</span> and knife hood gates are positioned when the necessary conditions are satisfied.
+                     When any abnormal conditions are encountered during the sequence a corresponding operator
+                     alarm is triggered. These automated sequences allow for optimal, consistent, repeatable
+                     extruder system operation, minimize human error, and relieve operators of the responsibility
+                     of executing the required sequence steps. All <span class="acronym" translate="no">PLC</span> supervised startup and shutdown sequences are described in detail in <a href="001_001_001.html#BABGEFBCG0">General Information</a>.
+                  </p> 
+                  <figure id="CHDEIJAAF4">
+                     <figcaption><span class="figure-number">Figure 3.56</span> Extruder Commands Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_056.png"></figure> 
+                  <ol>
+                     <li><strong>“Bypass Live Bin Fill” Button</strong> - Clicking this button instructs the <span class="acronym" translate="no">PLC</span> to skip the startup sequence step where the <span class="acronym" translate="no">PLC</span> waits for the live bin to fill up with dry feed material. This feature is convenient
+                        as a troubleshooting aid.
+                     </li> 
+                     <li><strong>“Bypass Cyl Blow Down” Button</strong> - Clicking this button instructs the <span class="acronym" translate="no">PLC</span> to skip the startup sequence step of expelling condensate from the <span class="acronym" translate="no">HIP</span>'s process steam supply line upstream of the Steam Mix Injection (<span class="acronym" translate="no">SMI</span>) system. This button serves no function for an extruder system with a <span class="acronym" translate="no">DDC</span> type of preconditioners.
+                     </li> 
+                     <li><strong>“Bypass Cyl Fill Time” Button</strong> - Clicking this button instructs the <span class="acronym" translate="no">PLC</span> to skip the startup sequence step where the <span class="acronym" translate="no">PLC</span> waits for the preconditioner initial fill timer to expire. This feature is convenient
+                        as a troubleshooting aid.
+                     </li> 
+                     <li><strong>“Confirm Knife Ready” Button</strong> - Clicking this button instructs the <span class="acronym" translate="no">PLC</span> that the operator has verified that the knife is safe to start.
+                     </li> 
+                     <li><strong>“Exit” Button</strong> - Clicking this button closes the Bypass/Confirm Menu faceplate.
+                     </li>
+                  </ol>
+               </section>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_002_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_003_002.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_003_004.html">Next Section &gt;</a></li>
+                     <li><a href="001_004_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

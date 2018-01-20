@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Extruder Barrel Flush Sequence</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_004_001.html">4&nbsp;&nbsp;Programmable Logic Controller</a></p>
+               </div>
+               <h2 id="CHDIDIEHC5"><span class="chapter-number">4.9</span> Extruder Barrel Flush Sequence
+               </h2> 
+               <p>The extruder barrel flush sequence is a maintenance utility whose purpose is to assist
+                  is removing material from the extruder barrel by flushing it out with process water
+                  and steam. This utility sequence is intended to be performed only when the extruder
+                  system is not in operation, as after a production run is concluded, or just prior
+                  to the start of a production run but before the extruder die is attached. This sequence
+                  should be executed with all extruder system devices not running and with the extruder
+                  die removed.
+               </p> 
+               <p>To initiate an <span class="acronym" translate="no">PLC</span>-managed extruder barrel flush, the operator brings up the Overview screen on the
+                  control room <span class="acronym" translate="no">APM</span> console, presses the “F10” function key on the keyboard, and on the Utility dialog
+                  box that appears, see <a href="001_004_009.html#CIHGJFAAI1">Figure 4.1</a>, clicks the Flush Extruder button (1). The operator can prematurely terminate the
+                  extruder barrel flush by clicking the Stop Flushing Extruder button (2) (otherwise,
+                  the <span class="acronym" translate="no">PLC</span> by default terminates the sequence after 4 minutes)
+               </p> 
+               <figure id="CIHGJFAAI1">
+                  <figcaption><span class="figure-number">Figure 4.1</span> Utility Screen
+                  </figcaption> <img src="../../../images/PLC_Figure_01.png"></figure> 
+               <ol>
+                  <li><strong>“Flush Extruder” Button</strong> - Clicking this button will command the <span class="acronym" translate="no">PLC</span> to initiate the extruder flush sequence
+                  </li> 
+                  <li><strong>“Stop Flushing Extruder” Button</strong> - Clicking this button will command the <span class="acronym" translate="no">PLC</span> to terminate the extruder flush sequence prematurely
+                  </li>
+               </ol> 
+               <p>The sequence of operations that the <span class="acronym" translate="no">PLC</span> executes when the operator chooses an extruder barrel flush are listed below in the
+                  order that they take place.
+               </p> 
+               <ol>
+                  <li>The <span class="acronym" translate="no">PLC</span> causes the alarm horn to sound and the beacon to flash for about ten seconds to alert
+                     all personnel that the extruder system is about to start. At the same time the <span class="acronym" translate="no">PLC</span> displays the system status in the upper left corner of the <span class="acronym" translate="no">APM</span> monitor as “Flushing Extruder.”
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> enables process water to flow to the extruder at an extruder flush rate configured
+                     by the Wenger Technicians during initial installation and system startup.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> enables process steam to flow to the extruder at an extruder flush rate configured
+                     by the Wenger Technicians during initial installation and system startup.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> starts the extruder's lubrication oil pump.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> starts the extruder motor at a speed that is 30 percent of the formula final extruder
+                     speed setpoint. The <span class="acronym" translate="no">PLC</span> will only start the extruder motor if it confirms the flow of lubrication oil. The
+                     <span class="acronym" translate="no">PLC</span> will terminate the normal startup sequence if lubrication oil flow is not confirmed
+                     within a time interval that was configured by the Wenger Technicians during initial
+                     installation and system startup. Otherwise the <span class="acronym" translate="no">PLC</span> will increase the extruder motor speed to a extruder flush speed that was configured
+                     by the Wenger Technicians during initial installation and system startup.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> allows flushing to continue for a maximum of four minutes from the point where the
+                     operator clicked the Flush Extruder button. During this time the operator can change
+                     the flow rate of process water or process steam to the extruder. To change the process
+                     water flow rate to the extruder, bring forth the extruder water <span class="acronym" translate="no">PID</span> dialog box, click the Manual button to change to Manual control mode, and change
+                     the percent output value. To change the process steam flow rate to the extruder, bring
+                     forth the extruder steam <span class="acronym" translate="no">PID</span> dialog box, click the Manual button to change to Manual control mode, and change
+                     the percent output value. The operator can terminate flushing prematurely at any time
+                     by clicking the Stop Flushing extruder button on the Utility dialog box.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> terminates flushing by first disabling flow of process water and process steam to
+                     the extruder. A few seconds later the <span class="acronym" translate="no">PLC</span> stops the extruder motor and extruder lube pump.
+                  </li>
+               </ol>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_003_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_004_008.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_004_010.html">Next Section &gt;</a></li>
+                     <li><a href="001_005_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

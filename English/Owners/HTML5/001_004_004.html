@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Extruder System Normal Startup Sequence</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_004_001.html">4&nbsp;&nbsp;Programmable Logic Controller</a></p>
+               </div>
+               <h2 id="d6e8407"><span class="chapter-number">4.4</span> Extruder System Normal Startup Sequence
+               </h2> 
+               <p>To initiate a <span class="acronym" translate="no">PLC</span>-managed extruder system normal startup, the operator brings up the Overview screen
+                  on the control room <span class="acronym" translate="no">APM</span> console, clicks the “(F5) Extruder Commands” button, and on the Commands Menu dialog
+                  box that appears, clicks the Start Extruder button. The sequence of operations that
+                  the <span class="acronym" translate="no">PLC</span> executes when the user chooses a normal startup of the extruder system are listed
+                  below in the order that they take place.
+               </p> 
+               <div class="alert">
+                  <div class="alert-symbol note"></div>
+                  <div class="alert-statement"><span class="note"></span>  
+                     <p>that this control scheme uses the gravimetric (loss in weight) mode of feeder control,
+                        which is the default and preferred mode, rather than the volumetric mode.
+                     </p>
+                  </div>
+               </div> 
+               <ol>
+                  <li>The <span class="acronym" translate="no">PLC</span> causes the alarm horn to sound and the beacon to flash for about ten seconds to alert
+                     all personnel that the extruder system is about to start. At the same time the <span class="acronym" translate="no">PLC</span> displays the system status in the upper left corner of the <span class="acronym" translate="no">APM</span> monitor as “Starting Extruder.”
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> positions the downspout between the preconditioner outlet and the extruder inlet
+                     in the bypass position.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> starts the extruder's lubrication oil pump.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> fills the live bin with dry feed from the surge bin via the surge bin slide gate.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> starts the live bin agitator.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> waits until the weight of dry feed in the live bin reaches a target weight value
+                     that was configured by the Wenger Technicians during initial installation and system
+                     startup. While the live bin fills the system status that is displayed in the upper
+                     left corner of the <span class="acronym" translate="no">APM</span> monitor will be displayed as “Waiting for Live Bin to Fill.” <strong>NOTE</strong>: that the user can terminate waiting for the live bin to fill (although not recommended)
+                     by clicking the (F6) Bypass/Confirm Menu button on the Overview screen, and on the
+                     Bypass/Confirm Commands Menu dialog box that appears, clicking the Bypass Live Bin
+                     Fill button. <strong>NOTE</strong>: also that during normal operation the <span class="acronym" translate="no">PLC</span> automatically refills the live bin whenever the weight of dry feed material in the
+                     live bin falls below a value that was configured by the Wenger Technicians during
+                     initial installation and system startup.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> enables automatic control of the extruder barrel zone temperatures to prewarm the
+                     extruder barrel while the live bin is filling. Steam or cooling water is applied by
+                     the <span class="acronym" translate="no">PLC</span> to each of the extruder barrel temperature control zones to attain the respective
+                     setpoint temperatures. Throughout normal operation the <span class="acronym" translate="no">PLC</span> continuously monitors and maintains the respective extruder barrel zone temperatures.
+                     The respective extruder barrel zone temperatures are displayed, and the respective
+                     setpoint changed, on the Barrel screen on the <span class="acronym" translate="no">APM</span> monitor.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> starts the preconditioner in the forward direction.
+                  </li> 
+                  <li>When the <span class="acronym" translate="no">PLC</span> verifies that the preconditioner is running it starts the screw feeder. Initially
+                     for a short time, the <span class="acronym" translate="no">PLC</span> calculates the feeder speed from the current formula's dry feed bulk density, startup
+                     feed rate, and feed rate setpoint. But in short order, the <span class="acronym" translate="no">PLC</span> uses live bin loss in weight to determine the feeder speed.
+                  </li> 
+                  <li>As soon as the <span class="acronym" translate="no">PLC</span> confirms that the screw feeder is running it displays the Confirm Knife ready button
+                     on the Overview screen a button above, below or adjacent to the knife. At the same
+                     time the system status that is displayed in the upper left corner of the <span class="acronym" translate="no">APM</span> monitor will be displayed as “Waiting for Knife Confirmation.” When the user is certain
+                     that it is safe for the knife to start, he clicks the Confirm Knife Ready button,
+                     at which point the <span class="acronym" translate="no">PLC</span> starts the knife.
+                  </li> 
+                  <li>After the <span class="acronym" translate="no">PLC</span> verifies that the screw feeder is running, and after a time delay (which may be zero)
+                     that was configured by the Wenger Technicians during initial installation and system
+                     startup, the <span class="acronym" translate="no">PLC</span> enables both steam and water flow to the preconditioner, the magnitude of each being
+                     a respective percentage of the dry feed rate, as per the current formula values loaded
+                     into the <span class="acronym" translate="no">PLC</span>. Water is injected into the preconditioner through a bank of spray nozzles. These
+                     spray nozzles ensure a uniform distribution of water at all flow rates. The <span class="acronym" translate="no">PLC</span> selects the water nozzle(s) appropriate given the current water flow rate setpoint.
+                     These nozzles are automatically switched on and off by the <span class="acronym" translate="no">PLC</span> as needed throughout the extruder system's operation.
+                  </li> 
+                  <li>After the <span class="acronym" translate="no">PLC</span> verifies that the screw feeder is running, and after a time delay (which may be zero)
+                     that was configured by the Wenger Technicians during initial installation and system
+                     startup, the <span class="acronym" translate="no">PLC</span> enables all liquids to flow to the preconditioner, the magnitude of each being a
+                     respective percentage of the dry feed rate, as per the current formula values loaded
+                     into the <span class="acronym" translate="no">PLC</span>. As with water, product-specific liquids may be injected into the preconditioner
+                     through spray nozzles. <strong>NOTE</strong>: that the number of liquids that are used is customer and product dependent. Some
+                     customers have products with formulations that require multiple liquids, while other
+                     customers have products that require no liquids (other than water).
+                  </li> 
+                  <li>When the actual water flow rate to the preconditioner becomes greater than the preconditioner
+                     water flow rate setpoint minus its alarm offset value, the <span class="acronym" translate="no">PLC</span> begins a time delay to allow the preconditioner to fill with sufficiently mixed material.
+                     During this time delay the system status that is displayed in the upper left corner
+                     of the <span class="acronym" translate="no">APM</span> monitor will be displayed as “Waiting for Cylinder to Fill.” At the same time, a
+                     “Bypass Preconditioner Fill Time” button will appear and remain on the Overview screen
+                     until the preconditioner fill time delay counts down to zero. The operator can terminate
+                     the preconditioner fill time delay and cause the normal startup sequence to proceed
+                     to the next step by clicking this button. This is useful if the normal startup began
+                     with premixed material already in the preconditioner.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> enables process water to flow to the extruder, the magnitude being a percentage of
+                     the dry feed rate, as per the current formula value loaded into the <span class="acronym" translate="no">PLC</span>. <strong>NOTE</strong>: that this water is injected into the extruder; it is not water that is used for
+                     extruder barrel temperature control. During startup, an extra amount of water is added,
+                     as per the current formula value loaded into the <span class="acronym" translate="no">PLC</span>. Once the <span class="acronym" translate="no">PLC</span> considers the startup sequence to be complete it no longer adds this extra amount
+                     of water to the extruder.
+                  </li> 
+                  <li>When the actual water flow rate to the extruder becomes greater than the extruder
+                     water flow rate setpoint minus its alarm offset value, the <span class="acronym" translate="no">PLC</span> starts the extruder motor at a speed that is 30 percent of the formula final extruder
+                     speed setpoint. The <span class="acronym" translate="no">PLC</span> will only start the extruder motor if it confirms the flow of lubrication oil. The
+                     <span class="acronym" translate="no">PLC</span> will terminate the normal startup sequence if lubrication oil flow is not confirmed
+                     within a time interval that was configured by the Wenger Technicians during initial
+                     installation and system startup.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> enables process steam to flow to the extruder, the magnitude being a percentage of
+                     the dry feed rate, as per the current formula value loaded into the <span class="acronym" translate="no">PLC</span>. <strong>NOTE</strong>: that this steam is injected into the extruder; it is not steam that is used for
+                     extruder barrel temperature control.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> waits for a time delay to expire that was started when the extruder motor was started.
+                     When the time delay expires, the <span class="acronym" translate="no">PLC</span> sets the downspout position to channel mixed feed material from the preconditioner
+                     outlet into the extruder inlet.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> attempts to confirm that the knifehood is in place and connected. If this is not
+                     so an alarm will appear and the <span class="acronym" translate="no">PLC</span> will not proceed with the startup sequence until it has confirmed that the knifehood
+                     has been fastened together.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> starts the knife, assuming that the operator has confirmed that the knife is safe
+                     to start. The operator is first prompted to confirm that the knife is safe to start
+                     earlier in this sequence when the screw feeder starts running. If the operator has
+                     not confirmed that the knife is safe to start, the <span class="acronym" translate="no">PLC</span> will wait until it receives confirmation.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> starts the knife, and sets its speed to the formula knife speed setpoint. The operator
+                     may increase or decrease the knife speed by changing the knife speed setpoint on the
+                     Formula screen or by using the knife speed selector switch mounted on the knife stand
+                     near the extruder. The knife speed will slowly ramp up or down if the selector switch
+                     is held in the increase or decrease position, respectively. The knife speed will change
+                     in small increments if the operator quickly rotates and releases the selector switch.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> ramps the dry feed rate setpoint from the formula startup feed rate setpoint to the
+                     formula normal operation dry feed rate setpoint.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> waits for a time delay to expire that was started when the downspout was positioned
+                     to channel mixed feed material to the extruder inlet. When the time delay expires
+                     the <span class="acronym" translate="no">PLC</span> no longer adds extra startup process water to the extruder.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span>'s normal startup sequence is concluded when the <span class="acronym" translate="no">PLC</span> confirms that all extruder system devices are running, and that the flow rates for
+                     all product ingredients (dry feed, water, steam, liquids) reach have attained their
+                     respective formula setpoint values.
+                  </li>
+               </ol> 
+               <div class="alert">
+                  <div class="alert-symbol note"></div>
+                  <div class="alert-statement"><span class="note"></span>  
+                     <p>On some twin screw extruder models, there is an auxiliary oil filter pump, and the
+                        <span class="acronym" translate="no">PLC</span> starts it one hour after it starts the extruder motor.
+                     </p>
+                  </div>
+               </div>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_003_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_004_003.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_004_005.html">Next Section &gt;</a></li>
+                     <li><a href="001_005_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

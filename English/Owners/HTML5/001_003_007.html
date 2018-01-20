@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Trends Screen</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_003_001.html">3&nbsp;&nbsp;APM Screens</a></p>
+               </div>
+               <h2 id="id17AIFB00SUI"><span class="chapter-number">3.7</span> Trends Screen
+               </h2> 
+               <section>
+                  <h3 id="d6e6449"><span class="chapter-number">3.7.1</span> Section Overview
+                  </h3> 
+                  <p>A trend is a graphical representation of changes to tag values over time. The trends
+                     screen allows the user to view plots of tag values as they occur. The user can choose
+                     for plotting from among a large collection of the more crucial tags. The user can
+                     view tag data in real-time as they occur, or he can scroll back in time to view historical
+                     data that was collected and saved days, weeks, and in some cases, months in the past.
+                     Plotting values of more than one tag together on the same chart may provide the user
+                     with insight into cause-and-effect relationships and is a valuable troubleshooting
+                     tool.
+                  </p> 
+                  <p>The Trends screen is accessed by clicking the (F7) Trends button in the region of
+                     the Main screen with the forest green background color. It can also be accessed from
+                     any screen by pressing the F7 function key on the <span class="acronym" translate="no">APM</span> console keyboard.
+                  </p>
+               </section> 
+               <section>
+                  <h3 id="d6e6462"><span class="chapter-number">3.7.2</span> Details
+                  </h3> 
+                  <p>The Trends screen appears as shown in <a href="001_003_007.html#CHDJEECCG7">Figure 3.69</a>, where data related to control of the extruder's zone temperatures is being plotted.
+                     Much of this screen is customizable by the user. For example, the chart background
+                     color can be changed, as can the colors and line widths of the various tag traces.
+                     Traces can appear superimposed on the same chart, or each tag can be plotted on its
+                     own chart as they are stacked vertically. The operator can even select which tags
+                     he wants to see plotted. The topic of customization will be discussed later on 
+                     <xref style="color:red" idref="CHDJFIBJA3" format="Page"></xref>.
+                  </p> 
+                  <figure id="CHDJEECCG7">
+                     <figcaption><span class="figure-number">Figure 3.69</span> Trending Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_069.png"></figure> 
+                  <ol>
+                     <li><strong>Tag Data Plots</strong> - Tag values are plotted as a series of data points connected by line segments. Each
+                        tag has a default line color and width, but these can be changed by the user.
+                     </li> 
+                     <li><strong>Tag Color and Range Legend</strong> - This legend (see detail in <a href="001_003_007.html#CHDIFEFCF4">Figure 3.70</a>) shows which trace colors are assigned to which tags, and provides the numerical
+                        range for each tag trace. In this example the ranges are the same for all tags in
+                        the group, but this is usually not the case.
+                     </li> 
+                     <li><strong>Tag Current Values</strong> - This legend (see detail in <a href="001_003_007.html#CHDCIHIJF0">Figure 3.71</a>) displays the current value of each of the tags being plotted.
+                     </li> 
+                     <li><strong>Horizontal Scroll Bar</strong> - The seven buttons on this scroll bar allow the user scroll backwards in time to
+                        view tag data that has been scrolled off the chart to the left. The middle of the
+                        seven scroll bar buttons allows the user to alternately pause and resume the plotting
+                        of current tag data. When plotting of current data is paused the user can scroll back
+                        and forth through past tag values. The button to the immediate left of the pause/continue
+                        button allows the user to go backward in time, five minutes for each button click,
+                        and display the traces for the tag data that were then collected and saved. The next
+                        button over on the left allows the user to scroll backward in time in ten minute increments.
+                        Clicking the left-most button will display traces for the oldest tag data retained
+                        by the <span class="acronym" translate="no">APM</span> computer; this data may be months old. The button to the immediate right of the pause/continue
+                        button allows the user to go forward in time in five minute increments. The next button
+                        over on the right allows the user to scroll forward in time in ten minute increments.
+                        Clicking the right-most button returns the user to the present time as current data
+                        will now be plotted.
+                     </li> 
+                     <li><strong>Date/Time</strong> - These two fields, one near the top of the screen and one immediately above the
+                        scroll bar buttons displays the date and time, respectively, for the data that is
+                        currently plotted. The date is displayed at the top and the time is displayed just
+                        above the scroll bar buttons.
+                     </li> 
+                     <li><strong>Tag Groups</strong> - All the tags for which trends can be viewed are arranged in functional groups (e.g.,
+                        extruder-related tags, liquids-related tags, temperature related tags). These buttons
+                        allow the user to change the tag group currently enabled.
+                     </li>
+                  </ol> 
+                  <figure id="CHDIFEFCF4">
+                     <figcaption><span class="figure-number">Figure 3.70</span> Expanded View of The Tag Color and Range Legend on The Trending Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_070.png"></figure> 
+                  <figure id="CHDCIHIJF0">
+                     <figcaption><span class="figure-number">Figure 3.71</span> Expanded View of The Tag Current Values on The Trending Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_071.png"></figure> 
+                  <p>If the operator right clicks anywhere on the trend screen's black background, a menu
+                     appears with some useful options (see <a href="001_003_007.html#CHDCGCICG1">Figure 3.72</a>). Repeatedly clicking the Scroll option causes the trend to screen to alternately
+                     pause and resume updating.
+                  </p> 
+                  <figure id="CHDCGCICG1">
+                     <figcaption><span class="figure-number">Figure 3.72</span> Trends Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_072.png"></figure> 
+                  <p>A very useful customization tool available to the operator is the Properties faceplate
+                     (see <a href="001_003_007.html#CHDJFIBJA3">Figure 3.73</a>), which can be brought forth by selecting Chart Properties menu option in <a href="001_003_007.html#CHDCGCICG1">Figure 3.72</a>.
+                  </p> 
+                  <figure id="CHDJFIBJA3">
+                     <figcaption><span class="figure-number">Figure 3.73</span> Trend Properties Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_073.png"></figure> 
+                  <p>The operator will find that the options available on the Pens tab will be the ones
+                     that he most frequently uses. With this tab the operator can change the visibility
+                     of any of the traces on the plot, which is convenient with charts that are confusing
+                     because so many traces are displayed at once. The operator can also change trace colors
+                     and line weights and trace data ranges.
+                  </p> 
+                  <p>Other handy options are available on the Y-Axis tab, such as plotting all visible
+                     traces on separate charts, rather than all on the same chart. On the X-Axis tab the
+                     operator can specify a date and time from the past from which to retrieve and plot
+                     data historical data that has been captured in the past and stored on the <span class="acronym" translate="no">APM</span> computer's hard drive.
+                  </p>
+               </section>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_002_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_003_006.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_003_008.html">Next Section &gt;</a></li>
+                     <li><a href="001_004_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

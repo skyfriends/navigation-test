@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Extruder Liquids 2 Screen</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_003_001.html">3&nbsp;&nbsp;APM Screens</a></p>
+               </div>
+               <h2 id="id17AIF5080HS"><span class="chapter-number">3.6</span> Extruder Liquids 2 Screen
+               </h2> 
+               <section>
+                  <h3 id="d6e5996"><span class="chapter-number">3.6.1</span> Section Overview
+                  </h3> 
+                  <p>Although the Extruder Liquids 2 screen is not a standard feature for all extruder
+                     systems, it is discussed here since most customers have product formulations that
+                     require at least one liquid other that water and steam. Examples of such liquids are
+                     dyes and oils. This screen also displays the most important formula-specific operating
+                     conditions on the right-side of the screen from which the corresponding setpoints
+                     can also be changed.
+                  </p> 
+                  <p>If an Extruder Liquids 2 screen is provided, it is not accessible from the Main screen,
+                     but rather by clicking an appropriately-labeled button at the bottom of the Extruder
+                     Liquids 1 screen.
+                  </p>
+               </section> 
+               <section>
+                  <h3 id="d6e6006"><span class="chapter-number">3.6.2</span> Details
+                  </h3> 
+                  <p>An example of the Extruder Liquids 2 screen is reproduced in <a href="001_003_006.html#CHDJGACEA0">Figure 3.64</a>. This screen shows a <span class="acronym" translate="no">PID</span> control loop faceplate for five customer-specific liquids, ranging from liquid 1
+                     on the left end to liquid 5 on the right end. For each liquid, there is a <span class="acronym" translate="no">PID</span> control loop faceplate, but also a graphic below the faceplate with which the operator
+                     can monitor and control other liquid features. The aspects of this screen pertaining
+                     to liquid 3 as an example and will be discussed below.
+                  </p> 
+                  <figure id="CHDJGACEA0">
+                     <figcaption><span class="figure-number">Figure 3.64</span> Extruder Liquids 2 Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_064.png"></figure> 
+                  <ol>
+                     <li><strong>Liquid 3 </strong><span class="acronym" translate="no">PID</span><strong> Control Loop Faceplate</strong> - This <span class="acronym" translate="no">PID</span> control loop faceplate for liquid 3, like the other four liquid faceplate’s, provides
+                        the most status and control options concerning control loop behavior.
+                     </li> 
+                     <li><strong>Liquid 3 Agitator Status/Control</strong> - This indicator and button allow the operator to monitor and control the liquid
+                        3 tank agitator behavior. The agitator motor graphic color indicates the run status
+                        of the agitator, where green indicates that the agitator is running, while blue indicates
+                        that the agitator is not running. The text in the ellipse to the immediate right of
+                        the motor graphic, which displays either “On” or “Off”, indicates the same thing.
+                        The color inside the ellipse indicates the agitator's <span class="acronym" translate="no">HOA</span> control mode, white for Auto control, yellow for Hand (i.e., Manual) control, and
+                        blue for Off.
+                     </li> 
+                     <li><strong>Liquid 3 Tank Refill Status/Control</strong> - This indicator and button allow the operator to monitor and control the liquid
+                        3 tank refill behavior. The text in the ellipse, which displays either “Refill” or
+                        “Off”, indicates whether the <span class="acronym" translate="no">PLC</span> is requesting that the tank be refilled (the customer is responsible for monitoring
+                        this signal and refilling the tank when requested). The color inside the ellipse indicates
+                        the agitator's <span class="acronym" translate="no">HOA</span> control status, white for Auto control, yellow for Hand (i.e., Manual) control, and
+                        blue for Off.
+                     </li> 
+                     <li><strong>Liquid 3 Pump Status/Control</strong> - This indicator and button allow the operator to monitor and control the liquid
+                        3 tank pump behavior. The pump motor graphic color indicates the run status of the
+                        pump, where green indicates that the pump is running, while blue indicates that the
+                        pump is not running. The text in the ellipse to the immediate right of the motor graphic,
+                        which displays either “On” or “Off”, indicates the same thing. The color inside the
+                        ellipse indicates the pump's <span class="acronym" translate="no">HOA</span> control mode, white for Auto control, yellow for Hand (i.e., Manual) control, and
+                        blue for Off.
+                     </li> 
+                     <li><strong>Liquid 3 High Level Sensor Indicator</strong> - There are two liquid level indicators on the liquid 3 tank, one for indicating
+                        high level and the other below for indicating low level. For each indicator, a green
+                        color indicates that the liquid level in the tank is above the sensor, while a white
+                        color indicates that the liquid level in tank is below the sensor.
+                     </li> 
+                     <li><strong>Setpoints and Actual Values of Most Important Operating Conditions</strong> - This panel displays the setpoints and current values of the operating conditions
+                        that are most crucial to the current product's formulation.
+                     </li> 
+                     <li><strong>Navigating Buttons</strong> - Some screens, such as this one, provide buttons at the bottom of the screen that
+                        allow the user to quickly switch to other screens without needing to go to the Main
+                        screen first.
+                     </li>
+                  </ol> 
+                  <p>The top-right corner of the Extruder Liquids 2 screen has been reproduced in <a href="001_003_006.html#CHDBBGCAH4">Figure 3.65</a>. The liquid flow rates are displayed in the right-most column. To the left is a column
+                     that displays, in white background colors, the liquid flow rate setpoints as percentages
+                     of the dry feed rate setpoint. To change a liquid's flow rate setpoint, click on the
+                     corresponding setpoint in a white rectangle. A faceplate will appear from which you
+                     can enter a new setpoint as a percentage of feed rate.
+                  </p> 
+                  <figure id="CHDBBGCAH4">
+                     <figcaption><span class="figure-number">Figure 3.65</span> Expanded View of Top Right Side of The Extruder Liquids 2 Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_065.png"></figure> 
+                  <ol>
+                     <li><strong>Liquid 3 Setpoint and Flow Rate</strong></li>
+                  </ol> 
+                  <p>For any of the five liquids in<a href="001_003_006.html#CHDBBGCAH4">Figure 3.65</a>, clicking the button with the agitator motor graphic causes an <span class="acronym" translate="no">HOA</span> faceplate to appear, from which the operator can change the agitator's control mode.
+                     Since agitators are On or Off devices (they have fixed-speed motors), the operator's
+                     only available control options are selecting the agitator's control mode; there are
+                     no setpoint or speed control parameters. The liquid 3 agitator <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_006.html#CHDGBGDEB9">Figure 3.66</a>, side [A], center [B], side [C], shows the three possible states for the liquid 3
+                     agitator. In <a href="001_003_006.html#CHDGBGDEB9">Figure 3.66</a>, side [A] the agitator has been placed in Auto mode and is running. In <a href="001_003_006.html#CHDGBGDEB9">Figure 3.66</a>, center [B] the agitator has been placed in Hand (Manual) mode and is running. In
+                     <a href="001_003_006.html#CHDGBGDEB9">Figure 3.66</a>, side [C] the agitator has been placed in Off mode and is stooped.
+                  </p> 
+                  <figure id="CHDGBGDEB9">
+                     <figcaption><span class="figure-number">Figure 3.66</span> Liquid 3 Agitator <span class="acronym" translate="no">HOA</span> Faceplate (A-Auto; C-Hand; B-Off)
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_066.png"></figure> 
+                  <ol>
+                     <li><strong>Device Name Indicator</strong> - “Liquid 3" in <a href="001_003_006.html#CHDGBGDEB9">Figure 3.66</a>, side [A], center [B], side [C].
+                     </li> 
+                     <li><strong>State Indicator</strong> - “Running” in <a href="001_003_006.html#CHDGBGDEB9">Figure 3.66</a>, side [A] and <a href="001_003_006.html#CHDGBGDEB9">Figure 3.66</a>, center [B], and “Stopped” in <a href="001_003_006.html#CHDGBGDEB9">Figure 3.66</a>, side [C].
+                     </li> 
+                     <li><strong>Mode Indicator</strong> - “Auto” in <a href="001_003_006.html#CHDGBGDEB9">Figure 3.66</a>, side [A] , “Hand” in <a href="001_003_006.html#CHDGBGDEB9">Figure 3.66</a>, center [B], and “Off” in<a href="001_003_006.html#CHDGBGDEB9">Figure 3.66</a>, side [C].
+                     </li> 
+                     <li><strong>“Hand” Button</strong> - Clicking this button will instruct the <span class="acronym" translate="no">PLC</span> to place the device in the Hand control mode.
+                     </li> 
+                     <li><strong>“Off” Button</strong> - Clicking this button will instruct the <span class="acronym" translate="no">PLC</span> to place the device in the Off control mode.
+                     </li> 
+                     <li><strong>“Auto” Button</strong> - Clicking this button will instruct the <span class="acronym" translate="no">PLC</span> to place the device in the Auto control mode.
+                     </li> 
+                     <li><strong>“Exit” Button</strong> - Closes the <span class="acronym" translate="no">HOA</span> faceplate.
+                     </li>
+                  </ol> 
+                  <p>For any of the five liquids in<a href="001_003_006.html#CHDJGACEA0">Figure 3.64</a>, clicking the button inside the tank causes an <span class="acronym" translate="no">HOA</span> faceplate to appear, from which the operator can change the tank's refill control
+                     mode. Since refill are either On or Off the operator's only available control options
+                     are selecting the agitator's control mode; there are no setpoint or speed control
+                     parameters. The tank refill <span class="acronym" translate="no">HOA</span> faceplate is similar enough to the agitator <span class="acronym" translate="no">HOA</span> faceplate in <a href="001_003_006.html#CHDGBGDEB9">Figure 3.66</a>, side [A], center [B], side [C] that they won't be discussed in detail.
+                  </p> 
+                  <p>The <span class="acronym" translate="no">PID</span> control loop faceplate’s for the four liquids have identical functionalities. Each
+                     faceplate allows the operator to place the corresponding flow rate <span class="acronym" translate="no">PID</span> control loop in either Auto control mode or Manual control mode. In Auto mode, the
+                     <span class="acronym" translate="no">PLC</span> varies the respective pump speed to maintain a constant flow rate that is determined
+                     from the setpoint. In Manual control mode, the <span class="acronym" translate="no">PLC</span> maintains the pump speed as per the operator's input. In <a href="001_003_006.html#CHDFGHIFI9">Figure 3.67</a>, side [A], the liquid 3 flow rate control loop is in Auto control mode, while in
+                     <a href="001_003_006.html#CHDFGHIFI9">Figure 3.67</a> , side [B], the liquid 3 flow rate control loop is in Manual control mode. The <span class="acronym" translate="no">PLC</span> ensures that the flow rate remains constant when the operator changes between Auto
+                     control mode and Manual control mode; this is referred to as “bumpless” control mode
+                     switching.
+                  </p> 
+                  <figure id="CHDFGHIFI9">
+                     <figcaption><span class="figure-number">Figure 3.67</span> Liquid 3 <span class="acronym" translate="no">PID</span> Faceplate (A-Auto Mode; B-Manual Mode)
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_067.png"></figure> 
+                  <ol>
+                     <li><strong>“Auto Control Mode Selector” Button</strong> - Clicking this button will cause the <span class="acronym" translate="no">PLC</span> to switch from Manual control mode to Auto control mode.
+                     </li> 
+                     <li><strong>“Manual Control Mode Selector” Button</strong> - Clicking this button will cause the <span class="acronym" translate="no">PLC</span> to switch from Auto control mode to Manual control mode.
+                     </li> 
+                     <li><strong>Control Mode Indicator</strong> - Indicates the control loop's current control mode, Auto in the <a href="001_003_006.html#CHDFGHIFI9">Figure 3.67</a>, side [A] and Manual in <a href="001_003_006.html#CHDFGHIFI9">Figure 3.67</a>, side [B].
+                     </li> 
+                     <li><strong>Auto Control Mode Flow Rate Setpoint Select</strong> - This group of controls allow the operator to change the current flow control loop's
+                        setpoint, ramping up or down by clicking the arrow buttons, or entering a numerical
+                        value by clicking inside the white rectangular field. Notice in <a href="001_003_006.html#CHDFGHIFI9">Figure 3.67</a>, side [B] that the setpoint is only displayed but cannot be changed when in Manual
+                        control mode.
+                     </li> 
+                     <li><strong>Device Name</strong> - “Liquid 3" in <a href="001_003_006.html#CHDFGHIFI9">Figure 3.67</a>. This group of controls allow the operator to change the pump's speed output command,
+                        ramping up or down by clicking the arrow buttons, or entering a numerical value by
+                        clicking inside the white rectangular field. Notice in <a href="001_003_006.html#CHDFGHIFI9">Figure 3.67</a>, side [A] that the pump speed output command is only displayed but cannot be changed
+                        when in Auto control mode.
+                     </li> 
+                     <li><strong>Setpoint Indicator</strong> - Bar graph that displays the current flow rate setpoint in units of weight/hour
+                        (converted from percent of dry feed rate).
+                     </li> 
+                     <li><strong>Flow Rate Indicator</strong> - Bar graph that displays the current flow rate actual value in units of weight/hour
+                        (converted from percent of dry feed rate). The color of this bar graph indicates whether
+                        the flow rate is within safe operating range (blue) or outside safe operating range
+                        (yellow).
+                     </li> 
+                     <li><strong>Safe Operating Range Indicator</strong> - This bar graph displays the safe operating range for the flow rate (blue).
+                     </li>
+                  </ol> 
+                  <p>For any of the five liquids in <a href="001_003_006.html#CHDJGACEA0">Figure 3.64</a>, clicking the button with the pump motor graphic causes a pump <span class="acronym" translate="no">HOA</span> faceplate to appear that is very similar to the liquid flow rate <span class="acronym" translate="no">PID</span> control loop faceplate. In fact, the liquid pump <span class="acronym" translate="no">HOA</span> faceplate provides the same functionality as the liquid flow rate <span class="acronym" translate="no">PID</span> control loop faceplate, but additionally allows the operator the ability to determine
+                     the pump's On/Off status. In <a href="001_003_006.html#CHDGABEBG8">Figure 3.68</a>, side [A], center [B], side [C], only the On/Off status of the liquid 3 pump is being
+                     changed; the status of the liquid 3 flow <span class="acronym" translate="no">PID</span> control loop is not affected.
+                  </p> 
+                  <figure id="CHDGABEBG8">
+                     <figcaption><span class="figure-number">Figure 3.68</span> Liquid<span class="acronym" translate="no"> PID</span> Faceplate (A-Auto; C-Hand; B-Off)
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_068.png"></figure> 
+                  <ol>
+                     <li><strong>“Auto” Button</strong> - Clicking this button will instruct the <span class="acronym" translate="no">PLC</span> to decide when the pump should be On or Off, but the speed of the pump is determined
+                        by the liquid 3 flow <span class="acronym" translate="no">PID</span> control loop.
+                     </li> 
+                     <li><strong>Mode Indicator</strong> - The liquid 3 pump is in Auto control mode after the Auto button was clicked.
+                     </li> 
+                     <li><strong>State Indicator</strong> - The liquid 3 pump is running as long as the <span class="acronym" translate="no">PLC</span> is satisfied that all necessary conditions for it to run in Auto mode are satisfied.
+                     </li> 
+                     <li><strong>“Hand” Button</strong> - Clicking this button will instruct the <span class="acronym" translate="no">PLC</span> that the operator wants the pump to run, overriding the o decide when the pump should
+                        be On or Off, but notice that the speed of the pump is still determined by the liquid
+                        3 flow <span class="acronym" translate="no">PID</span> control loop.
+                     </li> 
+                     <li><strong>Mode Indicator</strong> - The liquid 3 pump is in Hand control mode after the Hand button was clicked.
+                     </li> 
+                     <li><strong>State Indicator</strong> - The liquid 3 pump is running as long as the <span class="acronym" translate="no">PLC</span> is satisfied that all necessary conditions for it to run in Hand mode are satisfied.
+                     </li> 
+                     <li><strong>“Off” Button</strong> - Clicking this button will instruct the <span class="acronym" translate="no">PLC</span> to place the device in the Off control mode.
+                     </li> 
+                     <li><strong>Mode Indicator</strong> - The liquid 3 pump is in Off control mode after the Off button was clicked.
+                     </li> 
+                     <li><strong>State Indicator</strong> - The liquid 3 pump is stopped.
+                     </li> 
+                     <li><strong>Flow </strong><span class="acronym" translate="no">PID</span><strong> Control Loop Output</strong> - Since the pump is not running there is no liquid 3 flow. But the liquid 3 flow
+                        <span class="acronym" translate="no">PID</span> control loop, which is still in Auto control mode and does not know whether the pump
+                        is running, tries to increase the pump speed to increase the liquid 3 flow rate. It
+                        eventually increases the pump speed command to its maximum 100%.
+                     </li>
+                  </ol>
+               </section>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_002_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_003_005.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_003_007.html">Next Section &gt;</a></li>
+                     <li><a href="001_004_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

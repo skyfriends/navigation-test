@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Extruder Barrel Temperatures Screen</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_003_001.html">3&nbsp;&nbsp;APM Screens</a></p>
+               </div>
+               <h2 id="BABBEEJFE0"><span class="chapter-number">3.4</span> Extruder Barrel Temperatures Screen
+               </h2> 
+               <section>
+                  <h3 id="d6e5532"><span class="chapter-number">3.4.1</span> Section Overview
+                  </h3> 
+                  <p>The Extruder Barrel Temperatures screen displays the measured temperature, both numerically
+                     and graphically, of each of the extruder barrel temperature zone control loops. For
+                     each zone, it indicates if the respective temperature is within or outside of normal
+                     range. It also allows the operator to bring up a faceplate for each zone that he can
+                     use to change the zone's temperature setpoint or change the zone temperature control
+                     zone.
+                  </p> 
+                  <p>The Extruder Barrel Temperatures screen is accessed by clicking the (F3) Barrel Screen
+                     button in the region of the Main screen with the forest green background color. It
+                     can also be accessed from any screen by pressing the F3 function key on the <span class="acronym" translate="no">APM</span> console keyboard.
+                  </p>
+               </section> 
+               <section>
+                  <h3 id="d6e5545"><span class="chapter-number">3.4.2</span> Details
+                  </h3> 
+                  <p>An example of the Extruder Barrel Temperature screen is reproduced in <a href="001_003_004.html#CHDDBJBJF6">Figure 3.57</a>. This screen shows the actual temperature and temperature setpoint for five barrel
+                     temperature control zones, labelled simply as Zone 1 through Zone 5.1. It also displays
+                     the downspout temperature, but no temperature setpoint, since there is no downspout
+                     temperature control loop. In the upper part of the screen, the five zone temperatures
+                     and the downspout temperature are displayed with bar graphs, while slightly below
+                     that the actual temperatures and the temperature setpoints are displayed numerically.
+                     Below the extruder barrel image are graphical indicators of the status of each zone,
+                     regarding whether the zone is being heated with steam, cooled with water, or neither.
+                     A button is provided for each control zone that, when clicked, will bring up an <span class="acronym" translate="no">HOA</span> faceplate that allows the operator to manipulate the control loop for that zone.
+                  </p> 
+                  <figure id="CHDDBJBJF6">
+                     <figcaption><span class="figure-number">Figure 3.57</span> Extruder Barrel Temperature Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_057.png"></figure> 
+                  <ol>
+                     <li><strong>Downspout Temperature</strong> - The downspout temperature is always left-most, displayed as a bar graph in the
+                        region with the dark blue background color, and below that, but above the barrel image,
+                        as a numerical value in white text.
+                     </li> 
+                     <li><strong>Zone 1 Temperature</strong> - To the right of the downspout temperature is the extruder zone 1 temperature, similarly
+                        displayed both graphically and in text.
+                     </li> 
+                     <li><strong>Zone 5 Temperature</strong> - The last zone temperature is displayed right-most, both graphically and in text.
+                     </li> 
+                     <li><strong>Temperature Setpoints</strong> - This row displays the five zone temperature setpoints, in black text and white
+                        background color. For any of the five zones clicking on the white rectangle brings
+                        up a faceplate that allows the operator to enter a new temperature setpoint.
+                     </li> 
+                     <li><strong>Current Temperatures</strong> - This row displays the five zone temperatures plus the downspout temperature, in
+                        white text.
+                     </li> 
+                     <li><strong>“Zone 1</strong> <span class="acronym" translate="no">HOA</span><strong>” Button</strong>- Clicking this button will cause the <span class="acronym" translate="no">HOA</span> faceplate for temperature control zone 1 to appear.
+                     </li> 
+                     <li><strong>Extruder Motor Load</strong></li> 
+                     <li><strong>Extruder Head Pressure</strong></li> 
+                     <li><strong>Shortcuts to Other Most Commonly Used Screens</strong> - This row of buttons allows the user to quickly switch to a few of the most commonly
+                        used screens without having to switch to the Main screen first.
+                     </li>
+                  </ol> 
+                  <p>The fill colors of the bar graphs for the various zone temperatures in the upper region
+                     of the screen indicate whether the respective temperatures are within normal range
+                     or are out of bounds.
+                  </p> 
+                  <figure id="CHDBJEEGD7">
+                     <figcaption><span class="figure-number">Figure 3.58</span> Expanded View of Zone Temperatures on The Extruder Barrel Temperature Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_058.png"></figure> 
+                  <p>The status of the three zone temperatures in <a href="001_003_004.html#CHDBJEEGD7">Figure 3.58</a> are:
+                  </p> 
+                  <ol>
+                     <li><strong>Zone 3 Temperature</strong> - In this example, the red bar graph fill color indicates that the current Zone 3
+                        temperature is too high (i.e., it is greater than the sum of the Zone 3 temperature
+                        setpoint plus the Zone 3 temperature offset formula value).
+                     </li> 
+                     <li><strong>Zone 4 Temperature</strong> - In this example, the blue bar graph fill color indicates that the current Zone
+                        4 temperature is too low (i.e., it is less than the difference of the Zone 3 temperature
+                        setpoint minus the Zone 4 temperature offset formula value).
+                     </li> 
+                     <li><strong>Zone 5 Temperature</strong> - In this example, the gray bar graph fill color indicates that the current Zone
+                        5 temperature is with normal range (i.e., close enough to the Zone 5 temperature setpoint
+                        that the difference is less than the Zone 5 temperature offset formula value).
+                     </li>
+                  </ol> 
+                  <p>The fill colors for the graphics representing conduits for flow of steam and water
+                     to the extruder temperature control zone jackets indicate whether the respective flow
+                     control valves are open or closed.
+                  </p> 
+                  <figure id="CHDCDDHHI3">
+                     <figcaption><span class="figure-number">Figure 3.59</span> Expanded View of Flow Control Valves on The Extruder Barrel Temperature Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_059.png"></figure> 
+                  <p>The status of the two control zones in <a href="001_003_004.html#CHDCDDHHI3">Figure 3.59</a> are:
+                  </p> 
+                  <ol>
+                     <li><strong>Temperature Zone Being Cooled</strong> - When the fill color of a water control valve and the conduit between the valve
+                        and the extruder is blue, this indicates that the water control valve is open and
+                        that the zone is being cooled.
+                     </li> 
+                     <li><strong>Temperature Zone Not Being Cooled</strong> - When the fill color of a water control valve and the conduit between the valve
+                        and the extruder is gray, this indicates that the water control valve is closed and
+                        that the zone is not being cooled.
+                     </li> 
+                     <li><strong>Temperature Zone Being Heated</strong> - When the fill color of a steam control valve and the conduit between the valve
+                        and the extruder is white, this indicates that the steam control valve is open and
+                        that the zone is being heated.
+                     </li> 
+                     <li><strong>Temperature Zone Not Being Heated</strong> - When the fill color of a steam control valve and the conduit between the valve
+                        and the extruder is gray, this indicates that the steam control valve is closed and
+                        that the zone is not being heated.
+                     </li>
+                  </ol> 
+                  <p>The <span class="acronym" translate="no">PID</span> control <span class="acronym" translate="no">HOA</span> faceplate for each barrel temperature zone can be accessed by clicking the control
+                     valve button for that zone below the extruder barrel graphic. For any particular zone
+                     the operator can switch between letting the <span class="acronym" translate="no">PLC</span> control the zone temperature with a <span class="acronym" translate="no">PID</span> control loop, and controlling the water and steam control valve manually himself.
+                  </p> 
+                  <p>In <a href="001_003_004.html#CHDBJGIFE8">Figure 3.60</a>, side [A], the zone 1 temperature control loop is in Auto control mode (1). Notice
+                     that the operator can change the temperature setpoint by either clicking inside where
+                     the setpoint value is displayed in black text with white background color near the
+                     bottom of the faceplate or by clicking either of the up or down arrow buttons. Notice
+                     also that the <span class="acronym" translate="no">PLC</span> controls the movement of the vertical slider on the left side of the faceplate to
+                     indicate the relative magnitudes of water and steam flows to the zone jacket. The
+                     operator can switch between control modes by first clicking Edit button (2).
+                  </p> 
+                  <p>In <a href="001_003_004.html#CHDBJGIFE8">Figure 3.60</a>, center [B], the operator can switch the zone 1 temperature control loop to Manual
+                     control mode by clicking the Man button (3) followed by the Hide button (4).
+                  </p> 
+                  <p>In <a href="001_003_004.html#CHDBJGIFE8">Figure 3.60</a>, side [C], the zone 1 temperature control loop is now in Manual control mode (5).
+                     Notice that the operator can still change the temperature setpoint, but the <span class="acronym" translate="no">PLC</span> ignores it until the loop is set back to Auto control mode. Notice also that the
+                     operator can now control the movement of the vertical slider on the left side of the
+                     faceplate change rather than just indicate the relative magnitudes of water and steam
+                     flows to the zone jacket. Finally, notice that the operator can specify the relative
+                     magnitudes of water and steam flows to the zone jacket with some text entry box and
+                     two new arrow buttons near the bottom of the faceplate that are not visible when the
+                     loop is in Auto control mode.
+                  </p> 
+                  <figure id="CHDBJGIFE8">
+                     <figcaption><span class="figure-number">Figure 3.60</span> Extruder Zone All<span class="acronym" translate="no"> PID</span> Faceplate (A-Auto; C-Edit; B-Manual)
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_060.png"></figure>
+               </section>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_002_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_003_003.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_003_005.html">Next Section &gt;</a></li>
+                     <li><a href="001_004_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

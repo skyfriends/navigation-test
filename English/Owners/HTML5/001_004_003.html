@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Extruder Startup Initial Conditions Checklist</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_004_001.html">4&nbsp;&nbsp;Programmable Logic Controller</a></p>
+               </div>
+               <h2 id="d6e8334"><span class="chapter-number">4.3</span> Extruder Startup Initial Conditions Checklist
+               </h2> 
+               <p>The following should be verified prior to attempting any type of the extruder system
+                  startup:
+               </p> 
+               <ol>
+                  <li>That the extruder system control panel is powered up.</li> 
+                  <li>That the <span class="acronym" translate="no">PLC</span> is powered up and running normally (as per the program status displayed on the front
+                     face of the <span class="acronym" translate="no">PLC</span> module).
+                  </li> 
+                  <li>That each E-Stop pushbutton is in the popped-up position and that the E-Stop Reset
+                     button has been pressed.
+                  </li> 
+                  <li>That the system steam, water, and air pressures are all within normal ranges (use
+                     the Overview Screen).
+                  </li> 
+                  <li>That the live bin, feeder, and preconditioner doors are closed and locked, and if
+                     Fortress locks are used that the keys are all inserted into the proofing housing and
+                     locked in place.
+                  </li> 
+                  <li>That the downspout is closed and locked and in the Reject position.</li> 
+                  <li>That the knifehood is closed and locked.</li> 
+                  <li>That the knife disconnect switch on the knife stand is in the On position.</li> 
+                  <li>That the dry feed test mode is <strong>NOT</strong> the selected operation scheme (the extruder status in the top left corner of the
+                     Automated Process Management (<span class="acronym" translate="no">APM</span>) monitor should be displayed as extruder stopped).
+                  </li> 
+                  <li>That the desired product formula has been selected and loaded into the <span class="acronym" translate="no">PLC</span>.
+                  </li> 
+                  <li>That the desired dry feed rate control loop setpoint has been specified.</li> 
+                  <li>That all device control loops on the Overview Screen are set to Auto control mode
+                     (i.e., background color for each device's status/control ellipse should be white;
+                     none should be light blue or yellow). <strong>NOTE</strong>: that the extruder zone temperature control loops are set by the <span class="acronym" translate="no">PLC</span> software to Auto control mode upon startup of the extruder or upon initiation of
+                     a prestart. Then, when the extruder is shut down the temperature control loops will
+                     be set to Manual control mode.
+                  </li> 
+                  <li>That all pump, agitator and refill control loops on the Liquid Screen(s) are set to
+                     Auto control mode.
+                  </li> 
+                  <li>That there are no active (unacknowledged, red text) alarms.</li>
+               </ol>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_003_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_004_002.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_004_004.html">Next Section &gt;</a></li>
+                     <li><a href="001_005_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

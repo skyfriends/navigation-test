@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Extruder System Normal Operation After Startup</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_004_001.html">4&nbsp;&nbsp;Programmable Logic Controller</a></p>
+               </div>
+               <h2 id="d6e8687"><span class="chapter-number">4.5</span> Extruder System Normal Operation After Startup
+               </h2> 
+               <p>After <span class="acronym" translate="no">PLC</span> executes the extruder system's startup sequence to completion the extruder is in
+                  its normal steady-state operation mode. From this point on, until an extruder shutdown
+                  sequence is initiated, the <span class="acronym" translate="no">PLC</span> attempts to maintain the actual measured values of the following entities at their
+                  setpoint values:
+               </p> 
+               <ul>
+                  <li>Dry feed rate to the preconditioner.</li> 
+                  <li>Process water flow rate to the preconditioner.</li> 
+                  <li>Process steam flow rate to the preconditioner.</li> 
+                  <li>Liquid(s) flow rate to the preconditioner.</li> 
+                  <li>Process water flow rate to the extruder.</li> 
+                  <li>Process steam flow rate to the extruder.</li> 
+                  <li>Extruder zone temperatures.</li>
+               </ul> 
+               <p>For the entities above requiring flow rate control, the operator specifies the desired
+                  flow rate of all process water, process steam and liquids as respective percentages
+                  of the dry feed rate. From these percentages, the <span class="acronym" translate="no">PLC</span> calculates the desired mass flow rate of each ingredient, it continuously measures
+                  the actual mass flow rate for each ingredient, and it uses an implementation of a
+                  Proportional-Integral-Derivative (<span class="acronym" translate="no">PID</span>) control algorithm to maintain the actual mass flow for each ingredient at its respective
+                  desired mass flow rate.
+               </p> 
+               <p>The <span class="acronym" translate="no">PLC</span> also uses <span class="acronym" translate="no">PID</span> schemes for the control of the various extruder barrel temperatures. The <span class="acronym" translate="no">PLC</span> monitors the extruder's various barrel zone thermocouples, one thermocouple for each
+                  extruder zone (the temperature of the mixed material in the downspout is also measured,
+                  but only to be displayed, not for temperature control). The <span class="acronym" translate="no">PLC</span> controls each zone extruder barrel temperature with steam and water to the jacket
+                  of that zone, steam for heating and water for cooling.
+               </p>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_003_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_004_004.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_004_006.html">Next Section &gt;</a></li>
+                     <li><a href="001_005_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

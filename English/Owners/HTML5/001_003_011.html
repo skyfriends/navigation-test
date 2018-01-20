@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Alarm Summary Screen</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_003_001.html">3&nbsp;&nbsp;APM Screens</a></p>
+               </div>
+               <h2 id="id17AIFG00JPN"><span class="chapter-number">3.11</span> Alarm Summary Screen
+               </h2> 
+               <section>
+                  <h3 id="d6e7809"><span class="chapter-number">3.11.1</span> Section Overview
+                  </h3> 
+                  <p>The Alarm Summary screen displays all currently active alarms, both unacknowledged
+                     and acknowledged. The Alarm Summary screen is accessed by clicking the “(F9) Alarm
+                     Summary” button in the region of the Main screen with the gray background color. It
+                     can also be accessed from any screen by pressing the “F9” function key on the <span class="acronym" translate="no">APM</span> console keyboard.
+                  </p>
+               </section> 
+               <section>
+                  <h3 id="d6e7819"><span class="chapter-number">3.11.2</span> Details
+                  </h3> 
+                  <p>An example of an alarm summary is reproduced in <a href="001_003_011.html#CHDBCJAAF8">Figure 3.100</a>. All currently active alarms are displayed here. Unacknowledged alarms are displayed
+                     in red text; acknowledged alarms are displayed in yellow text. The most recent alarms
+                     are displayed at the top of the list; the oldest alarms are displayed at the bottom
+                     of the list. If there are more active alarms than there are rows on the list, the
+                     operator can use the vertical scroll bar to scroll down to view the older alarms.
+                  </p> 
+                  <figure id="CHDBCJAAF8">
+                     <figcaption><span class="figure-number">Figure 3.100</span> Alarm Summary Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_100.png"></figure> 
+                  <p>The aspects of the Alarm Summary screen that will be important for the operator to
+                     know are as follows:
+                  </p> 
+                  <ol>
+                     <li><strong>“Refresh” Button</strong> - When the Alarm Summary screen is selected from the Main screen it displays all
+                        alarm log entries up to the moment that the screen appears. The alarm list does not
+                        refresh itself as new alarm events occur. To do that the operator must click the Refresh
+                        button.
+                     </li> 
+                     <li><strong>Event Time Column</strong> - The date and time when the alarm was originally raised (for unacknowledged alarms)
+                        or acknowledged (for acknowledged alarms).
+                     </li> 
+                     <li><strong>Alarm Name Column</strong> - Displays the reference number for each alarm.
+                     </li> 
+                     <li><strong>Message Column</strong> - Displays the description for each alarm.
+                     </li> 
+                     <li><strong>Total Number of Unacknowledge Alarms</strong> - Displays the total number of currently unacknowledged active alarms.
+                     </li> 
+                     <li><strong>Total Number of Acknowledge Alarms</strong> - Displays the total number of currently acknowledged active alarms.
+                     </li> 
+                     <li><strong>“Acknowledge All Alarms End” Button</strong> - Clicking this button acknowledges all currently unacknowledged active alarms. (The
+                        operator can also acknowledge by pressing the End key on the <span class="acronym" translate="no">APM</span> console keyboard from any screen.)
+                     </li> 
+                     <li><strong>“Troubleshooting” Button</strong> - Clicking this button brings up the Troubleshoot screen.
+                     </li> 
+                     <li><strong>“Close” Button</strong> - Clicking this button closes the Alarm Summary screen.
+                     </li>
+                  </ol> 
+                  <div class="alert">
+                     <div class="alert-symbol caution"></div>
+                     <div class="alert-statement"><span class="caution"></span>  
+                        <p>Be sure to scroll through and note all alarms in the alarm list before acknowledging
+                           alarms. The reason for this is that acknowledging alarms first will result in any
+                           alarm for which the condition that originally caused that alarm to be raised has been
+                           resolved, the alarm message will disappear before the operator will have a chance
+                           to see it.
+                        </p>
+                     </div>
+                  </div>
+               </section>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_002_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_003_010.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_003_012.html">Next Section &gt;</a></li>
+                     <li><a href="001_004_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

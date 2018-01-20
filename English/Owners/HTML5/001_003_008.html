@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Formula Screen</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_003_001.html">3&nbsp;&nbsp;APM Screens</a></p>
+               </div>
+               <h2 id="id17AIFE00OYK"><span class="chapter-number">3.8</span> Formula Screen
+               </h2> 
+               <section>
+                  <h3 id="d6e6573"><span class="chapter-number">3.8.1</span> Section Overview
+                  </h3> 
+                  <p>Formulas, also referred to as recipes, are collections of extruder system parameters
+                     (e.g., operating condition setpoints, time intervals between the events in a sequence
+                     of events, specifiers that determine how the extruder system is to be started up)
+                     that a customer has determined are necessary to formulate the various products in
+                     the customer's product line. The number of parameters that must be set to formulate
+                     each product can be quite large. Thus, it is desirable to be able to specify each
+                     collection of values just once, and store this collection of values in a formula file
+                     on the <span class="acronym" translate="no">APM</span> hard drive. Thereafter, when it is necessary to formulate a new batch of that product,
+                     the necessary extruder system parameters can be retrieved from the corresponding formula
+                     file on the <span class="acronym" translate="no">APM</span> computer's hard drive and downloaded to the <span class="acronym" translate="no">PLC</span> without the operator needing to manual specify them again. This saves time and minimizes
+                     the possibility of human error.
+                  </p> 
+                  <p>The operator will manage formulas by using three screens, the Formula screen and the
+                     Load Formula screen and the Edit/Add Formula screen, along with a handful of small
+                     faceplates. Using these tools, the operator will be able to perform the following
+                     formula-specific tasks:
+                  </p> 
+                  <ul>
+                     <li>Create completely new formulas.</li> 
+                     <li>Create new formulas from existing formulas.</li> 
+                     <li>Modify existing formulas.</li> 
+                     <li>Delete existing formulas.</li> 
+                     <li>Create new formulas from current <span class="acronym" translate="no">PLC</span> setpoints.
+                     </li> 
+                     <li>Updating formula values with <span class="acronym" translate="no">PLC</span> setpoints.
+                     </li> 
+                     <li>Transfer formula values to the <span class="acronym" translate="no">PLC</span> to be used as the new setpoints.
+                     </li>
+                  </ul> 
+                  <p>The formula data that is stored on the <span class="acronym" translate="no">APM</span> computer's hard drive are stored in Microsoft SQL Server database files.
+                  </p> 
+                  <p>The Formula screen is accessed by clicking the (F8) Formula button in the region of
+                     the Main screen with the forest green background color. It can also be accessed from
+                     any screen by pressing the F8 function key on the <span class="acronym" translate="no">APM</span> console keyboard. The Load Formula screen is accessed from the Formula screen. The
+                     Edit/Add Formula screen is accessed from the Load Formula screen.
+                  </p>
+               </section> 
+               <section>
+                  <h3 id="d6e6643"><span class="chapter-number">3.8.2</span> Formula Screen
+                  </h3> 
+                  <p>An example of the Formula screen is shown in <a href="001_003_008.html#CHDCDHEJC2">Figure 3.74</a>. There are three collections of values displayed on this screen:
+                  </p> 
+                  <ul>
+                     <li>The selected formula data that have been retrieved from a selected SQL database formula
+                        stored on the <span class="acronym" translate="no">APM</span> computer's hard drive. This data is displayed in the two columns of data under the
+                        “Formula Value” headers, and in the top left region of the screen with the dark blue
+                        background color, under the header labeled “Selected Formula”. From the Formula screen,
+                        this data can be loaded into the <span class="acronym" translate="no">PLC</span>'s memory, thus overwriting the <span class="acronym" translate="no">PLC</span>'s current setpoint values.
+                     </li> 
+                     <li>The setpoint data that reside in the <span class="acronym" translate="no">PLC</span>'s memory and are currently being used by the <span class="acronym" translate="no">PLC</span> to control the extruder system. This data is displayed in the two columns of data
+                        under the “<span class="acronym" translate="no">PLC</span> Setpoint” headers, and in the top right region of the screen with the dark blue background
+                        color, under the header labeled “<span class="acronym" translate="no">PLC</span>”. From the Formula screen, this data can be saved to an existing or new formula database
+                        file on the <span class="acronym" translate="no">APM</span> computer's hard drive, or overwritten with the selected formula data.
+                     </li> 
+                     <li>Current operating conditions that result from the setpoint data used by the <span class="acronym" translate="no">PLC</span> to control the extruder system. This constantly updated information is obtained by
+                        the <span class="acronym" translate="no">PLC</span> from the various input/output modules in the extruder system control panel, and is
+                        displayed in the two columns of data under the “Actual Value” headers. Not all formula
+                        parameters are setpoints, directly impacting current operating conditions. Thus, some
+                        of the cells in the “Actual Value” columns are blank. This data is for information
+                        only and is not stored in either a formula database file or in <span class="acronym" translate="no">PLC</span> memory.
+                     </li>
+                  </ul> 
+                  <figure id="CHDCDHEJC2">
+                     <figcaption><span class="figure-number">Figure 3.74</span> Formula Screen (example)
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_074.png"></figure> 
+                  <ol>
+                     <li><strong>Formula Data Retrieved from Database</strong> - This block of data provides general information about the selected formula database
+                        file on the <span class="acronym" translate="no">APM</span> computer's hard drive. This information includes the formula database file name,
+                        a short description of the formula, revision number and date, and the extruder die
+                        number.
+                     </li> 
+                     <li><strong>Formula Data in PLC Memory</strong> - This block of data provides general information about the formula parameters that
+                        reside in <span class="acronym" translate="no">PLC</span> memory and that the <span class="acronym" translate="no">PLC</span> is currently using to control the extruder system. This information is related to
+                        the formula database file on the <span class="acronym" translate="no">APM</span> computer's hard drive from which the data was retrieved before being loaded into
+                        the <span class="acronym" translate="no">PLC</span>'s memory. This data includes the formula database file name, a short description
+                        of the formula, revision number and date, and the extruder die number.
+                     </li> 
+                     <li><strong>Formula Select/Maintenance Button</strong> - Clicking this button causes the Load Formula screen to appear (more about this
+                        later).
+                     </li> 
+                     <li><strong>Load Formula to </strong><span class="acronym" translate="no">PLC</span><strong> Setpoints Button</strong> - Clicking this button copies into <span class="acronym" translate="no">PLC</span> memory the currently selected formula parameters that have been retrieved from an
+                        <span class="acronym" translate="no">APM</span> computer database file (and possibly edited, more about this later), and causes the
+                        <span class="acronym" translate="no">PLC</span> to use these new values as the setpoints with which to control the extruder system.
+                     </li> 
+                     <li><strong>Save </strong><span class="acronym" translate="no">PLC</span><strong> Setpoint Buttons</strong> - Clicking this button brings forth a small faceplate with which the operator may
+                        use to overwrite the data in the currently selected formula database file stored an
+                        <span class="acronym" translate="no">APM</span> computer's hard drive with the setpoints currently residing in <span class="acronym" translate="no">PLC</span> memory.
+                     </li> 
+                     <li><strong>Item Description Columns</strong> - These two columns of text display short descriptions of the purpose of each pair
+                        of formula parameter and <span class="acronym" translate="no">PLC</span> setpoint.
+                     </li> 
+                     <li><strong>Formula Value Columns</strong> - These two columns display the values for the various formula parameters that have
+                        been retrieved from a formula database file and possibly edited.
+                     </li> 
+                     <li><span class="acronym" translate="no">PLC</span><strong> Setpoint Columns</strong> - These two columns display the values for the setpoints that reside in <span class="acronym" translate="no">PLC</span> memory and currently used by the <span class="acronym" translate="no">PLC</span> to control the extruder system.
+                     </li> 
+                     <li><strong>Actual Value Columns</strong> - These two columns display actual extruder system operating conditions resulting
+                        from the <span class="acronym" translate="no">PLC</span>'s use of its setpoints to control of the extruder system.
+                     </li>
+                  </ol>
+               </section> 
+               <section>
+                  <h3 id="d6e6812"><span class="chapter-number">3.8.3</span> Load Formula Screen
+                  </h3> 
+                  <p>An example of the Load Formula screen is shown in <a href="001_003_008.html#CHDJFEHHE7">Figure 3.75</a>. This screen is accessed when the Formula Select/Maintenance button on the Formula
+                     screen is clicked. The Load Formula screen displays all formula database files currently
+                     residing on the <span class="acronym" translate="no">APM</span> computer's hard drive. This screen also provides the operator with the means of filtering
+                     the display of existing formula database files using either file name or formula description
+                     as the filter criterion. Finally, this screen allows the operator to perform the following
+                     tasks:
+                  </p> 
+                  <ul>
+                     <li>Select an existing formula database file (causes the formula data to be read from
+                        the chosen database file and displayed on the Formula screen as the selected formula).
+                     </li> 
+                     <li>Edit an existing formula database file (causes the formula data to be read from the
+                        chosen database file and displayed on the Add/Edit Formula screen that appears in
+                        place of the Load Formula screen).
+                     </li> 
+                     <li>Create a completely new formula database file (causes the Add/Edit Formula screen
+                        to appear with all parameter fields filled with the new formula default values.
+                     </li> 
+                     <li>Delete an existing formula database file (causes the chosen database file to be deleted).</li>
+                  </ul> 
+                  <figure id="CHDJFEHHE7">
+                     <figcaption><span class="figure-number">Figure 3.75</span> Load Formula Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_075.png"></figure> 
+                  <ol>
+                     <li><strong>List of Current Formulas (Forms Column)</strong> - This column in the list box displays the names of all formulas currently stored
+                        on the <span class="acronym" translate="no">APM</span> computer's hard drive.
+                     </li> 
+                     <li><strong>List of Current Formulas (Rev Column)</strong> - This column in the list box displays the revision number for each of the formulas
+                        currently stored on the <span class="acronym" translate="no">APM</span> computer's hard drive. Multiple formulas may be stored with the same name provided
+                        they have different revisions.
+                     </li> 
+                     <li><strong>List of Current Formula (Description Column)</strong> - This column in the list box displays the short textual description for each of
+                        the formulas currently stored on the <span class="acronym" translate="no">APM</span> computer's hard drive.
+                     </li> 
+                     <li><strong>“Select Formula” Button</strong> - This button is disabled until a formula in the list box to the left is clicked.
+                        Then, when this button becomes enabled and when clicked, the formula data for the
+                        chosen formula is retrieved from the formula database file on the <span class="acronym" translate="no">APM</span> computer's hard drive and displayed as the selected formula parameters on the Formula
+                        screen.
+                     </li> 
+                     <li><strong>“Edit Formula” Button</strong> - This button is disabled until a formula in the list box to the left is clicked.
+                        Then, when this button becomes enabled and when clicked, the formula data for the
+                        chosen formula is retrieved from the formula database file on the <span class="acronym" translate="no">APM</span> computer's hard drive and displayed as the formula parameters ready to be edited
+                        on the Add/Edit Formula screen.
+                     </li> 
+                     <li><strong>“Add Formula” Button</strong> - This button is always enabled, and when clicked, causes the Add/Edit Formula screen
+                        to appear with all its parameter fields filled with the formula default values.
+                     </li> 
+                     <li><strong>“Delete Formula” Button</strong> - This button is disabled until a formula in the list box to the left is clicked.
+                        Then, when this button becomes enabled and when clicked, the chosen formula is deleted
+                        from the formula database on the <span class="acronym" translate="no">APM</span> computer's hard drive.
+                     </li> 
+                     <li><strong>“Refresh” Button</strong> - This button is always enabled, and when clicked, refreshes the information displayed
+                        in the list box to the left using the search criterion specified with the Search By
+                        and Search Options filter tools.
+                     </li> 
+                     <li><strong>“Close” Button</strong> - This button is always enabled, and when clicked, closes the Load formula screen.
+                     </li> 
+                     <li><strong>Search By Tool</strong> - Allows the operator to search for formulas by text in their description fields
+                        rather than by formula name.
+                     </li> 
+                     <li><strong>Search Options Tool</strong> - Allows the operator to refine his formula description search filter criterion.
+                     </li>
+                  </ol>
+               </section> 
+               <section>
+                  <h3 id="d6e6933"><span class="chapter-number">3.8.4</span> Add/Edit Formula Screen
+                  </h3> 
+                  <p>An example of the Add/Edit Formula screen is shown in <a href="001_003_008.html#CHDJCGHJD6">Figure 3.76</a>. This screen is accessed when either of the Edit Formula or Add Formula buttons on
+                     the Load Formula screen is clicked. This screen is also accessed when the Save <span class="acronym" translate="no">PLC</span> Setpoints button on the Formula screen is clicked, and then followed by the operator
+                     clicking either of the two Save buttons on the Update Anyway faceplate.
+                  </p> 
+                  <p>When the Add/Edit Formula screen appears as a result of the Edit Formula button on
+                     the Load Formula screen being clicked, all fields are populated with values from the
+                     most recently selected formula. When the Add/Edit Formula screen appears as a result
+                     of the Add Formula button on the Load Formula screen being clicked, all fields are
+                     populated with the formula default values. When the Add/Edit Formula screen appears
+                     as a result of the Save <span class="acronym" translate="no">PLC</span> Setpoint button on the Formula screen being clicked, all fields are populated with
+                     values currently residing in <span class="acronym" translate="no">PLC</span> memory.
+                  </p> 
+                  <p>Regardless, once the Add/Edit formula screen appears the operator can change any of
+                     the displayed values, for example specifying a new formula revision, even a new formula
+                     name, or changing any of the individual formula parameter values. Then he can overwrite
+                     the data in the existing formula in the formula database on the <span class="acronym" translate="no">APM</span> computer's hard drive, save the data as a new formula in the database, or he can
+                     cancel without making any changes to the formula database.
+                  </p> 
+                  <figure id="CHDJCGHJD6">
+                     <figcaption><span class="figure-number">Figure 3.76</span> Add/Edit Formula Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_076.png"></figure> 
+                  <ol>
+                     <li><strong>Formula No.</strong> - This is the formula identifier for the currently selected formula as it is stored
+                        in the formula database. It can be either a number or text. The operator can create
+                        a new formula by clicking in the white rectangle, in which case a faceplate will appear
+                        prompting him to enter a new formula identifier.
+                     </li> 
+                     <li><strong>Revision</strong> - This is the revision number for the currently selected formula. Each formula in
+                        the database can have multiple revisions, and they are each maintained separately.
+                        The operator can create a new revision for the formula by clicking in the white rectangle,
+                        in which case a faceplate will appear prompting him to enter a new formula revision
+                        number.
+                     </li> 
+                     <li><strong>Last Revision Date</strong> - This is date when this revision of the formula was most recently updated.
+                     </li> 
+                     <li><strong>Description</strong> - This is a field where the operator can provide a short description of what the
+                        formula is intended to be used. The operator can edit this field by clicking in the
+                        white rectangle, in which case a faceplate will appear prompting him to enter a new
+                        description.
+                     </li> 
+                     <li><strong>Individual Formula Parameters</strong> - The operator can edit the values in any of these field by clicking in the white
+                        rectangle, in which case a faceplate will appear prompting him to enter a new parameter
+                        value.
+                     </li> 
+                     <li><strong>“Update Formula” Button</strong> - Clicking this button will cause a small faceplate to appear from which from operator
+                        can confirm that he wants to update, update and select, or cancel.
+                     </li> 
+                     <li><strong>“Cancel” Button</strong> - Clicking this button will cause a small faceplate to appear prompting the operator
+                        to confirm that he wants to cancel (in which case the Add/Edit Formula screen will
+                        close without saving any edits) discontinue canceling (in which case the Add/Edit
+                        Formula screen will remain open and allow the operator to resume editing).
+                     </li> 
+                     <li><strong>“Abort” Button</strong> - Clicking this button will cause the Add/Edit formula screen to immediately close
+                        (in which case any edits will be discarded).
+                     </li>
+                  </ol>
+               </section> 
+               <section>
+                  <h3 id="d6e7016"><span class="chapter-number">3.8.5</span> Creating a Completely New Formula
+                  </h3> 
+                  <p>To create a new completely new formula, first display the Formula screen, and on it
+                     click the Formula Select/Maintenance button (1) (see <a href="001_003_008.html#CHDHHJADF9">Figure 3.77</a>).
+                  </p> 
+                  <figure id="CHDHHJADF9">
+                     <figcaption><span class="figure-number">Figure 3.77</span> <span class="acronym" translate="no">PLC</span> Formula Load/Save Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_077.png"></figure> 
+                  <p>Next, when the Load Formula screen appears, click the Add Formula button (1) (see
+                     <a href="001_003_008.html#CHDBEDJII2">Figure 3.78</a>).
+                  </p> 
+                  <figure id="CHDBEDJII2">
+                     <figcaption><span class="figure-number">Figure 3.78</span> Load Formula Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_078.png"></figure> 
+                  <p>The Add/Edit Formula screen (see <a href="001_003_008.html#CHDJCGHJD6">Figure 3.76</a>) will appear with all fields populated with the default formula values. The only
+                     value that absolutely must be changed from its default value before the formula can
+                     be updated is the value in the Formula No field. Click inside the white rectangles
+                     to edit the various formula values. When finished editing, click the Update Formula
+                     button (1) on the Add/Edit Formula screen (see <a href="001_003_008.html#CHDBEJAIA5">Figure 3.79</a>).
+                  </p> 
+                  <figure id="CHDBEJAIA5">
+                     <figcaption><span class="figure-number">Figure 3.79</span> Add/Edit Formula Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_079.png"></figure> 
+                  <p>The Add Formula? faceplate will appear, as shown in <a href="001_003_008.html#CHDHGFIBG5">Figure 3.80</a>, where the formula identifier (1) and the formula revision (2) are displayed. To
+                     store the newly defined formula to the formula database on the <span class="acronym" translate="no">APM</span> computer hard drive, click the Yes button (3). This will only store, but not select
+                     (i.e., retrieve) the formula values from the new stored formula. The Formula screen
+                     (see <a href="001_003_008.html#CHDCDHEJC2">Figure 3.74</a>) will reappear, but the new formula will not be the selected formula. To both store
+                     the new formula and then retrieve its values as the selected formula on the Formula
+                     screen, click the Yes and Select button (4) in <a href="001_003_008.html#CHDHGFIBG5">Figure 3.80</a>. To return to the Formula Edit screen click the Cancel button (5) in <a href="001_003_008.html#CHDHGFIBG5">Figure 3.80</a>.
+                  </p> 
+                  <figure id="CHDHGFIBG5">
+                     <figcaption><span class="figure-number">Figure 3.80</span> Add Formula? Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_080.png"></figure> 
+                  <p>If the Update Formula button on the Formula Add/Edit screen is clicked with the value
+                     in the Formula No field unchanged from its default value of 0, the Default Formula
+                     faceplate in <a href="001_003_008.html#CHDFJDJGH8">Figure 3.81</a> will appear, prompting the operator to change the value in the Formula No field.
+                     Clicking the OK button (1) will return the operator to the Add/Edit Formula screen
+                     where the Formula No field can be changed.
+                  </p> 
+                  <figure id="CHDFJDJGH8">
+                     <figcaption><span class="figure-number">Figure 3.81</span> Default Formula Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_081.png"></figure>
+               </section> 
+               <section>
+                  <h3 id="d6e7090"><span class="chapter-number">3.8.6</span> Creating a New Formula from an Existing Formula
+                  </h3> 
+                  <p>To create a new formula from an existing formula, first display the Formula screen,
+                     and on it click the Formula Select/Maintenance button (1) (see <a href="001_003_008.html#CHDEBEBGD5">Figure 3.82</a>).
+                  </p> 
+                  <figure id="CHDEBEBGD5">
+                     <figcaption><span class="figure-number">Figure 3.82</span> <span class="acronym" translate="no">PLC</span> Formula Load/Save Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_082.png"></figure> 
+                  <p>Next, when the Formula Load screen appears, choose an existing formula that has values
+                     as similar as possible to those desired for the new formula (1), and click the Edit
+                     Formula button (2), as shown in <a href="001_003_008.html#CHDIAADDC8">Figure 3.83</a>.
+                  </p> 
+                  <figure id="CHDIAADDC8">
+                     <figcaption><span class="figure-number">Figure 3.83</span> Formula Load Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_083.png"></figure> 
+                  <p>The Add/Edit Formula screen (see <a href="001_003_008.html#CHDJCGHJD6">Figure 3.76</a>) will appear with all fields populated with values from the existing chosen formula.
+                     The only value that absolutely must be changed from its default value before the formula
+                     can be updated is the value in the Formula No field. Click inside the white rectangles
+                     to edit the various formula values. The only values that must be changed from the
+                     values read from the existing formula are the values in the Formula No field and/or
+                     the Revision field. A new formula can be created by changing either of these fields,
+                     but it is wisest to change both. When finished editing, click the Update Formula button
+                     (1) on the Add/Edit Formula screen (see <a href="001_003_008.html#CHDBADIDA5">Figure 3.84</a>).
+                  </p> 
+                  <figure id="CHDBADIDA5">
+                     <figcaption><span class="figure-number">Figure 3.84</span> Add/Edit Formula Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_084.png"></figure> 
+                  <p>The Add Formula? faceplate will appear, as shown in <a href="001_003_008.html#CHDDEFBHG9">Figure 3.85</a>, where the formula identifier (1) and the formula revision (2) are displayed. To
+                     store the newly defined formula to the formula database on the <span class="acronym" translate="no">APM</span> computer hard drive, click the Yes button (3). To store and select the new formula
+                     click the Yes and Select button (4). To return to the Formula Edit screen click the
+                     Cancel button (5).
+                  </p> 
+                  <figure id="CHDDEFBHG9">
+                     <figcaption><span class="figure-number">Figure 3.85</span> Add Formula? Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_085.png"></figure> 
+                  <ol>
+                     <li><strong>“Flush Extruder” Button</strong> - Clicking this button commands the <span class="acronym" translate="no">PLC</span> to execute the extruder flush utility. Refer to <a href="001_004_009.html#CHDIDIEHC5">Extruder Barrel Flush Sequence</a> for a detailed description of how this utility is used.
+                     </li> 
+                     <li><strong>“Stop Flushing Extruder” Button</strong> - Clicking this button commands the <span class="acronym" translate="no">PLC</span> to terminate the extruder flush utility. Refer to <a href="001_004_009.html#CHDIDIEHC5">Extruder Barrel Flush Sequence</a> for a detailed description of how this utility is used.
+                     </li> 
+                     <li><strong>“Normal Flush Cylinder” Button</strong> - Clicking this button commands the <span class="acronym" translate="no">PLC</span> to execute the preconditioner normal flush utility. Refer to <a href="001_004_010.html#CHDIFACEF2">Preconditioner Flush Sequences</a> for a detailed description of how this utility is used.
+                     </li> 
+                     <li><strong>“Wet Flush Cylinder” Button</strong> - Clicking this button commands the <span class="acronym" translate="no">PLC</span> to execute the preconditioner wet flush utility. Refer to <a href="001_004_010.html#CHDIFACEF2">Preconditioner Flush Sequences</a> for a detailed description of how this utility is used.
+                     </li> 
+                     <li><strong>“Stop Flushing Cylinder” Button</strong> - Clicking this button commands the <span class="acronym" translate="no">PLC</span> to terminate whichever preconditioner flush utility is being executed by the <span class="acronym" translate="no">PLC</span>. Refer to <a href="001_004_010.html#CHDIFACEF2">Preconditioner Flush Sequences</a> for a detailed description of how this utility is used.
+                     </li>
+                  </ol>
+               </section> 
+               <section>
+                  <h3 id="d6e7205"><span class="chapter-number">3.8.7</span> Modifying an Existing Formula
+                  </h3> 
+                  <p>To modify an existing formula, first display the Formula screen, and on it click the
+                     Formula Select/Maintenance button (1) (see <a href="001_003_008.html#CHDGACHEH3">Figure 3.86</a>).
+                  </p> 
+                  <figure id="CHDGACHEH3">
+                     <figcaption><span class="figure-number">Figure 3.86</span> <span class="acronym" translate="no">PLC</span> Formula Load/Save Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_086.png"></figure> 
+                  <p>Next, when the Formula Load screen appears, choose the formula to modify (1), and
+                     click the Edit Formula button (2), as shown in <a href="001_003_008.html#CHDIFACFG7">Figure 3.87</a>.
+                  </p> 
+                  <figure id="CHDIFACFG7">
+                     <figcaption><span class="figure-number">Figure 3.87</span> Formula Load Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_087.png"></figure> 
+                  <p>The Add/Edit Formula screen (see <a href="001_003_008.html#CHDJCGHJD6">Figure 3.76</a>) will appear with all fields populated with values from the chosen formula. Click
+                     inside the white rectangles to edit the various formula values. Do <strong>NOT</strong> change the “Formula No.” value or the “Revision” value. When finished editing, click
+                     the Update Formula button (1) on the Add/Edit Formula screen (see <a href="001_003_008.html#CHDGJGFHE4">Figure 3.88</a>).
+                  </p> 
+                  <figure id="CHDGJGFHE4">
+                     <figcaption><span class="figure-number">Figure 3.88</span> Add/Edit Formula Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_088.png"></figure> 
+                  <p>The Add Formula? faceplate will appear, as shown in <a href="001_003_008.html#CHDCGDJHA1">Figure 3.89</a>.
+                  </p> 
+                  <ol>
+                     <li><strong>“Update Formula” Button</strong> - Click this button when finished editing, on the “Add/Edit Formula” screen (see
+                        <a href="001_003_008.html#CHDGJGFHE4">Figure 3.88</a>).
+                     </li>
+                  </ol> 
+                  <figure id="CHDCGDJHA1">
+                     <figcaption><span class="figure-number">Figure 3.89</span> Add Formula? Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_089.png"></figure> 
+                  <ol>
+                     <li><strong>Formula:</strong> - This displays the formula identifier.
+                     </li> 
+                     <li><strong>Revision:</strong> - This displays the formula revision.
+                     </li> 
+                     <li><strong>“Yes” Button</strong> - Clicking this button to store the modified formula to the formula database on the
+                        <span class="acronym" translate="no">APM</span> computer hard drive.
+                     </li> 
+                     <li><strong>“Yes and Select” Button</strong> - Clicking this button to store and select the new formula.
+                     </li> 
+                     <li><strong>“Cancel” Button</strong> - Clicking this button to return to the Formula Edit screen.
+                     </li>
+                  </ol>
+               </section> 
+               <section>
+                  <h3 id="d6e7304"><span class="chapter-number">3.8.8</span> Deleting an Existing Formula
+                  </h3> 
+                  <p>To delete an existing formula, first display the Formula screen, as shown in <a href="001_003_008.html#CHDHGDHEG7">Figure 3.90</a>).
+                  </p> 
+                  <figure id="CHDHGDHEG7">
+                     <figcaption><span class="figure-number">Figure 3.90</span> Formula Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_090.png"></figure> 
+                  <ol>
+                     <li><strong>“Formula Select/Maintenance” Button</strong> - Click this button to bring up the formula load screen.
+                     </li>
+                  </ol> 
+                  <p>Next, when the Formula Load screen appears as shown in <a href="001_003_008.html#CHDDFEEGJ6">Figure 3.91</a>.
+                  </p> 
+                  <figure id="CHDDFEEGJ6">
+                     <figcaption><span class="figure-number">Figure 3.91</span> Formula Load Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_091.png"></figure> 
+                  <ol>
+                     <li><strong>Formula</strong> - Choose the formula to delete.
+                     </li> 
+                     <li><strong>“Delete Formula” Button</strong> - Click this button to delete the formula.
+                     </li>
+                  </ol> 
+                  <p>The Delete? faceplate in <a href="001_003_008.html#CHDDHDEGH2">Figure 3.92</a> will appear.
+                  </p> 
+                  <figure id="CHDDHDEGH2">
+                     <figcaption><span class="figure-number">Figure 3.92</span> Delete? Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_092.png"></figure> 
+                  <ol>
+                     <li><strong>“Yes” Button</strong> - Click this button to delete the formula.
+                     </li> 
+                     <li><strong>“No” Button</strong> - Click this button to return to the Formula screen without deleting the formula.
+                     </li>
+                  </ol>
+               </section> 
+               <section>
+                  <h3 id="d6e7375"><span class="chapter-number">3.8.9</span> Updating Formula Values with Current <span class="acronym" translate="no">PLC</span> Setpoints
+                  </h3> 
+                  <div class="alert">
+                     <div class="alert-symbol note"></div>
+                     <div class="alert-statement"><span class="note"></span>  
+                        <p>This operation involves overwriting the formula values in the currently selected formula
+                           with the setpoints in <span class="acronym" translate="no">PLC</span> memory. Before starting this operation, the currently selected formula should be
+                           one that has values that the operator wants to replace with the <span class="acronym" translate="no">PLC</span> setpoints.
+                        </p>
+                     </div>
+                  </div> 
+                  <p>To update the values of the currently selected formula with the setpoints in <span class="acronym" translate="no">PLC</span> memory, first display the Formula screen shown in <a href="001_003_008.html#CHDDCBAAJ3">Figure 3.93</a>.
+                  </p> 
+                  <figure id="CHDDCBAAJ3">
+                     <figcaption><span class="figure-number">Figure 3.93</span> <span class="acronym" translate="no">PLC</span> Formula Load/Save Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_093.png"></figure> 
+                  <ol>
+                     <li><strong>“Save</strong> <span class="acronym" translate="no">PLC</span> <strong>Setpoints” Button</strong> - To save updated formula values in the <span class="acronym" translate="no">PLC</span> memory.
+                     </li>
+                  </ol> 
+                  <p>The faceplate shown in <a href="001_003_008.html#CHDJDEDJH9">Figure 3.94</a> appears, warning the operator of a conflict, specifically that he is trying to save
+                     data to a database formula that already exists for the given formula name and revision.
+                  </p> 
+                  <figure id="CHDJDEDJH9">
+                     <figcaption><span class="figure-number">Figure 3.94</span> Warning Faceplate
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_094.png"></figure> 
+                  <ol>
+                     <li><strong>Formula:</strong> - This shows the formula name that already exists, that was trying to be saved to
+                        the database.
+                     </li> 
+                     <li><strong>Revision:</strong> - This shows the revision number that already exists, that was trying to be saved
+                        to the database.
+                     </li> 
+                     <li><strong>“Save Extruder Setpoints Only” Button</strong> - Clicking this button will save <strong>ONLY</strong> the extruder setpoints.
+                     </li> 
+                     <li><strong>“Save Extruder &amp; Downstream Equip. Setpoint” Button</strong> - Clicking this button will save the extruder &amp; downstream equipment setpoint.
+                     </li> 
+                     <li><strong>“Cancel” Button</strong> - Clicking this button can discard the formula data uploaded from the <span class="acronym" translate="no">PLC</span>.
+                     </li>
+                  </ol>
+               </section>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_002_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_003_007.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_003_009.html">Next Section &gt;</a></li>
+                     <li><a href="001_004_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

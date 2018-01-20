@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>APM Startup</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <h1 id="BABGEFBCG0"><span class="chapter-number">2</span> <span class="acronym" translate="no">APM</span> Startup
+               </h1>
+               <section>
+                  <h2 id="d6e814"><span class="chapter-number">2.1</span> Overview
+                  </h2>
+                  <div>
+                     <p>This chapter addresses what the operator will need to know to get the <span class="acronym" translate="no">APM</span> computer up and running and to the point that the <span class="acronym" translate="no">APM</span> software is also running. It describes the different Windows and <span class="acronym" translate="no">APM</span> software user accounts that exist, how to boot up the <span class="acronym" translate="no">APM</span> computer, how to get the <span class="acronym" translate="no">APM</span> application software running, how to switch among the different levels of <span class="acronym" translate="no">APM</span> user types, and for <span class="acronym" translate="no">APM</span> systems that were developed for customers in Non-English speaking CE countries, how
+                        to switch the language that the <span class="acronym" translate="no">APM</span> software uses to display text between English and the customer's local language.
+                     </p>
+                  </div>
+                  <section>
+                     <h3 id="d6e847"><span class="chapter-number">2.1.1</span> User Accounts
+                     </h3>
+                     <p>For the reader to avoid being confused by the following sub-paragraphs, he should
+                        understand that two types of user accounts will be discussed. The first type are the
+                        Windows operating system user accounts, of which there are two, and the second type
+                        are the <span class="acronym" translate="no">APM</span> software user accounts, of which there are four. Note that the names of the two Windows
+                        user accounts are also used as names for two of the four <span class="acronym" translate="no">APM</span> user accounts.
+                     </p>
+                  </section>
+                  <section>
+                     <h3 id="d6e860"><span class="chapter-number">2.1.2</span> Windows Operating System User Accounts
+                     </h3>
+                     <p>On every <span class="acronym" translate="no">APM</span> computer that is delivered to a customer, Wenger has created the following two user
+                        accounts at the Windows operating system level:
+                     </p>
+                     <ul>
+                        <li>Operator</li>
+                        <li>Wenger</li>
+                     </ul>
+                     <p>The “Wenger” Windows user account is password-protected but the “Operator” Windows
+                        user account is not. Only Wenger personnel know the “Wenger” Windows user account
+                        password, so no non-Wenger personnel will be able to login to Windows using the “Wenger”
+                        user account. It will be necessary for all customer personnel, regardless of whether
+                        they are operators, maintenance personnel, or supervisors, to login to Windows using
+                        the “Operator” Windows user account, but since this Windows user account is not password-protected,
+                        the user will not be prompted for a password.
+                     </p>
+                  </section>
+                  <section>
+                     <h3 id="d6e882"><span class="chapter-number">2.1.3</span> <span class="acronym" translate="no">APM</span> Software User Accounts
+                     </h3>
+                     <p>At the <span class="acronym" translate="no">APM</span> application software level, Wenger has created the following four user accounts:
+                     </p>
+                     <ul>
+                        <li>Operator</li>
+                        <li>Maintenance</li>
+                        <li>Supervisor</li>
+                        <li>Wenger</li>
+                     </ul>
+                     <p>These four <span class="acronym" translate="no">APM</span> software user accounts provide the users with differing levels of <span class="acronym" translate="no">APM</span> software privileges. The “Operator” <span class="acronym" translate="no">APM</span> user type is the most restrictive. The “Maintenance” <span class="acronym" translate="no">APM</span> user account is slightly less restrictive. The “Supervisor” <span class="acronym" translate="no">APM</span> user account is much less restrictive. And finally, the “Wenger” <span class="acronym" translate="no">APM</span> user account has no restrictions associated with it. Note that the Maintenance, Supervisor
+                        and Wenger user accounts at the <span class="acronym" translate="no">APM</span> software level are password protected, while the Operator user account is not password-protected.
+                     </p>
+                     <p>Due to the potential for confusion, it will be stressed here again. The “Operator”
+                        and “Wenger” user accounts that have been defined at the Windows operating system
+                        level should not be confused with the “Operator”, “Maintenance”, “Supervisor” and
+                        “Wenger” user accounts that have been defined at the <span class="acronym" translate="no">APM</span> application software level.
+                     </p>
+                     <p>All customer personnel must login to Windows using the “Operator” Windows user account.
+                        When this happens, and after the <span class="acronym" translate="no">APM</span> software starts up, the <span class="acronym" translate="no">APM</span> software automatically logs the customer into the <span class="acronym" translate="no">APM</span> software using the “Operator” <span class="acronym" translate="no">APM</span> application software's Operator user account. But using the <span class="acronym" translate="no">APM</span> software, customer personnel can switch to either of the less restrictive Maintenance
+                        or Supervisor types (if they know the respective user type passwords). This will be
+                        described in detail below
+                     </p>
+                  </section>
+                  <section>
+                     <h3 id="d6e960"><span class="chapter-number">2.1.4</span> Powering Up the Computer, and Logging into Windows
+                     </h3>
+                     <p>When the <span class="acronym" translate="no">HMI</span> computer is first powered up it boots up with whatever version of the Windows operating
+                        system has been installed on the computer. When bootup is complete, Windows prompts
+                        the user to login to Windows. There are two types of Windows user accounts that are
+                        available for selection, “Operator” and “Wenger” (see <a href="001_002_001.html#CJHIIHAEF0">Figure 2.1</a>).
+                     </p>
+                     <figure id="CJHIIHAEF0">
+                        <figcaption><span class="figure-number">Figure 2.1</span> Windows Login
+                        </figcaption> <img src="../../../images/APM_Startup_01.png"></figure>
+                     <ol>
+                        <li><strong>Operator</strong> - Clicking this icon will cause the user to be logged in to Windows without being
+                           prompted for a Windows user password.
+                        </li>
+                        <li><strong>Wenger</strong> - Clicking this icon will cause the user to be logged in to Windows only after he
+                           supplies the password for the “Wenger” Windows user account.
+                        </li>
+                     </ol>
+                     <p>When the user logs in to Windows using the “Operator” Windows user account, Windows
+                        will automatically start up the <span class="acronym" translate="no">APM</span> application software (which may require up to a minute to completely start up and
+                        begin running), and automatically login the user at the “Operator” <span class="acronym" translate="no">APM</span> software level.
+                     </p>
+                     <p>When startup is complete the <span class="acronym" translate="no">APM</span> software's Main screen will appear (see <a href="001_002_001.html#CJHDHBHHF9">Figure 2.2</a>). The various features of this Main screen will be explained in detail in a later
+                        chapter, but for now notice that four of the buttons (1), (2), (3) and (4) in the
+                        lower region of the screen are disabled. That is because users at the “Operator” <span class="acronym" translate="no">APM</span> software level are restricted from accessing these features. These buttons, however,
+                        are all enabled for users at the “Wenger” <span class="acronym" translate="no">APM</span> software level.
+                     </p>
+                     <figure id="CJHDHBHHF9">
+                        <figcaption><span class="figure-number">Figure 2.2</span> Wenger <span class="acronym" translate="no">APM</span> Software
+                        </figcaption> <img src="../../../images/APM_Startup_02.png"></figure>
+                     <p>Also, notice in <a href="001_002_001.html#CJHGHBIJJ8">Figure 2.3</a> below, that the current <span class="acronym" translate="no">APM</span> software user account, “Operator” in this case (1), is displayed in the upper left
+                        region of the Main screen.
+                     </p>
+                     <figure id="CJHGHBIJJ8">
+                        <figcaption><span class="figure-number">Figure 2.3</span> Extruder Running Screen
+                        </figcaption> <img src="../../../images/APM_Startup_03.png"></figure>
+                  </section>
+                  <section>
+                     <h3 id="d6e1039"><span class="chapter-number">2.1.5</span> Switching <span class="acronym" translate="no">APM</span> Software User Types
+                     </h3>
+                     <p>As already stated, the <span class="acronym" translate="no">APM</span> software recognizes the following four <span class="acronym" translate="no">APM</span> software user accounts in ascending order of security levels and privileges:
+                     </p>
+                     <ul>
+                        <li>Operator</li>
+                        <li>Maintenance</li>
+                        <li>Supervisor</li>
+                        <li>Wenger</li>
+                     </ul>
+                     <p>As an example, the “Supervisor” <span class="acronym" translate="no">APM</span> software user account allows the user to modify the various <span class="acronym" translate="no">PID</span> control loop tuning values, something not permitted by the “Operator” or “Maintenance”
+                        <span class="acronym" translate="no">APM</span> software user accounts. When the customer's operators are logged in and using the
+                        <span class="acronym" translate="no">APM</span> software to control the extruder system, occasionally customer personnel with more
+                        expansive user privileges may want to use the <span class="acronym" translate="no">HMI</span> for a short time. The <span class="acronym" translate="no">APM</span> software allows for doing this by providing the “(csL) Log On” button in the lower
+                        right region on the Main screen (see <a href="001_002_001.html#CJHCGHBFE5">Figure 2.4</a>). When this button is clicked, the FactoryTalk View SE Client Login dialog box appears
+                        with which the user can switch to a <span class="acronym" translate="no">APM</span> software user level with more privileges, by specifying a different <span class="acronym" translate="no">APM</span> software user account in the “User name” text box and the associated password in
+                        the “Password” text box.
+                     </p>
+                     <figure id="CJHCGHBFE5">
+                        <figcaption><span class="figure-number">Figure 2.4</span> FactoryTalk View SE Client Login Dialog Box
+                        </figcaption> <img src="../../../images/APM_Startup_04.png">
+                        <ol class="legend-list">
+                           <li class="legend-item">“(csL) Log On” Button</li>
+                           <li class="legend-item">FactoryTalk View SE Client Login </li>
+                           <li class="legend-item">“User Name” Input</li>
+                           <li class="legend-item">“Password” Input </li>
+                           <li class="legend-item">“Log Off” Button</li>
+                        </ol>
+                     </figure>
+                     <p>Each of the <span class="acronym" translate="no">APM</span> software user accounts other than the “Operator” user account has its own unique
+                        associated password. After the user clicks the “(csL) Log On” button, and then log
+                        on using one of the three <span class="acronym" translate="no">APM</span> software user accounts with elevated security level and completes what he wants to
+                        do, he can easily revert back to the “Operator” <span class="acronym" translate="no">APM</span> software user account by clicking the “Log Off” button.
+                     </p>
+                  </section>
+               </section>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_001_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_001_003.html">&lt; Previous Section</a></li>
+                     <li><a href="001_003_001.html">Next Section &gt;</a></li>
+                     <li><a href="001_003_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Equipment Description</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_001_001.html">1&nbsp;&nbsp;General Information</a></p>
+               </div>
+               <h2 id="d6e494"><span class="chapter-number">1.3</span> Equipment Description
+               </h2> 
+               <section>
+                  <h3 id="d6e498"><span class="chapter-number">1.3.1</span> Section Overview
+                  </h3> 
+                  <p>This section provides information regarding the physical equipment that is necessary
+                     for running the Wenger Automated Process Management (<span class="acronym" translate="no">APM</span>) software. Every <span class="acronym" translate="no">APM</span> controls system is delivered with a <span class="acronym" translate="no">APM</span> Human Machine Interface (<span class="acronym" translate="no">HMI</span>) control station that is intended to reside in a climate-controlled air-conditioned
+                     control room. Some customers request a second redundant station that they want located
+                     on the factory floor near the extruder system equipment. Each of these systems are
+                     described below.
+                  </p>
+               </section> 
+               <section>
+                  <h3 id="d6e517"><span class="chapter-number">1.3.2</span> Control Room Console
+                  </h3> 
+                  <p>The standard Wenger <span class="acronym" translate="no">APM</span> console, or operator control station <a href="001_001_003.html#BABJFAGIE7">Figure 1.1</a> and <a href="001_001_003.html#BABHEFFGB3">Figure 1.2</a>, is intended for use in an air-conditioned control room. This style of control station
+                     consists of a podium-style console, computer, monitor, keyboard, mouse, and a handful
+                     of special-purpose buttons, switches and lamps.
+                  </p> 
+                  <figure id="BABJFAGIE7">
+                     <figcaption><span class="figure-number">Figure 1.1</span> <span class="acronym" translate="no">APM</span> Console
+                     </figcaption> <img src="../../../images/APM_GI_Figure_01.png"></figure> 
+                  <figure id="BABHEFFGB3">
+                     <figcaption><span class="figure-number">Figure 1.2</span> <span class="acronym" translate="no">APM</span> Console
+                     </figcaption> <img src="../../../images/APM_GI_Figure_02.png"></figure> 
+                  <ol>
+                     <li><strong>Computer</strong> - This is a small-footprint industrial computer that usually resides inside the console
+                        cabinet (although it is occasionally mounted inside the extruder system control panel,
+                        part of which is shown in <a href="001_001_003.html#BABEAEJJC4">Figure 1.4</a> ). This computer will have some flavor of the Windows operating system installed
+                        along with Wenger <span class="acronym" translate="no">HMI</span> application software
+                     </li> 
+                     <li><strong>Monitor</strong> - The monitor is a standard desktop monitor that has touchscreen capability, meaning
+                        that the operator can move the mouse pointer and select screen objects by sliding
+                        and pressing his finger on the monitor.
+                     </li> 
+                     <li><strong>Keyboard/Mouse</strong> - The keyboard and mouse are standard USB type devices used with any typical office
+                        desktop PC. They are <strong>NOT</strong> impervious to spilled liquids.
+                     </li> 
+                     <li><strong>Alarm Beacon</strong> - This high-intensity lamp blinks on and off while there is one or more unacknowledged
+                        alarm conditions.
+                     </li> 
+                     <li><strong>Special Purpose Buttons, Switches and Lamps</strong> - shown in <a href="001_001_003.html#BABBHBBBA9">Figure 1.3</a>.
+                     </li>
+                  </ol> 
+                  <figure id="BABBHBBBA9">
+                     <figcaption><span class="figure-number">Figure 1.3</span> Keyboard
+                     </figcaption> <img src="../../../images/APM_GI_Figure_03.png"></figure> 
+                  <ol>
+                     <li><strong>Manual Shutdown Rotary Switch</strong> - When rotated momentarily clockwise this switch causes the extruder system Programmable
+                        Logic Controller (<span class="acronym" translate="no">PLC</span>) to execute a normal extruder system shutdown sequence.
+                     </li> 
+                     <li><strong>Loss Of Communications Lamp</strong> - This lamp is illuminated by the extruder system's <span class="acronym" translate="no">PLC</span> when it fails to receive regular updated date and time information from the <span class="acronym" translate="no">APM</span> software.
+                     </li> 
+                     <li><strong>“Downspout Bypass” Button</strong> - This button is only pertinent when the extruder system's normal startup sequence
+                        has been completed and raw material is flowing from the preconditioner to the extruder.
+                        In this case, depressing the button causes the extruder system <span class="acronym" translate="no">PLC</span> to move the downspout from the process position to the bypass position. Releasing
+                        the button will result in the downspout returning to the process position.
+                     </li> 
+                     <li><strong>“Horn Silence” Button</strong> - Occasionally, certain alarm conditions cycle repeatedly between true and false,
+                        in which case the alarm horn becomes a nuisance. Pressing this button silences the
+                        alarm horn even when there are unacknowledged alarms.
+                     </li> 
+                     <li><strong>“Emergency Shutdown (E-Stop)” Button</strong> - This unlabeled large red mushroom button is intended for use in emergency situations.
+                        When this button is pressed, electrical power to the outputs is immediately disconnected.
+                        When pressed, the “Emergency Shutdown” button remains locked in the depressed state.
+                        To release it from its locked state it must be manually rotated, which allows it to
+                        pop back up.
+                     </li> 
+                     <li><strong>“E-Stop Reset” Button</strong> - Following an emergency shutdown, pressing this button reconnects electrical power
+                        to the outputs (but only after the “E-Stop” button has been manually rotated causing
+                        it to pop up).
+                     </li>
+                  </ol> 
+                  <p>The <span class="acronym" translate="no">PLC</span> that resides in the extruder system control panel executes software that interfaces
+                     with both the <span class="acronym" translate="no">APM</span> computer and the control panel input/output modules that read data from the extruder
+                     system equipment and write data to the same equipment. The <span class="acronym" translate="no">APM</span> computer exchanges information with the <span class="acronym" translate="no">PLC</span> via an Ethernet data link. The <span class="acronym" translate="no">PLC</span> communicates directly with an Ethernet module that resides in the same I/O module
+                     chassis in which the <span class="acronym" translate="no">PLC</span> resides (the electrical signals travel through the backplane of the I/O module chassis).
+                     This Ethernet module communicates directly with an Ethernet switch that resides in
+                     the control panel (the electrical signals travel through a connecting CAT5 Ethernet
+                     cable). This Ethernet switch communicates directly with both the Ethernet network
+                     module in the I/O module chassis (via a CAT5 Ethernet cable), and with the <span class="acronym" translate="no">APM</span> computer (via a second CAT5 Ethernet cable). The control panel components just described
+                     are shown in <a href="001_001_003.html#BABEAEJJC4">Figure 1.4</a>.
+                  </p> 
+                  <figure id="BABEAEJJC4">
+                     <figcaption><span class="figure-number">Figure 1.4</span> Control Panel
+                     </figcaption> <img src="../../../images/APM_GI_Figure_04.png"></figure> 
+                  <ol>
+                     <li><span class="acronym" translate="no">PLC</span> - This executes software that both controls the extruder system equipment and communicates
+                        with the <span class="acronym" translate="no">APM</span> computer.
+                     </li> 
+                     <li><span class="acronym" translate="no">PLC</span> <strong>Ethernet Module</strong> - This device allows the <span class="acronym" translate="no">PLC</span> to exchange data with the <span class="acronym" translate="no">APM</span> computer through the Ethernet switch.
+                     </li> 
+                     <li><strong>Ethernet Switch</strong> - This device facilitates the exchange of data between the <span class="acronym" translate="no">PLC</span> and the <span class="acronym" translate="no">APM</span> computer.
+                     </li> 
+                     <li><strong>CAT5 Ethernet Cable</strong> - This cable (blue in the above figure) connects the <span class="acronym" translate="no">PLC</span> network module to the Ethernet switch.
+                     </li> 
+                     <li><strong>CAT5 Ethernet Cable</strong> - This cable (yellow in the above figure) connects the <span class="acronym" translate="no">APM</span> computer (not shown) to the Ethernet switch.
+                     </li>
+                  </ol> 
+                  <p>A battery backup is available for purchase for the control room control station. This
+                     optional equipment is recommended for customers who experience occasional power surges
+                     and/or losses from their local electric utility. During a power outage or other utility
+                     problems the <span class="acronym" translate="no">APM</span> computer and display monitor will receive power for a limited time from the backup
+                     battery.
+                  </p> 
+                  <figure>
+                     <figcaption><span class="figure-number">Figure 1.5</span> Battery Backup
+                     </figcaption> <img src="../../../images/APM_GI_Figure_05.png"></figure> 
+                  <ol>
+                     <li><strong>Battery Backup Master Outlet</strong> - This is the port that should be used for the <span class="acronym" translate="no">APM</span> computer's AC adapter.
+                     </li> 
+                     <li><strong>Battery Backup Outlet</strong> - This is the port that should be used for the <span class="acronym" translate="no">APM</span> monitor's AC adapter.
+                     </li> 
+                     <li><strong>USB Data Port</strong> - Locate the USB serial communications cable that is provided as part of the battery
+                        backup unit, mate the end of the cable with the telephone plug type of connector to
+                        this jack, and insert the other end of the cable into an external USB port of the
+                        <span class="acronym" translate="no">APM</span> computer.
+                     </li> 
+                     <li><strong>Input AC Power Outlet</strong> - This is the port through which the battery backup unit receives its AC power from
+                        the local utility.
+                     </li>
+                  </ol>
+               </section> 
+               <section>
+                  <h3 id="d6e779"><span class="chapter-number">1.3.3</span> Auxiliary Factory Floor Station
+                  </h3> 
+                  <p>As an option, the Wenger <span class="acronym" translate="no">APM</span> can be ordered with a second (auxiliary) control station that is suitable for installation
+                     on the factory floor. This ruggedized control station is redundant with the control
+                     room station in the sense that the two monitors display the same information, and
+                     that what an operator at one station types with his keyboard or clicks with his mouse
+                     appears on the monitor of the other control.
+                  </p> 
+                  <p>This style <span class="acronym" translate="no">HMI</span> consists of a sealed membrane keyboard/mouse, an industrial monitor designed for
+                     use in harsh environments, an alarm beacon, and an alarm horn. All items that are
+                     part of this control station are suitable for washdown (rated NEMA 4 or IP54).
+                  </p>
+               </section>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_000_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_001_002.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_002_001.html">Next Section &gt;</a></li>
+                     <li><a href="001_002_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

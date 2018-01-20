@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Dry Feed Test Mode Sequence</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_004_001.html">4&nbsp;&nbsp;Programmable Logic Controller</a></p>
+               </div>
+               <h2 id="CHDGIAIHF3"><span class="chapter-number">4.11</span> Dry Feed Test Mode Sequence
+               </h2> 
+               <p>The purpose of the <span class="acronym" translate="no">PLC</span>-managed dry feed test mode utility is to facilitate calibration of the loss-in-weight
+                  feed system. While this utility is being executed the <span class="acronym" translate="no">PLC</span> controls the surge bin slide gate, the live bin agitator, the screw feeder, the preconditioner,
+                  and the downspout.
+               </p> 
+               <p>To initiate an <span class="acronym" translate="no">PLC</span>-managed preconditioner flush, the operator brings up the Overview screen on the control
+                  room <span class="acronym" translate="no">APM</span> console and ensures that all extruder system devices are in Auto control mode. The
+                  operator then presses the F10 function key on the keyboard, and on the Utility dialog
+                  box that appears (see <a href="001_004_011.html#CIHJDCHGG9">Figure 4.3</a> ), clicks the Activate Feed Test Mode button (1). There is no limit on how long the
+                  extruder system will remain in this mode. The operator can terminate the dry feed
+                  test mode at any time by clicking the Deactivate Feed Test Mode button (2).
+               </p> 
+               <figure id="CIHJDCHGG9">
+                  <figcaption><span class="figure-number">Figure 4.3</span> Utility Screen
+                  </figcaption> <img src="../../../images/PLC_Figure_03.png"></figure> 
+               <ol>
+                  <li><strong>“Activate Feed Test Mode” Button</strong> - Clicking this button will command the <span class="acronym" translate="no">PLC</span> to initiate the dry feed test mode sequence.
+                  </li> 
+                  <li><strong>“Deactivate Feed Test Mode” Button</strong> - Clicking this button will command the <span class="acronym" translate="no">PLC</span> to terminate the dry feed test mode sequence.
+                  </li>
+               </ol> 
+               <p>The sequence of operations that the <span class="acronym" translate="no">PLC</span> executes when the operator chooses to enter the dry feed test mode are listed below
+                  in the order that they take place.
+               </p> 
+               <ol>
+                  <li>The <span class="acronym" translate="no">PLC</span> causes the alarm horn to sound and the beacon to flash for about ten seconds to alert
+                     all personnel that the extruder system is about to start. At the same time the <span class="acronym" translate="no">PLC</span> displays the system status in the upper left corner of the <span class="acronym" translate="no">APM</span> monitor as “Dry Feed Test Mode.”
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> fills the live bin with dry material from the Surge Bin. The Live Bin will automatically
+                     refill during normal operation each time the Live Bin weight falls below a predetermined
+                     value.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> starts the live bin agitator.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> starts the preconditioner in the forward direction.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> starts the screw feeder after it verifies that the preconditioner is running.
+                  </li> 
+                  <li>Initially, the <span class="acronym" translate="no">PLC</span> calculates the feeder speed setpoint using the formula dry feed bulk density and
+                     the formula feed rate setpoint. However, soon after steady-state is achieved the <span class="acronym" translate="no">PLC</span> uses the Loss In Weight (<span class="acronym" translate="no">LIW</span>) algorithm to determine the feeder speed setpoint.
+                  </li>
+               </ol> 
+               <p>The sequence of operations that the <span class="acronym" translate="no">PLC</span> executes when the operator chooses to exit the dry feed test mode are listed below
+                  in the order that they take place.
+               </p> 
+               <ol>
+                  <li>The <span class="acronym" translate="no">PLC</span> displays the system status in the upper left corner of the <span class="acronym" translate="no">APM</span> monitor as “Extruder Stopped.”
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> stops filling the live bin with dry material from the Surge Bin.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> stops the live bin agitator.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> stops the preconditioner.
+                  </li> 
+                  <li>The <span class="acronym" translate="no">PLC</span> stops the screw feeder.
+                  </li>
+               </ol>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_003_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_004_010.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_004_012.html">Next Section &gt;</a></li>
+                     <li><a href="001_005_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>

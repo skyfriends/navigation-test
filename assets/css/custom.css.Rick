@@ -1,0 +1,518 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.ttf'),url('../fonts/Raleway-Regular.ttf');
+	font-weight: normal;
+    font-style: normal
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.ttf'),url('../fonts/Lato-Regular.ttf');
+	font-weight: 400;
+    font-style: normal
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Light.ttf'),url('../fonts/Raleway-Light.ttf');
+	font-weight: 300;
+    font-style: normal
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Medium.ttf'),url('../fonts/Raleway-Medium.ttf');
+	font-weight: 500;
+    font-style: normal
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Thin.ttf'),url('../fonts/Raleway-Thin.ttf');
+	font-weight: 100;
+    font-style: normal
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-ExtraBold.ttf'),url('../fonts/Raleway-ExtraBold.ttf');
+	font-weight: 800;
+    font-style: normal
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-SemiBold.ttf'),url('../fonts/Raleway-SemiBold.ttf');
+	font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.ttf'),url('../fonts/Lato-Regular.ttf');
+	font-weight: 400;
+    font-style: normal
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Light.ttf'),url('../fonts/Lato-Light.ttf');
+	font-weight: 300;
+    font-style: normal
+}
+
+
+.glyphicons-list {
+    list-style: none;
+    padding: 0
+}
+
+.glyphicons-list li {
+    display: inline-block;
+    float: left;
+    width: 12.5%;
+    height: 115px;
+    background-color: #f8f8f8;
+    border: 1px solid #fff;
+    padding: 10px;
+    -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease
+}
+
+.glyphicons-list li:hover {
+    background-color: #eee
+}
+
+.glyphicons-list .glyphicon {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    color: #222
+}
+
+.glyphicons-list .glyphicon-class {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 16px;
+    font-size: 13px
+}
+
+.fa-page-header {
+    font-size: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f1f1f1
+}
+
+.fontawesome-icon-list .fa-hover {
+    margin-bottom: 5px;
+    -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease
+}
+
+.fontawesome-icon-list .fa-hover:hover {
+    background-color: #f8f8f8
+}
+
+.fontawesome-icon-list .fa-hover .fa {
+    width: 25px;
+    color: #222
+}
+
+@media (max-width:767px) {
+    .glyphicons-list li {
+        width: 25%
+    }
+}
+
+.prism-languages {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0
+}
+
+.prism-languages li {
+    width: 33.3333%;
+    float: left
+}
+
+.prism-languages li code {
+    margin-left: 8px
+}
+
+@media (max-width:991px) {
+    .prism-languages li {
+        width: 50%
+    }
+}
+
+.window-content .btn {
+    margin-bottom: 6px
+}
+
+.code-tabs .languages .btn.active,
+.code-tabs .languages .btn:active,
+.navbar-default.navbar-light .active>a,
+.navbar-default.navbar-light .active>a:focus,
+.navbar-default.navbar-light .active>a:hover,
+.navbar-default.navbar-light .open>a,
+.navbar-default.navbar-light .open>a:focus,
+.navbar-default.navbar-light .open>a:hover,
+.navbar-default.navbar-light li>a:focus,
+.navbar-default.navbar-light li>a:hover,
+.pager li>a:hover,
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover,
+.promo>.fa,
+.promo>.glyphicon,
+.sidebar-boxed .sidenav>li>a.open,
+.sidebar-boxed .sidenav>li>a:hover,
+.sidenav a.active,
+.sidenav a:hover,
+.sidenav li.active>a,
+.sidenav>li>a.active,
+.sidenav>li>a:hover,
+.tabs-btn .nav-tabs li.active a,
+.tabs-text .nav-tabs>li.active a,
+.toc a:active,
+.toc a:hover,
+a,
+a:focus,
+a:hover,
+h1 a:before,
+h2 a:before,
+h3 a:before {
+    color: #a80532
+}
+
+.carousel.indicators-out .carousel-indicators .active,
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover,
+.sidebar-line .sidenav a.active:before,
+.sidebar-line .sidenav li.active>a:before,
+.sidenav>li>ul a.active:before,
+.sidenav>li>ul li.active a:before,
+.site-header .navbar {
+    background-color: #a80532
+}
+
+.carousel.indicators-out .carousel-indicators li {
+    border-color: #a80532
+}
+
+.tabs-text .nav-tabs>li.active {
+    border-bottom-color: #a80532
+}
+
+.grid-view li {
+    border-top-color: #a80532
+}
+
+.sidenav>li>a {
+    font-size: 16px;
+    line-height: 16px;
+	padding: 10px 0px !important;
+}
+
+.sidebar-boxed .sidenav a {
+    padding: 10px 20px!important;
+}
+
+.sidebar-boxed .sidenav>li>a {
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
+}
+
+.sidebar-boxed .sidenav>li>a.has-child:after {
+    content: "\f105";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 20px;
+    top: 9px;
+}
+
+.sidebar-boxed .sidenav>li>a.has-child:after {
+    content: "\f105";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 20px;
+    top: 9px;
+}
+
+
+.highlight { background: #FFFF40; }
+.searchheading { font-size: 130%; font-family: 'NexaBold', Arial, Helvetica, Verdana; }
+.summary { font-size: 80%; font-style: italic; }
+.suggestion { font-size: 100%; }
+.results { font-size: 100%; }
+.category { color: #999999; }
+.sorting { text-align: right; }
+
+.result_title { font-size: 100%; }		
+.description { font-size: 100%; color: #000; }
+.context { font-size: 100%; }
+.infoline { font-size: 80%; font-style: normal; color: #808080; font-family: 'NexaBook', Arial, Helvetica, Verdana;}
+
+.zoom_searchform { font-size: 100%; }
+.zoom_results_per_page { font-size: 80%; margin-left: 10px; }
+.zoom_match { font-size: 80%; margin-left: 2px;}				
+.zoom_categories { font-size: 80%; }
+.zoom_categories ul { display: inline; margin: 0px; padding: 0px;}
+.zoom_categories li { display: inline; margin-left: 15px; list-style-type: none; }
+
+.cat_summary ul { margin: 0px; padding: 0px; display: inline; }
+.cat_summary li { display: inline; margin-left: 15px; list-style-type: none; }
+
+input.zoom_button { margin-left:10px;width:60px; }
+input.zoom_searchbox { width:140px; }		
+
+.result_image { float: left; display: block; }
+.result_image img { margin: 10px; width: 80px; border: 0px; }
+
+.result_block { margin-top: 15px; margin-bottom: 15px; clear: left; }
+.result_altblock { margin-top: 15px; margin-bottom: 15px; clear: left; }
+
+.result_pages { font-size: 100%; }
+.result_pagescount { font-size: 100%; }
+
+.searchtime { font-size: 80%; }
+
+.recommended 
+{ 
+	background: #DFFFBF; 
+	border-top: 1px dotted #808080; 
+	border-bottom: 1px dotted #808080; 
+	margin-top: 15px; 
+	margin-bottom: 15px; 
+}
+.recommended_heading { float: right; font-weight: bold; }
+.recommend_block { margin-top: 15px; margin-bottom: 15px; clear: left; }		
+.recommend_title { font-size: 100%; }
+.recommend_description { font-size: 100%; color: #008000; }
+.recommend_infoline { font-size: 80%; font-style: normal; color: #808080;}
+.recommend_image { float: left; display: block; }
+.recommend_image img { margin: 10px; width: 80px; border: 0px; }
+
+#searchDiv{margin:0px 20px 20px 20px; border-bottom:1px solid #999;padding-bottom:10px;}
+
+/* RQ: Added this so that the left nav scroll bar is not covered by the footer. */
+#leftNav {
+	z-index: 100;
+}
+
+/* RQ: Added this so that li > p elements wouldn't have more margin than bare li elements. */
+li > p {
+	margin-bottom: 0;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 48px;
+    margin-bottom: 45px;
+	text-transform: uppercase;
+}
+h2 {
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 42px;
+}
+h3 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 36px;
+}
+
+figcaption{
+	text-align:left;
+	color:#000;
+	font-style: normal;
+	font-weight: normal;
+}
+
+figure{ margin-top:30px;margin-bottom:30px;}
+figure > img{
+	padding: 20px 0px;
+}
+
+span.figure-number{
+	font-family: Raleway,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-weight:800;
+}
+
+ol.legend-list{
+	margin:0;padding:0;font-size:14px;line-height:18px;font-style:italic;
+	border-bottom:1px solid #999; padding-bottom:10px; margin-bottom: 10px;
+}
+
+ol.legend-list>li:before{
+    content: "";
+    display: list-item;
+    position: absolute;
+	font-weight:bold;
+}
+
+ol.legend-list li.legend-item{
+	display:inline-block;
+	margin-left:20px;
+}
+
+.legend-alert {font-family: Raleway,Helvetica Neue,Helvetica,Arial,sans-serif;
+	display:inline-block;padding:0 8px 0 8px;font-weight:600;font-style:normal;
+	margin-right:5px;
+}
+
+.danger{ background-color:#ff0000;color:#fff;}
+.warning{ background-color:#ff7f00;color:#000;}
+.caution{ background-color:#ffe600;color:#000;}
+.note{ background-color:#fff;color:#000;}
+.notice{ background-color:#074fa0;color:#fff;}
+.important{ background-color:#000;color:#fff;}
+
+.safety-alert{
+	position: relative;
+	margin-left:-70px; /* RQ: changed from -55px */
+}
+
+.safety-alert > .alert-image > img{
+	width:150%; /* RQ: changed from 100% */
+}
+.safety-alert > .alert-image{
+	margin:0;padding:0;width: 35px;position: absolute;top: 0;left: 0;bottom: 0;
+}
+
+.safety-alert > .alert-statement { margin: 0;margin-left: 70px; /* RQ: changed from 55px */ border-bottom:2px solid #999;margin-bottom:30px;padding-bottom:10px;}
+
+.safety-alert > .alert-statement > span{
+	font-family: Raleway,Helvetica Neue,Helvetica,Arial,sans-serif;
+	display:inline-block;padding:0 8px 0 8px;font-weight:800;font-style:normal;
+	margin-right:5px; text-transform: uppercase;
+}
+.safety-alert > div.alert-statement > span + p {
+	display:inline !important;
+}
+.safety-alert > div.alert-statement > span + p + p{
+	margin-top: 10px;
+}
+
+.alert{
+	position: relative;
+	padding:0;margin:0;
+	margin-left:-55px;
+}
+
+.alert > .alert-symbol{
+	margin:0;padding:0;width: 35px;position: absolute;top: 0;left: 0;bottom: 0;
+	background-color: transparent !important;
+	background-size:contain;
+	background-repeat: no-repeat;
+}
+
+.alert > .alert-statement { margin: 0;margin-left: 55px; border-bottom:2px solid #999;margin-bottom:30px;padding-bottom:10px;}
+
+.alert > .alert-statement > span{
+	font-family: Raleway,Helvetica Neue,Helvetica,Arial,sans-serif;
+	display:inline-block;padding:0 8px 0 8px;font-weight:800;font-style:normal;
+	margin-right:5px; text-transform: uppercase;
+}
+
+.alert > .alert-statement > span.note{
+	padding:0 4px 0 0px;
+}
+
+.alert > div.alert-statement > span + p {
+	display:inline !important;
+}
+.alert > div.alert-statement > span + p + p{
+	margin-top: 10px;
+}
+
+.alert > .alert-symbol.danger{	background-image:url(../img/Danger.png); }
+.alert > .alert-statement > span.danger:before{	content:"DANGER!"; }
+
+.alert > .alert-symbol.caution{	background-image:url(../img/Caution.png); }
+.alert > .alert-statement > span.caution:before{	content:"CAUTION!"; }
+
+.alert > .alert-symbol.important{	background-image:url(../img/Important.png); }
+.alert > .alert-statement > span.important:before{	content:"IMPORTANT!"; }
+
+.alert > .alert-symbol.note{	background-image:url(../img/Note.png); }
+.alert > .alert-statement > span.note:before{	content:"NOTE"; }
+
+.alert > .alert-symbol.notice{	background-image:url(../img/Notice.png); }
+.alert > .alert-statement > span.notice:before{	content:"NOTICE!"; }
+
+.alert > .alert-symbol.warning{	background-image:url(../img/Warning.png); }
+.alert > .alert-statement > span.warning:before{	content:"WARNING!"; }
+
+.main-content > section{
+	margin-left:80px;
+}
+
+section h1, section h2{ margin-left:-80px;}
+section h3{ margin-left:-60px;}
+
+span.table-number{
+	font-family: Raleway,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-weight:800;
+}
+
+table { border-collapse: collapse; width:100%;margin-bottom:20px;}
+
+table, th, td {
+   border:1px solid #000;
+}
+
+table caption{ color:#000;}
+
+thead > tr:last-child {
+	/* RQ: added this rule because I only want a thicker border below the last tr in a thead. */
+	border-bottom:4px solid #000;
+}
+
+th{
+	font-family: Raleway,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-weight:800; line-height: 18px; 
+	padding:5px 10px;
+	/* RQ: removed border-bottom because I only want a thicker border below the last tr in a thead. */
+}
+td{
+	padding:5px 10px;line-height: 18px; 
+}
+
+th.center, td.center{ text-align:center }
+th.left, td.left{ text-align:left }
+th.right, td.right{ text-align:right }
+
+th.top, td.top{ vertical-align: top; }
+th.middle, td.middle{ vertical-align: middle; }
+th.bottom, td.bottom{ vertical-align: bottom; }
+
+th.shading-default{ background-color:#ccc; color:#000; }
+th.shading-light{ background-color:#ccc; color:#000; }
+th.shading-medium{ background-color:#999; color:#000; }
+th.shading-dark{ background-color:#333; color:#fff; }
+th.shading-reversed{ background-color:#000; color:#fff; }
+th.shading-black{ background-color:#000; color:#fff; }
+th.shading-highlight{ background-color:#FFF248; color:#000; }
+
+td.shading-default{ background-color:#fff; color:#000; }
+td.shading-light{ background-color:#ccc; color:#000; }
+td.shading-medium{ background-color:#999; color:#000; }
+td.shading-dark{ background-color:#333; color:#fff; }
+td.shading-reversed{ background-color:#000; color:#fff; }
+td.shading-black{ background-color:#000; color:#fff; }
+td.shading-highlight{ background-color:#FFF248; color:#000; }
+
+@media screen and (max-width:767px) {
+    .navbar {
+        background-color: #a80532!important
+    }
+	.sidebar.sidebar-boxed .sidenav a {
+		padding-left: 10px !important;
+		padding-top: 7px !important;
+		padding-bottom: 7px !important;
+	}
+	#searchDiv{margin:0px 20px 20px 10px;}
+}

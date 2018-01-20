@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>Maintenance Screen</title>
+      <link href="../../../assets/css/theDocs.all.min.css" rel="stylesheet">
+      <link href="../../../assets/css/custom.css" rel="stylesheet">
+      <link rel="icon" href="../../../assets/img/favicon.ico">
+   </head>
+   <body>
+      <aside class="sidebar sidebar-boxed" id="oldNav"></aside>
+      <header class="site-header navbar-fullwidth" id="headerDiv"></header>
+      <main class="container-fluid">
+         <div class="row">
+            <article class="main-content" role="main">
+               <div class="row breadcrumbs">
+                  <p><a href="001_003_001.html">3&nbsp;&nbsp;APM Screens</a></p>
+               </div>
+               <h2 id="id17AIFF010PF"><span class="chapter-number">3.10</span> Maintenance Screen
+               </h2> 
+               <section>
+                  <h3 id="d6e7625"><span class="chapter-number">3.10.1</span> Section Overview
+                  </h3> 
+                  <p>Wenger recommends that customers perform certain reoccurring maintenance operations
+                     on their extruder systems to extend the operational life of the equipment and to minimize
+                     repair and replace costs. Such maintenance tasks include things like lubricating moving
+                     parts, cleaning filters, and changing oil. The Extruder Maintenance screen is intended
+                     to alert operators and maintenance personnel when extruder system scheduled maintenance
+                     tasks need to be completed, based on a running total of hours of extruder system operation.
+                     The Extruder Maintenance screen is accessed by clicking the “(F12) Maintenance” button
+                     in the region of the Main screen with the forest green background color. It can also
+                     be accessed from any screen by pressing the “F12” function key on the <span class="acronym" translate="no">APM</span> console keyboard.
+                  </p>
+               </section> 
+               <section>
+                  <h3 id="d6e7635"><span class="chapter-number">3.10.2</span> Details
+                  </h3> 
+                  <p>The <span class="acronym" translate="no">PLC</span> that controls the extruder system machinery maintains a running total of hours that
+                     the extruder system is in operation. The <span class="acronym" translate="no">PLC</span> uses this number to maintain a running total of the number of hours until each of
+                     certain routine scheduled maintenance tasks need to be performed. Some tasks can be
+                     performed by either operators or maintenance personnel, while other tasks are to be
+                     performed only by maintenance personnel.
+                  </p> 
+                  <p>An example of the Extruder Maintenance screen is reproduced in <a href="001_003_010.html#CHDBFECHA8">Figure 3.96</a>. This is how the screen would look when the extruder system is started up at the
+                     customer's facility for the first time by the Wenger Service Team. It is also how
+                     it appears when a user has logged in who has a security level higher than the Operator
+                     user type.
+                  </p> 
+                  <figure id="CHDBFECHA8">
+                     <figcaption><span class="figure-number">Figure 3.96</span> Extruder Maintenance Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_096.png"></figure> 
+                  <ol>
+                     <li><strong>Extruder Hours</strong> - This is the running total of the number of hours that the extruder has been running
+                        since it was commissioned by the Wenger Service Team, 7501 hours in the example above.
+                        The <span class="acronym" translate="no">PLC</span> accumulates time only when the extruder motor is in the running state.
+                     </li> 
+                     <li><strong>Hours Until Maintenance Indicators</strong> - This column of numbers, each of which is maintained by the <span class="acronym" translate="no">PLC</span> and counts down only while the extruder motor is running, shows the total number
+                        of operational hours remaining until the corresponding scheduled maintenance task
+                        should be performed. In <a href="001_003_010.html#CHDBFECHA8">Figure 3.96</a>, the task at the top of the list will need to be performed after four more hours
+                        of extruder operation.
+                     </li> 
+                     <li><strong>“Reset” Buttons</strong> - When it is time for a maintenance task to be performed the background color of
+                        the button associated with that task will change to red. Clicking any of the buttons
+                        in this column resets the corresponding hours-until-maintenance value to the left
+                        of the button to its maximum value.
+                     </li> 
+                     <li><strong>Maintenance Instructions</strong> - There are many small rectangular and circular maintenance instruction prompts displayed
+                        on the screen. When it is time for a maintenance task to be performed the background
+                        color of the prompt associated with that task will change to red. Hovering the mouse
+                        over any of these small rectangular/circular prompts causes the maintenance instructions
+                        associated with the associated equipment to be displayed, as in <a href="001_003_010.html#CHDJBAIDH8">Figure 3.98</a>.
+                     </li>
+                  </ol> 
+                  <p>An example of the Extruder Maintenance screen is reproduced in <a href="001_003_010.html#CHDIIHIJJ7">Figure 3.97</a> where it is time to perform a maintenance task.
+                  </p> 
+                  <figure id="CHDIIHIJJ7">
+                     <figcaption><span class="figure-number">Figure 3.97</span> Extruder Maintenance Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_097.png"></figure> 
+                  <ol>
+                     <li><strong>Hours until Maintenance Indicator</strong> - Notice that the countdown time for that maintenance task has decremented to zero
+                        (1), the background color of the reset button for that task has changed to red (2),
+                        and the maintenance instructions prompt for that task is colored red. (3)
+                     </li> 
+                     <li><strong>“Press Sensor” Button</strong> - Notice that the background color of the reset button for that task has changed
+                        to red (2), and the maintenance instructions prompt for that task is colored red.
+                        (3).
+                     </li> 
+                     <li><strong>Maintenance Instruction Prompt</strong> - Notice that the maintenance instructions prompt for that task is colored red. Hovering
+                        the mouse over the small red rectangular prompt causes the maintenance instructions
+                        associated with the associated equipment to be displayed, see <a href="001_003_010.html#CHDJBAIDH8">Figure 3.98</a>.
+                     </li>
+                  </ol> 
+                  <figure id="CHDJBAIDH8">
+                     <figcaption><span class="figure-number">Figure 3.98</span> Expanded Maintenance Screen with Maintenance Instructions Pop-Up
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_098.png"></figure> 
+                  <p>Users with Maintenance security levels can reset all maintenance task countdown timers,
+                     while users with Operator security levels can reset only a few. <a href="001_003_010.html#CHDIBIDJD6">Figure 3.99</a> shows the reset buttons that are visible on the Extruder Maintenance screen when
+                     the user is logged in as a Maintenance user type. All buttons are visible. <a href="001_003_010.html#CHDIBIDJD6">Figure 3.99</a> shows the reset buttons that are visible on the Extruder Maintenance screen when
+                     the user is logged in as an Operator user type. Only the top three buttons are visible.
+                  </p> 
+                  <figure id="CHDIBIDJD6">
+                     <figcaption><span class="figure-number">Figure 3.99</span> Extruder Maintenance Screen
+                     </figcaption> <img src="../../../images/APM_Screens_Figure_099.png"></figure> 
+                  <ol>
+                     <li><strong>“Pressure Sensor” Button</strong> - The extruder's conehead pressure sensor needs to be greased.
+                     </li> 
+                     <li><strong>“Seals and Bearings” Button</strong> - The downspout seal and the knife and <span class="acronym" translate="no">BPV</span> bearings need to be greased.
+                     </li> 
+                     <li><strong>“Air Filters” Button</strong> - The downspout air filter needs to be cleaned.
+                     </li> 
+                     <li><strong>“Preconditioner/Feeder” Button</strong> - The feeder and preconditioner bearings need to be greased.
+                     </li> 
+                     <li><strong>“Knife Shaft” Button</strong> - The knife shaft needs to be lubricated.
+                     </li> 
+                     <li><strong>“Extruder Filter” Button</strong> - The extruder oil filter needs to be replaced.
+                     </li> 
+                     <li><strong>“Extruder Oil” Button</strong> - The oil in the extruder bearing housing needs to be changed.
+                     </li> 
+                     <li><strong>“Gearboxes” Button</strong> - The oil in the feeder gearbox needs to be changed.
+                     </li> 
+                     <li><strong>“Motor Bearings” Button</strong> - The extruder motor bearings need to be greased.
+                     </li>
+                  </ol>
+               </section>
+            </article>
+            <footer class="site-footer" id="copyrightDiv"></footer>
+         </div>
+      </main>
+      <footer class="nav-footer">
+         <div class="container-fluid"><a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a><div class="row">
+               <div class="col-md-12">
+                  <ul class="footer-menu">
+                     <li><a href="001_002_001.html">&lt;&lt; Previous Chapter</a></li>
+                     <li><a href="001_003_009.html#">&lt; Previous Section</a></li>
+                     <li><a href="001_003_011.html">Next Section &gt;</a></li>
+                     <li><a href="001_004_001.html">Next Chapter &gt;&gt;</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/theDocs.all.min.js"></script><script src="assets/js/toc.js"></script><script src="assets/js/zoom_settings.js"></script><script src="assets/js/zoom_index.js"></script><script src="assets/js/zoom_pageinfo.js"></script><script src="../../../assets/js/search.js"></script><script src="../../../assets/js/data.js"></script></body>
+</html>
